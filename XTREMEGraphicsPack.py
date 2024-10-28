@@ -56,7 +56,7 @@ disabledmods = """
 """
 
 if page == "Home":
-    st.title("XTREME Graphics Overhaul For G.A.M.M.A.")
+    st.title("XTREME Graphics Pack For G.A.M.M.A.")
 
 else:
 
