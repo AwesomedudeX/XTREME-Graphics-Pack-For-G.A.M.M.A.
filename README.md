@@ -3,6 +3,8 @@ The official website for the XTREME Graphics Pack For G.A.M.M.A. This pack aims 
 
 **Graphics Pack Download:** ...
 
-**ReShade Download**: https://drive.google.com/uc?export=download&id=13ObXLzO2QgkdwvMzU9yFuya_Rf7_QGvq
+**Seasonal Pack Download:** https://drive.google.com/uc?export=download&id=1xpPD7acL-VTHyZpZ3PCtVEb6ILAQ-WRp
+
+**ReShade Download**: https://drive.google.com/uc?export=download&id=1EUc23Znead72BogH3TEOmlh4ftNeGRj6
 
 **Official Website:** https://xtremegraphicspack.streamlit.app
