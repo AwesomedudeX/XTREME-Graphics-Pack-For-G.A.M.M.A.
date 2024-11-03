@@ -55,7 +55,7 @@ disabledmods = """
 -24- Skies Redux - d_nan
 """
 sssmcm = """
-[mcm]
+![mcm]
         ssfx_module/ao/blur_mcm          = 1
         ssfx_module/ao/distance_mcm      = 150
         ssfx_module/ao/flora_int_mcm     = 0.75
