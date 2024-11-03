@@ -8,14 +8,14 @@ atmospreset = """
 r__color_grading (0.35, 0.5, 0.6)
 
 r__detail_density 0.34
-r__detail_height 1.
-r__detail_radius 170
+r__detail_height 0.9
+r__detail_radius 150
 r__dtex_range 50.
-r__enable_grass_shadow on
+r__enable_grass_shadow off
 
 r__saturation 1.1
 r__gamma 0.9
-r__exposure 1.2
+r__exposure 1
 scope_factor 1
 
 r2_sun_lumscale 3.
