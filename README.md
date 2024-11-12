@@ -1,10 +1,19 @@
 # XTREME-Graphics-Pack-For-G.A.M.M.A.
-The official website for the XTREME Graphics Pack For G.A.M.M.A. This pack aims to be easy to install, while making S.T.A.L.K.E.R. G.A.M.M.A. look as realistic and cinematic as possible.
 
-**Graphics Pack Download:** https://drive.google.com/uc?export=download&id=1QvkNZ1VKlwVUQ5lAAaOUZwSfXb2g2aQt
+This is the official GitHub Repository for the XTREME Graphics Pack For S.T.A.L.K.E.R. G.A.M.M.A.
 
-**Seasonal Pack Download:** https://drive.google.com/uc?export=download&id=1xpPD7acL-VTHyZpZ3PCtVEb6ILAQ-WRp
+This graphics overhaul is a nice and easy way to make your game look so much better. It features a series of mods to improve visual fidelity, shaders, VFX and textures.
 
-**ReShade Download**: https://drive.google.com/uc?export=download&id=1EUc23Znead72BogH3TEOmlh4ftNeGRj6
+**INSTALLATION:**
 
-**Official Website:** https://xtremegraphicspack.streamlit.app
+To install the pack, just download it using the link below and install it like any other mod in MO2 at the bottom of the modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
+
+Below that, install the seasonals and ReShade for this pack in the same way.
+
+**XTREME GRAPHICS PACK (install at the BOTTOM of your modlist): TO BE UPDATED**
+
+**XTREME GRAPHICS OPTIONALS (install UNDER the main graphics pack): TO BE UPDATED**
+
+**RESHADE - OPTIONAL, BUT RECOMMENDED (install UNDER the graphics packs - MAKE SURE THAT THE MAIN PACK IS INSTALLED WITHOUT TEXTURES): https://drive.google.com/uc?export=download&id=1EUc23Znead72BogH3TEOmlh4ftNeGRj6**
+
+Afterward, go to **https://xtremegraphicspack.streamlit.app** and follow the instructions on the **Modlist Compatibility**, **Load Atmospheric Preset** and **MCM Settings For SSS** pages to convert your settings and mod list files to work with this pack.
