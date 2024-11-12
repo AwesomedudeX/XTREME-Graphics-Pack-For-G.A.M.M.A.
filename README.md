@@ -10,9 +10,9 @@ To install the pack, just download it using the link below and install it like a
 
 Below that, install the seasonals and ReShade for this pack in the same way.
 
-**XTREME GRAPHICS PACK (install at the BOTTOM of your modlist): TO BE UPDATED**
+**XTREME GRAPHICS PACK (install at the BOTTOM of your modlist): https://drive.google.com/uc?export=download&id=1AAy4gAth5fyc2JFKaq8eR2Vt8DBFznOG**
 
-**XTREME GRAPHICS OPTIONALS (install UNDER the main graphics pack): TO BE UPDATED**
+**XTREME GRAPHICS OPTIONALS (install UNDER the main graphics pack): https://drive.google.com/uc?export=download&id=1_ZQ9s_xusB19mvdjWr52bQDULnpDD0SW**
 
 **RESHADE - OPTIONAL, BUT RECOMMENDED (install UNDER the graphics packs - MAKE SURE THAT THE MAIN PACK IS INSTALLED WITHOUT TEXTURES): https://drive.google.com/uc?export=download&id=1EUc23Znead72BogH3TEOmlh4ftNeGRj6**
 
