@@ -8,11 +8,11 @@ This graphics overhaul is a nice and easy way to make your game look so much bet
 
 To install the pack, just download it using the link below and install it like any other mod in MO2 at the bottom of the modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-Below that, install the seasonals and ReShade for this pack in the same way.
+Below that, install the optionals and ReShade for this pack in the same way.
 
-**XTREME GRAPHICS PACK (install at the BOTTOM of your modlist): https://drive.google.com/uc?export=download&id=1AAy4gAth5fyc2JFKaq8eR2Vt8DBFznOG**
+**XTREME GRAPHICS PACK (install at the BOTTOM of your modlist): https://drive.google.com/uc?export=download&id=1LHYD3YaM0oDwZT3jkjZYje0vRwoI3mdG**
 
-**XTREME GRAPHICS OPTIONALS (install UNDER the main graphics pack): https://drive.google.com/uc?export=download&id=1_ZQ9s_xusB19mvdjWr52bQDULnpDD0SW**
+**XTREME GRAPHICS OPTIONALS (install UNDER the main graphics pack): https://drive.google.com/uc?export=download&id=12xC9xs8XQn19ddLjGRkykNRmPUXYiQgC**
 
 **RESHADE - OPTIONAL, BUT RECOMMENDED (install UNDER the graphics packs - MAKE SURE THAT THE MAIN PACK IS INSTALLED WITHOUT TEXTURES): https://drive.google.com/uc?export=download&id=1EUc23Znead72BogH3TEOmlh4ftNeGRj6**
 
