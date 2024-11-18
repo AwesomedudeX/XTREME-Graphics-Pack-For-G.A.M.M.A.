@@ -44,7 +44,9 @@ shader_param_6 (8.016100, 10.000500, 0.800000, 0.120000)
 shader_param_7 (100.000000, 0.500000, 0.000000, 0.000000)
 shader_param_8 (0.000000, 0.000000, 0.000000, 0.000000)
 """
-disabledmods = """
+disabledmods = {
+
+":green[**G.A.M.M.A.**]": """
 -304- Dark Signal Weather and Ambiance Audio - Shrike
 -290- Atmospherics Shaders Weathers and Reshade Latest - Hippobot
 -190- Screen Space Shaders 20 - Ascii1457
@@ -53,7 +55,40 @@ disabledmods = """
 -35- Wet Surfaces Fix - CryoManne
 -26- High Res PDA Maps - Bazingarrey
 -24- Skies Redux - d_nan
+""",
+
+":orange[**E.F.P.**]": """
+-[Detron] Better Rain FX
+-[Iretuerye] Golden Autumn Retexture - Autumn Grass Tress
+-[Iretuerye] Golden Autumn Retexture - Green Grass
+-[Ascii1457] Screen Space Shaders u16 - Volumetric Sun Rays Fixes (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Fog (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Flora Fixes and Improvements (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Sky Debanding (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Shadows Fixes (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Interactive Grass (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - New Shadow Features (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Indirect Light (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Weapons DOF (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Rain Puddles (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - SSR Water (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - SSR (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - SSS (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - SSDO (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Main - ES Patch (DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Main - Beef NVGs Patch(DX10-11 Only)
+-[Ascii1457] Screen Space Shaders u16 - Main (DX10-11 Only)
+-[Beef] NVGS - ES (DX10-11 Only)
+-[Joe325] Nicer Reflections
+-[KennShade] ES PBR - Shader Params
+-[KennShade] ES PBR - Fixed Bloom
+-[KennShade] ES PBR - Cubemaps
+-[KennShade] ES PBR - Color Grading
+-[KennShade] ES PBR (DX10-11 Only)
+-[Awene] Agressor - Custom Weather
 """
+
+}
 sssmcm = """
 ![mcm]
         ssfx_module/ao/blur_mcm          = 1
@@ -209,6 +244,7 @@ else:
         st.write("Upload your **`modlist.txt`** file - **located in your current profile's folder (`GAMMA/profiles/yourprofile/` - default GAMMA profile is the `GAMMA/profiles/G.A.M.M.A./` folder)**")
         st.write("Then, download the converted file, drag it into your **`GAMMA/profiles/yourprofile/`** folder and replace the existing file when prompted.")
 
+        version = st.radio("**What S.T.A.L.K.E.R. modpack do you use?**", [":green[**G.A.M.M.A.**]", ":orange[**E.F.P.**]"])
         userfile = st.file_uploader("")
         
         if userfile != None:
@@ -219,7 +255,7 @@ else:
             else:
 
                 strio = StringIO(userfile.getvalue().decode("utf-8"))
-                userout = disabledmods + strio.read()
+                userout = disabledmods[version] + strio.read()
                 download = st.download_button("Download Converted File", data=userout, file_name="modlist.txt")
 
     elif page == "Load Atmospheric Preset":
