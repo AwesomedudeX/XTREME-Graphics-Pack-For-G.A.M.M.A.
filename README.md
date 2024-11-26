@@ -10,10 +10,10 @@ To install the pack, just download it using the link below and install it like a
 
 Below that, install the optionals and ReShade for this pack in the same way.
 
-**XTREME GRAPHICS PACK (install at the BOTTOM of your modlist): https://drive.google.com/uc?export=download&id=1dAr3GOL_AQ1p-mPFDxZB00ZEge9bKn-T**
+**XTREME GRAPHICS PACK (install at the BOTTOM of your modlist): TO BE UPDATED**
 
-**XTREME GRAPHICS OPTIONALS (install UNDER the main graphics pack or ABOVE if you are using Winter or Late Fall): https://drive.google.com/uc?export=download&id=1UmYri_PQKDaQ_Lwjnu7ZfDhgrGZYTeLO**
+**XTREME GRAPHICS OPTIONALS (install UNDER the main graphics pack or ABOVE if you are using Winter or Late Fall): TO BE UPDATED**
 
-**RESHADE - OPTIONAL, BUT RECOMMENDED (install UNDER the graphics packs - MAKE SURE THAT THE MAIN PACK IS INSTALLED WITHOUT TEXTURES): https://drive.google.com/uc?export=download&id=1T6LvEOkDV_i8h6hkUfXw03uj55i3IqPI**
+**RESHADE - OPTIONAL, BUT RECOMMENDED (install UNDER the graphics packs - MAKE SURE THAT THE MAIN PACK IS INSTALLED WITHOUT TEXTURES): https://drive.google.com/uc?export=download&id=1gvPrjFu0a0t26ElYt6sE_8qEmMt9i3Y3**
 
 Afterward, go to **https://xtremegraphicspack.streamlit.app** and follow the instructions on the **Modlist Compatibility**, **Load Atmospheric Preset** and **MCM Settings For SSS** pages to convert your settings and mod list files to work with this pack.
