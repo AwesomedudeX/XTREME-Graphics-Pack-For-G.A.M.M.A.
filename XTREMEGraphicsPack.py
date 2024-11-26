@@ -31,8 +31,21 @@ r2_tonemap_middlegray 1.4
 rs_c_brightness 0.985
 rs_c_contrast 0.92
 rs_c_gamma 1.
+r2_aa off
+r2_aa_break (0.800000, 0.100000, 0.000000)
+r2_aa_kernel 0.5
+r2_aa_weight (0.250000, 0.250000, 0.000000)
+r2_smaa off
+r2_ssao st_opt_off
+r2_ssao_blur off
+r2_ssao_half_data off
+r2_ssao_hbao off
+r2_ssao_hdao off
+r2_ssao_mode disabled
 r2_sun_depth_near_scale 0.9998
 r2_sun_depth_far_scale 0.99988
+r3_msaa st_opt_off
+r3_msaa_alphatest st_opt_atest_msaa_dx10_1
 ssfx_hud_hemi 0.3
 
 shader_param_1 (1.000000, 1.000000, 1.000000, 0.100000)
