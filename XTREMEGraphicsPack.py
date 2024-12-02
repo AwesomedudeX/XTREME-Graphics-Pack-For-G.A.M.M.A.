@@ -59,16 +59,29 @@ shader_param_8 (0.000000, 0.000000, 0.000000, 0.000000)
 """
 disabledmods = {
 
-":green[**G.A.M.M.A.**]": """
+":green[**G.A.M.M.A.**]": {
+
+    "shaders": """-G.A.M.M.A. No Masks Textures
+-G.A.M.M.A. Weathers
 -304- Dark Signal Weather and Ambiance Audio - Shrike
 -290- Atmospherics Shaders Weathers and Reshade Latest - Hippobot
 -190- Screen Space Shaders 20 - Ascii1457
 -188- Enhanced Shaders - KennShade
+-129- Mask Reflections - shader fix - Grokitach
 -36- Better Rain texture - Detron
 -35- Wet Surfaces Fix - CryoManne
 -26- High Res PDA Maps - Bazingarrey
 -24- Skies Redux - d_nan
 """,
+
+    "textures": """-388- Aydins Grass Tweaks SSS Terrain LOD Compatibility - aytabag
+-289- Grass Tweaks (reinstall for different options) - Aydin
+""",
+
+    "maps": """-26- High Res PDA Maps - Bazingarrey
+"""
+
+},
 
 ":orange[**E.F.P.**]": """
 -[Detron] Better Rain FX
@@ -254,8 +267,8 @@ else:
     if page == "Modlist Compatibility":
 
         st.write("This will edit your MO2 modlist file to disable the mods that should be disabled, while keeping the rest of your modlist intact.")
-        st.write("Upload your **`modlist.txt`** file - **located in your current profile's folder (`GAMMA/profiles/yourprofile/` - default GAMMA profile is the `GAMMA/profiles/G.A.M.M.A./` folder)**")
-        st.write("Then, download the converted file, drag it into your **`GAMMA/profiles/yourprofile/`** folder and replace the existing file when prompted.")
+        st.write("Upload your **`modlist.txt`** file - **located in your current profile's folder (`GAMMA/profiles/yourprofile/` - default GAMMA profile is the `GAMMA/profiles/G.A.M.M.A./` folder)**. Then, select whichever options you selected when installing the pack.")
+        st.write("After that, download the converted file, drag it into your **`GAMMA/profiles/yourprofile/`** folder and replace the existing file when prompted.")
 
         version = st.radio("**What S.T.A.L.K.E.R. modpack do you use?**", [":green[**G.A.M.M.A.**]", ":orange[**E.F.P.**]"])
         userfile = st.file_uploader("")
@@ -268,7 +281,27 @@ else:
             else:
 
                 strio = StringIO(userfile.getvalue().decode("utf-8"))
-                userout = disabledmods[version] + strio.read()
+                userfile = strio.read()
+
+                if version == ":green[**G.A.M.M.A.**]":
+
+                    st.subheader("What options did you select when installing the pack?")
+                    
+                    shaders = st.checkbox("Shaders & VFX")
+                    textures = st.checkbox("ADEGAZR+ Texture Multipack")                    
+                    maps = st.checkbox("Re\:Pack 16K PDA Maps")
+
+                    userout = userfile
+
+                    if shaders:
+                        userout = disabledmods[version]["shaders"] + userout
+
+                    if textures:
+                        userout = disabledmods[version]["textures"] + userout
+                        
+                    if maps:
+                        userout = disabledmods[version]["maps"] + userout
+
                 download = st.download_button("Download Converted File", data=userout, file_name="modlist.txt")
 
     elif page == "Load Atmospheric Preset":
