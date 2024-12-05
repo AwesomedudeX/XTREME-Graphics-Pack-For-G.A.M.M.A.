@@ -75,7 +75,10 @@ disabledmods = {
 """,
 
     "textures": """-388- Aydins Grass Tweaks SSS Terrain LOD Compatibility - aytabag
+357- Grey Tree Barks Begone - Joe325
 -289- Grass Tweaks (reinstall for different options) - Aydin
+242- Gardener of the Zone Textures - YuriVernadsky
+241- Simple Autumn Retexture No leaves - Daedalus-Prime
 """,
 
     "maps": """-26- High Res PDA Maps - Bazingarrey
@@ -290,13 +293,14 @@ else:
                     shaders = st.checkbox("Shaders & VFX")
                     textures = st.checkbox("ADEGAZR+ Texture Multipack")                    
                     maps = st.checkbox("Re\:Pack 16K PDA Maps")
+                    winter = st.checkbox("Winter")
 
                     userout = userfile
 
                     if shaders:
                         userout = disabledmods[version]["shaders"] + userout
 
-                    if textures:
+                    if textures or winter:
                         userout = disabledmods[version]["textures"] + userout
                         
                     if maps:
