@@ -49,8 +49,8 @@ disabledmods = {
 -304- Dark Signal Weather and Ambiance Audio - Shrike
 -290- Atmospherics Shaders Weathers and Reshade Latest - Hippobot
 -190- Screen Space Shaders 20 - Ascii1457
-189- Beef's NVG - theRealBeef
-188- Enhanced Shaders - KennShade
+-189- Beef's NVG - theRealBeef
+-188- Enhanced Shaders - KennShade
 -129- Mask Reflections - shader fix - Grokitach
 -36- Better Rain texture - Detron
 -35- Wet Surfaces Fix - CryoManne
@@ -59,10 +59,10 @@ disabledmods = {
 """,
 
     "textures": """-388- Aydins Grass Tweaks SSS Terrain LOD Compatibility - aytabag
-357- Grey Tree Barks Begone - Joe325
+-357- Grey Tree Barks Begone - Joe325
 -289- Grass Tweaks (reinstall for different options) - Aydin
-242- Gardener of the Zone Textures - YuriVernadsky
-241- Simple Autumn Retexture No leaves - Daedalus-Prime
+-242- Gardener of the Zone Textures - YuriVernadsky
+-241- Simple Autumn Retexture No leaves - Daedalus-Prime
 """,
 
     "maps": """-26- High Res PDA Maps - Bazingarrey
