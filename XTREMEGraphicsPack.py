@@ -5,17 +5,13 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS"])
 atmospreset = """
-r__color_grading (0.35, 0.5, 0.6)
+r__color_grading (0.300000, 0.500000, 0.600000)
 
-r__detail_density 0.34
-r__detail_height 0.9
-r__detail_radius 150
-r__dtex_range 50.
 r__enable_grass_shadow off
 
-r__saturation 1.1
-r__gamma 0.9
-r__exposure 1
+r__saturation 1.2
+r__gamma 1
+r__exposure 0.65
 scope_factor 1
 
 r2_sun_lumscale 3.
@@ -31,21 +27,8 @@ r2_tonemap_middlegray 1.4
 rs_c_brightness 0.985
 rs_c_contrast 0.92
 rs_c_gamma 1.
-r2_aa off
-r2_aa_break (0.800000, 0.100000, 0.000000)
-r2_aa_kernel 0.5
-r2_aa_weight (0.250000, 0.250000, 0.000000)
-r2_smaa off
-r2_ssao st_opt_off
-r2_ssao_blur off
-r2_ssao_half_data off
-r2_ssao_hbao off
-r2_ssao_hdao off
-r2_ssao_mode disabled
 r2_sun_depth_near_scale 0.9998
 r2_sun_depth_far_scale 0.99988
-r3_msaa st_opt_off
-r3_msaa_alphatest st_opt_atest_msaa_dx10_1
 ssfx_hud_hemi 0.3
 
 shader_param_1 (1.000000, 1.000000, 1.000000, 0.100000)
@@ -66,7 +49,8 @@ disabledmods = {
 -304- Dark Signal Weather and Ambiance Audio - Shrike
 -290- Atmospherics Shaders Weathers and Reshade Latest - Hippobot
 -190- Screen Space Shaders 20 - Ascii1457
--188- Enhanced Shaders - KennShade
+189- Beef's NVG - theRealBeef
+188- Enhanced Shaders - KennShade
 -129- Mask Reflections - shader fix - Grokitach
 -36- Better Rain texture - Detron
 -35- Wet Surfaces Fix - CryoManne
@@ -158,11 +142,16 @@ sssmcm = """
         ssfx_module/inter_grass/shooting_range_mcm = 2
         ssfx_module/inter_grass/shooting_str_mcm = 0.3
         ssfx_module/inter_grass/vertical_str_mcm = 1
+        ssfx_module/parallax/ao_mcm      = 0
+        ssfx_module/parallax/height_mcm  = 0.05
+        ssfx_module/parallax/quality_mcm = 36
+        ssfx_module/parallax/range_mcm   = 40
+        ssfx_module/parallax/refine_mcm  = true
         ssfx_module/shadows/lod_max_mcm  = 0
         ssfx_module/shadows/lod_min_mcm  = 0
         ssfx_module/shadows/lod_quality_mcm = 1
         ssfx_module/shadows/volumetric_force_mcm = true
-        ssfx_module/shadows/volumetric_int_mcm = 2
+        ssfx_module/shadows/volumetric_int_mcm = 3
         ssfx_module/shadows/volumetric_quality_mcm = 5
         ssfx_module/shadows/volumetric_resolution_mcm = 100
         ssfx_module/shw_cascades/grass_shw_distance_mcm = 35
@@ -171,6 +160,14 @@ sssmcm = """
         ssfx_module/shw_cascades/size_1_mcm = 20
         ssfx_module/shw_cascades/size_2_mcm = 60
         ssfx_module/shw_cascades/size_3_mcm = 160
+        ssfx_module/ssfx_pp/ssfx_bloom/blur_mcm = 2
+        ssfx_module/ssfx_pp/ssfx_bloom/dirt_mcm = 1.8
+        ssfx_module/ssfx_pp/ssfx_bloom/exposure_mcm = 1
+        ssfx_module/ssfx_pp/ssfx_bloom/lens_mcm = 1.5
+        ssfx_module/ssfx_pp/ssfx_bloom/sky_mcm = 0
+        ssfx_module/ssfx_pp/ssfx_bloom/threshold_mcm = 6
+        ssfx_module/ssfx_pp/ssfx_bloom/use_weather_mcm = false
+        ssfx_module/ssfx_pp/ssfx_bloom/vibrance_mcm = 1.3
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/jump_vol_mcm = 0.7
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/land_vol_mcm = 0.7
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/main_vol_mcm = 0.4
@@ -190,7 +187,9 @@ sssmcm = """
         ssfx_module/ssfx_rain_module/ssfx_rain_main/alpha_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_main/brightness_mcm = 0
         ssfx_module/ssfx_rain_module/ssfx_rain_main/len_mcm = 1.1
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/max_drops_mcm = 2500
         ssfx_module/ssfx_rain_module/ssfx_rain_main/quality_mcm = 2
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/radius_mcm = 15
         ssfx_module/ssfx_rain_module/ssfx_rain_main/reflection_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_main/refraction_mcm = 2.5
         ssfx_module/ssfx_rain_module/ssfx_rain_main/speed_mcm = 0.7
@@ -201,8 +200,8 @@ sssmcm = """
         ssfx_module/ssfx_wetness/ssfx_gloss/auto_gloss_mcm = true
         ssfx_module/ssfx_wetness/ssfx_gloss/max_gloss_mcm = 0.96
         ssfx_module/ssfx_wetness/ssfx_gloss/min_gloss_mcm = 0.7
-        ssfx_module/ssfx_wetness/ssfx_gloss/specular_color_mcm = 1
-        ssfx_module/ssfx_wetness/ssfx_gloss/specular_int_mcm = 1
+        ssfx_module/ssfx_wetness/ssfx_gloss/specular_color_mcm = 0.6
+        ssfx_module/ssfx_wetness/ssfx_gloss/specular_int_mcm = 0.6
         ssfx_module/ssfx_wetness/ssfx_wet_surf/buildup_speed_mcm = 1.4
         ssfx_module/ssfx_wetness/ssfx_wet_surf/cover_distance_mcm = 30
         ssfx_module/ssfx_wetness/ssfx_wet_surf/cover_res_mcm = 1
@@ -215,7 +214,7 @@ sssmcm = """
         ssfx_module/ssfx_wetness/ssfx_wet_surf/waterfall_min_speed_mcm = 0.2
         ssfx_module/ssfx_wetness/ssfx_wet_surf/waterfall_size_mcm = 1.2
         ssfx_module/ssfx_wetness/ssfx_wet_surf/waterfall_speed_mcm = 1.5
-        ssfx_module/ssr/blur_mcm         = 0.16
+        ssfx_module/ssr/blur_mcm         = 0.1
         ssfx_module/ssr/general_int_mcm  = 1.1
         ssfx_module/ssr/quality_mcm      = 0
         ssfx_module/ssr/render_scale_mcm = 1
@@ -224,6 +223,20 @@ sssmcm = """
         ssfx_module/ssr/use_noise_mcm    = false
         ssfx_module/ssr/weapon_int_max_mcm = 0.1
         ssfx_module/ssr/weapon_int_mcm   = 1
+        ssfx_module/sss/enable_dir_mcm   = true
+        ssfx_module/sss/enable_point_mcm = true
+        ssfx_module/sss/len_dir_mcm      = 1
+        ssfx_module/sss/len_point_mcm    = 1
+        ssfx_module/sss/quality_dir_mcm  = 24
+        ssfx_module/sss/quality_point_mcm = 8
+        ssfx_module/terrain/distance_mcm = 20
+        ssfx_module/terrain/grass_align_mcm = true
+        ssfx_module/terrain/grass_slope_mcm = 90
+        ssfx_module/terrain/pom_height_mcm = 0.04
+        ssfx_module/terrain/pom_quality_mcm = 36
+        ssfx_module/terrain/pom_range_mcm = 20
+        ssfx_module/terrain/pom_refine_mcm = true
+        ssfx_module/terrain/pom_water_level_mcm = 1
         ssfx_module/water/blur_mcm       = 0.45
         ssfx_module/water/blur_pattern_mcm = 1
         ssfx_module/water/caustics_int_mcm = 0.3
@@ -290,6 +303,7 @@ else:
 
                     st.subheader("What options did you select when installing the pack?")
                     
+                    baseshaders = st.checkbox("Base Shaders (REGULAR OR WINTER)", value=True)
                     shaders = st.checkbox("Shaders & VFX")
                     textures = st.checkbox("ADEGAZR+ Texture Multipack")                    
                     maps = st.checkbox("Re\:Pack 16K PDA Maps")
@@ -298,7 +312,7 @@ else:
 
                     userout = userfile
 
-                    if shaders:
+                    if shaders or baseshaders:
                         userout = disabledmods[version]["shaders"] + userout
 
                     if textures or winter or latefall:
