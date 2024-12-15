@@ -5,7 +5,7 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS"])
 atmospreset = """
-r__color_grading (0.300000, 0.500000, 0.600000)
+r__color_grading (0.300000, 0.500000, 0.500000)
 
 r__enable_grass_shadow off
 
@@ -17,7 +17,7 @@ scope_factor 1
 r2_sun_lumscale 3.
 r2_gloss_factor 0.001
 r2_gloss_min 0.56
-r2_sun_lumscale_amb 1.05
+r2_sun_lumscale 1.5
 r2_sun_lumscale_hemi 1.41
 r2_tonemap_lowlum 0.55
 r2_tonemap on
@@ -29,6 +29,7 @@ rs_c_contrast 0.92
 rs_c_gamma 1.
 r2_sun_depth_near_scale 0.9998
 r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0.5
 ssfx_hud_hemi 0.3
 
 shader_param_1 (1.000000, 1.000000, 1.000000, 0.100000)
@@ -123,7 +124,7 @@ sssmcm = """
         ssfx_module/il/blur_mcm          = 1
         ssfx_module/il/distance_mcm      = 150
         ssfx_module/il/flora_int_mcm     = 0.62
-        ssfx_module/il/global_int_mcm    = 0.577
+        ssfx_module/il/global_int_mcm    = 4
         ssfx_module/il/hud_int_mcm       = 0.95
         ssfx_module/il/quality_mcm       = 32
         ssfx_module/il/res_mcm           = 0.15
@@ -151,7 +152,7 @@ sssmcm = """
         ssfx_module/shadows/lod_min_mcm  = 1
         ssfx_module/shadows/lod_quality_mcm = 1
         ssfx_module/shadows/volumetric_force_mcm = true
-        ssfx_module/shadows/volumetric_int_mcm = 1.5
+        ssfx_module/shadows/volumetric_int_mcm = 2
         ssfx_module/shadows/volumetric_quality_mcm = 5
         ssfx_module/shadows/volumetric_resolution_mcm = 100
         ssfx_module/shw_cascades/grass_shw_distance_mcm = 35
