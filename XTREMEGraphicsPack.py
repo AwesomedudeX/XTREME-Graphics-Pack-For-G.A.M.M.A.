@@ -306,15 +306,14 @@ else:
                     shaders = st.checkbox("Shaders & VFX")
                     textures = st.checkbox("ADEGAZR+ Texture Multipack")                    
                     maps = st.checkbox("Re\:Pack 16K PDA Maps")
-                    winter = st.checkbox("Winter")
-                    latefall = st.checkbox("Late Fall")
+                    optionals = st.checkbox("Optionals Pack")
 
                     userout = userfile
 
                     if shaders or baseshaders:
                         userout = disabledmods[version]["shaders"] + userout
 
-                    if textures or winter or latefall:
+                    if textures or optionals:
                         userout = disabledmods[version]["textures"] + userout
                         
                     if maps:
