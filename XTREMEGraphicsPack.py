@@ -306,14 +306,14 @@ else:
                     shaders = st.checkbox("Shaders & VFX")
                     textures = st.checkbox("ADEGAZR+ Texture Multipack")                    
                     maps = st.checkbox("Re\:Pack 16K PDA Maps")
-                    optionals = st.checkbox("Optionals Pack")
+                    seasonal = st.checkbox("Any Seasonal Pack (Summer, Autumn, Winter or either Late Fall pack)")
 
                     userout = userfile
 
                     if shaders or baseshaders:
                         userout = disabledmods[version]["shaders"] + userout
 
-                    if textures or optionals:
+                    if textures or seasonal:
                         userout = disabledmods[version]["textures"] + userout
                         
                     if maps:
