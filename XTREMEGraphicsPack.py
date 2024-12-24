@@ -5,13 +5,13 @@ st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS"])
 atmospreset = """
-r__color_grading (0.300000, 0.500000, 0.500000)
+r__color_grading (0, 0, 0)
 
 r__enable_grass_shadow off
 
-r__saturation 1.2
+r__saturation 1.15
 r__gamma 1
-r__exposure 0.65
+r__exposure 1
 scope_factor 1
 
 r2_sun_lumscale 3.
@@ -19,27 +19,23 @@ r2_gloss_factor 0.001
 r2_gloss_min 0.56
 r2_sun_lumscale 1.5
 r2_sun_lumscale_hemi 1.41
-r2_tonemap_lowlum 0.55
 r2_tonemap on
 r2_tonemap_adaptation 3.0
 r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
 r2_tonemap_middlegray 1.4
-rs_c_brightness 0.985
-rs_c_contrast 0.92
+rs_c_brightness 1
+rs_c_contrast 1
 rs_c_gamma 1.
 r2_sun_depth_near_scale 0.9998
 r2_sun_depth_far_scale 0.99988
 r2_sun_tsm_bias 0.5
-ssfx_hud_hemi 0.3
+ssfx_hud_hemi 0
 
-shader_param_1 (1.000000, 1.000000, 1.000000, 0.100000)
-shader_param_2 (0.000000, 0.000000, 0.000000, 0.000000)
-shader_param_3 (0.838000, 0.847000, 0.852000, -0.005000)
-shader_param_4 (1.120000, 1.120000, 1.130000, -0.420000)
-shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
-shader_param_6 (8.016100, 10.000500, 0.800000, 0.120000)
-shader_param_7 (100.000000, 0.500000, 0.000000, 0.000000)
-shader_param_8 (0.000000, 0.000000, 0.000000, 0.000000)
+shader_param_1 (0.99, 1, 0.97, -0.2)
+shader_param_2 (0, 0, 0, 0.1)
+shader_param_3 (0.838, 0.847, 0.852, -0.005)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """
 disabledmods = {
 
@@ -105,69 +101,69 @@ disabledmods = {
 }
 sssmcm = """
 ![mcm]
-        ssfx_module/ao/blur_mcm          = 1
+        ssfx_module/ao/blur_mcm          = 0.1
         ssfx_module/ao/distance_mcm      = 150
-        ssfx_module/ao/flora_int_mcm     = 0.75
-        ssfx_module/ao/global_int_mcm    = 0.8
+        ssfx_module/ao/flora_int_mcm     = 0.4
+        ssfx_module/ao/global_int_mcm    = 2
         ssfx_module/ao/hud_int_mcm       = 1
-        ssfx_module/ao/max_occ_mcm       = 0
-        ssfx_module/ao/quality_mcm       = 4
-        ssfx_module/ao/radius_mcm        = 2.5
+        ssfx_module/ao/max_occ_mcm       = 0.06
+        ssfx_module/ao/quality_mcm       = 8
+        ssfx_module/ao/radius_mcm        = 1
         ssfx_module/ao/res_mcm           = 0.5
         ssfx_module/florafixes/grass_specular_mcm = 0.15
         ssfx_module/florafixes/grass_specular_wet_mcm = 0.18
-        ssfx_module/florafixes/sss_color_mcm = 1
-        ssfx_module/florafixes/sss_int_mcm = 2
+        ssfx_module/florafixes/sss_color_mcm = 0.38
+        ssfx_module/florafixes/sss_int_mcm = 4.6
         ssfx_module/florafixes/trees_specular_mcm = 0.14
         ssfx_module/florafixes/trees_specular_wet_mcm = 0.15
-        ssfx_module/general/shaderscope_patch_mcm = true
-        ssfx_module/il/blur_mcm          = 1
+        ssfx_module/general/shaderscope_patch_mcm = false
+        ssfx_module/il/blur_mcm          = 0.1
         ssfx_module/il/distance_mcm      = 150
-        ssfx_module/il/flora_int_mcm     = 0.62
+        ssfx_module/il/flora_int_mcm     = 1
         ssfx_module/il/global_int_mcm    = 4
-        ssfx_module/il/hud_int_mcm       = 0.95
-        ssfx_module/il/quality_mcm       = 32
+        ssfx_module/il/hud_int_mcm       = 1
+        ssfx_module/il/quality_mcm       = 16
         ssfx_module/il/res_mcm           = 0.15
-        ssfx_module/il/vibrance_mcm      = 0.55
+        ssfx_module/il/vibrance_mcm      = 0.6
         ssfx_module/inter_grass/anomalies_distance_mcm = 25
         ssfx_module/inter_grass/enable_anomalies_mcm = true
         ssfx_module/inter_grass/enable_mcm = true
         ssfx_module/inter_grass/enable_mutants_mcm = true
         ssfx_module/inter_grass/enable_player_mcm = true
         ssfx_module/inter_grass/explosions_speed_mcm = 5
-        ssfx_module/inter_grass/explosions_str_mcm = 1.5
-        ssfx_module/inter_grass/horizontal_str_mcm = 2.5
-        ssfx_module/inter_grass/max_distance_mcm = 1000
-        ssfx_module/inter_grass/max_entities_mcm = 7
+        ssfx_module/inter_grass/explosions_str_mcm = 1
+        ssfx_module/inter_grass/horizontal_str_mcm = 1
+        ssfx_module/inter_grass/max_distance_mcm = 2000
+        ssfx_module/inter_grass/max_entities_mcm = 8
         ssfx_module/inter_grass/radius_mcm = 1
         ssfx_module/inter_grass/shooting_range_mcm = 2
         ssfx_module/inter_grass/shooting_str_mcm = 0.3
         ssfx_module/inter_grass/vertical_str_mcm = 1
-        ssfx_module/parallax/ao_mcm      = 0
-        ssfx_module/parallax/height_mcm  = 0.05
+        ssfx_module/parallax/ao_mcm      = 0.6
+        ssfx_module/parallax/height_mcm  = 0.035
         ssfx_module/parallax/quality_mcm = 36
         ssfx_module/parallax/range_mcm   = 40
         ssfx_module/parallax/refine_mcm  = true
         ssfx_module/shadows/lod_max_mcm  = 0
         ssfx_module/shadows/lod_min_mcm  = 1
-        ssfx_module/shadows/lod_quality_mcm = 1
+        ssfx_module/shadows/lod_quality_mcm = 3
         ssfx_module/shadows/volumetric_force_mcm = true
-        ssfx_module/shadows/volumetric_int_mcm = 2
-        ssfx_module/shadows/volumetric_quality_mcm = 5
-        ssfx_module/shw_cascades/grass_shw_distance_mcm = 35
+        ssfx_module/shadows/volumetric_int_mcm = 0.5
+        ssfx_module/shadows/volumetric_quality_mcm = 4
+        ssfx_module/shw_cascades/grass_shw_distance_mcm = 66
         ssfx_module/shw_cascades/grass_shw_nondir_maxdistance_mcm = 30
-        ssfx_module/shw_cascades/grass_shw_quality_mcm = 0
-        ssfx_module/shw_cascades/size_1_mcm = 20
-        ssfx_module/shw_cascades/size_2_mcm = 60
-        ssfx_module/shw_cascades/size_3_mcm = 160
-        ssfx_module/ssfx_pp/ssfx_bloom/blur_mcm = 2
-        ssfx_module/ssfx_pp/ssfx_bloom/dirt_mcm = 1.5
+        ssfx_module/shw_cascades/grass_shw_quality_mcm = 1
+        ssfx_module/shw_cascades/size_1_mcm = 14
+        ssfx_module/shw_cascades/size_2_mcm = 40
+        ssfx_module/shw_cascades/size_3_mcm = 126
+        ssfx_module/ssfx_pp/ssfx_bloom/blur_mcm = 1
+        ssfx_module/ssfx_pp/ssfx_bloom/dirt_mcm = 0.8
         ssfx_module/ssfx_pp/ssfx_bloom/exposure_mcm = 1
-        ssfx_module/ssfx_pp/ssfx_bloom/lens_mcm = 0
-        ssfx_module/ssfx_pp/ssfx_bloom/sky_mcm = 0
-        ssfx_module/ssfx_pp/ssfx_bloom/threshold_mcm = 8
+        ssfx_module/ssfx_pp/ssfx_bloom/lens_mcm = 1.5
+        ssfx_module/ssfx_pp/ssfx_bloom/sky_mcm = 0.6
+        ssfx_module/ssfx_pp/ssfx_bloom/threshold_mcm = 10
         ssfx_module/ssfx_pp/ssfx_bloom/use_weather_mcm = false
-        ssfx_module/ssfx_pp/ssfx_bloom/vibrance_mcm = 1
+        ssfx_module/ssfx_pp/ssfx_bloom/vibrance_mcm = 1.35
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/jump_vol_mcm = 0.7
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/land_vol_mcm = 0.7
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/main_vol_mcm = 0.4
@@ -214,14 +210,14 @@ sssmcm = """
         ssfx_module/ssfx_wetness/ssfx_wet_surf/waterfall_min_speed_mcm = 0.2
         ssfx_module/ssfx_wetness/ssfx_wet_surf/waterfall_size_mcm = 1.2
         ssfx_module/ssfx_wetness/ssfx_wet_surf/waterfall_speed_mcm = 1.5
-        ssfx_module/ssr/blur_mcm         = 0.1
-        ssfx_module/ssr/general_int_mcm  = 1.1
+        ssfx_module/ssr/blur_mcm         = 0.25
+        ssfx_module/ssr/general_int_mcm  = 1.15
         ssfx_module/ssr/quality_mcm      = 0
         ssfx_module/ssr/render_scale_mcm = 1
-        ssfx_module/ssr/sky_int_mcm      = 1.2
+        ssfx_module/ssr/sky_int_mcm      = 1.3
         ssfx_module/ssr/use_noise_mcm    = false
-        ssfx_module/ssr/weapon_int_max_mcm = 0.1
-        ssfx_module/ssr/weapon_int_mcm   = 1
+        ssfx_module/ssr/weapon_int_max_mcm = 0.05
+        ssfx_module/ssr/weapon_int_mcm   = 0.45
         ssfx_module/sss/enable_dir_mcm   = true
         ssfx_module/sss/enable_point_mcm = true
         ssfx_module/sss/len_dir_mcm      = 1
@@ -230,10 +226,10 @@ sssmcm = """
         ssfx_module/sss/quality_point_mcm = 8
         ssfx_module/terrain/distance_mcm = 20
         ssfx_module/terrain/grass_align_mcm = true
-        ssfx_module/terrain/grass_slope_mcm = 90
+        ssfx_module/terrain/grass_slope_mcm = 76
         ssfx_module/terrain/pom_height_mcm = 0.04
         ssfx_module/terrain/pom_quality_mcm = 36
-        ssfx_module/terrain/pom_range_mcm = 20
+        ssfx_module/terrain/pom_range_mcm = 40
         ssfx_module/terrain/pom_refine_mcm = true
         ssfx_module/terrain/pom_water_level_mcm = 1
         ssfx_module/water/blur_mcm       = 0.45
@@ -242,21 +238,21 @@ sssmcm = """
         ssfx_module/water/distortion_mcm = 0.6
         ssfx_module/water/parallax_height_mcm = 0.05
         ssfx_module/water/parallax_quality_mcm = 2
-        ssfx_module/water/reflection_int_mcm = 0.8
+        ssfx_module/water/reflection_int_mcm = 0.86
         ssfx_module/water/ripples_int_mcm = 0.5
         ssfx_module/water/softborder_mcm = 0.3
         ssfx_module/water/specular_int_mcm = 1
         ssfx_module/water/ssr_quality_mcm = 2
         ssfx_module/water/ssr_res_mcm    = 2
         ssfx_module/water/turbidity_mcm  = 0.3
-        ssfx_module/wind/grass_push_mcm  = 3
-        ssfx_module/wind/grass_speed_mcm = 10.000001
-        ssfx_module/wind/grass_turbulence_mcm = 3
-        ssfx_module/wind/grass_wave_mcm  = 1
-        ssfx_module/wind/min_speed_mcm   = 0.45
-        ssfx_module/wind/trees_bend_mcm  = 0.3
-        ssfx_module/wind/trees_speed_mcm = 12.000001
-        ssfx_module/wind/trees_trunk_mcm = 0.2
+        ssfx_module/wind/grass_push_mcm  = 1.6
+        ssfx_module/wind/grass_speed_mcm = 9.7
+        ssfx_module/wind/grass_turbulence_mcm = 1.5
+        ssfx_module/wind/grass_wave_mcm  = 0.5
+        ssfx_module/wind/min_speed_mcm   = 0.1
+        ssfx_module/wind/trees_bend_mcm  = 0.9
+        ssfx_module/wind/trees_speed_mcm = 11.1
+        ssfx_module/wind/trees_trunk_mcm = 0.17
         ssfx_module/wpn_dof/aim_blur_mcm = 1.6
         ssfx_module/wpn_dof/aim_edgeblur_mcm = 1
         ssfx_module/wpn_dof/aim_fadelen_mcm = 0.25
@@ -270,6 +266,37 @@ sssmcm = """
         ssfx_module/wpn_dof/looting_mutant_mcm = true
         ssfx_module/wpn_dof/pda_mcm      = true
         ssfx_module/wpn_dof/reloading_mcm = false
+
+        dynamic_tonemap_extended/adaptation = 3
+        dynamic_tonemap_extended/enable_dynamic_tonemap = true
+        dynamic_tonemap_extended/k_amount = 0.1
+        dynamic_tonemap_extended/k_lowlum = 0.08
+        dynamic_tonemap_extended/k_lumscale_amb = 0.05
+        dynamic_tonemap_extended/k_lumscale_amb_addition = 0.25
+        dynamic_tonemap_extended/k_lumscale_hemi = 0.01
+        dynamic_tonemap_extended/k_lumscale_hemi_addition = 0.05
+        dynamic_tonemap_extended/k_middle = 0.05
+        dynamic_tonemap_extended/max_amount = 1
+        dynamic_tonemap_extended/max_lowlum = 0.25
+        dynamic_tonemap_extended/max_lumscale_amb = 0.95
+        dynamic_tonemap_extended/max_lumscale_hemi = 0.9
+        dynamic_tonemap_extended/max_middle_gray = 1.25
+        dynamic_tonemap_extended/min_amount = 0.65
+        dynamic_tonemap_extended/min_clear_lowlum = 0
+        dynamic_tonemap_extended/min_lumscale_amb = 0.6
+        dynamic_tonemap_extended/min_lumscale_hemi = 0.4
+        dynamic_tonemap_extended/min_middle_gray = 0.75
+        dynamic_tonemap_extended/min_not_clear_lowlum = 0
+        dynamic_tonemap_extended/not_clear_amb_reduction_coeff = 0.5
+        dynamic_tonemap_extended/not_clear_hemi_reduction_coeff = 1
+        dynamic_tonemap_extended/rain_amb_reduction_coeff = 0.8
+        dynamic_tonemap_extended/rain_amount_addition = 0.25
+        dynamic_tonemap_extended/rain_hemi_reduction_coeff = 0.9
+        dynamic_tonemap_extended/rain_lowlum_reduction_coeff = 0.8
+        dynamic_tonemap_extended/storm_amb_reduction_coeff = 0.75
+        dynamic_tonemap_extended/storm_amount_addition = 0.3
+        dynamic_tonemap_extended/storm_hemi_reduction_coeff = 0.9
+        dynamic_tonemap_extended/storm_lowlum_reduction_coeff = 0.8        
 """
 
 if page == "Home":
