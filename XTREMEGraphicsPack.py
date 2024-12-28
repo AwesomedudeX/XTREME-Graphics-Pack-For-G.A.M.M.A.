@@ -612,6 +612,10 @@ zoom_step_count 3."""
 caminert = """
 cam_inert 0.55
 cam_slide_inert 0.25"""
+fov = """
+fov 100.
+hud_fov 0.7
+hud_fov_aim_factor 0."""
 
 if page == "Home":
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
@@ -723,6 +727,9 @@ else:
 
                 if st.checkbox("Camera Inertia Settings"):
                     write += caminert
+
+                if st.checkbox("Field of View Settings"):
+                    write += fov
 
                 strio = StringIO(userfile.getvalue().decode("utf-8"))
                 userout = strio.read() + write
