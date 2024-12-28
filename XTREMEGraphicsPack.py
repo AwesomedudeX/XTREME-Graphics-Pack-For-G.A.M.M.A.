@@ -608,12 +608,10 @@ viewport_near 0.2
 weapon_sway on
 wpn_aim_toggle off
 wpn_degradation 0.5
-zoom_step_count 3.
-"""
+zoom_step_count 3."""
 caminert = """
 cam_inert 0.55
-cam_slide_inert 0.25
-"""
+cam_slide_inert 0.25"""
 
 if page == "Home":
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
@@ -666,7 +664,7 @@ else:
 
     elif page == "Load Atmospheric Preset":
 
-        st.write("This will load the settings from the **`XTREME`** atmospheric preset file into a copy of your game settings file, which you can download and use to replace your **`user.ltx`** file.")
+        st.write("This will load the settings from the **`XTREME`** atmospheric preset file into a copy of your game settings file, which you can download and use to replace your **`user.ltx`** (game settings) file.")
         st.write("Upload your **`user.ltx`** file (**located in the `Anomaly/appdata/` folder**) below.")
         st.write("Then, download the converted file, drag it into your **`Anomaly/appdata/`** folder and replace the existing file when prompted.")
 
@@ -705,7 +703,7 @@ else:
 
     elif page == "Awesomedude's Graphics Settings":
 
-        st.write("This will load my own graphics settings into your **`user.ltx`** file, which you can download and use to replace your current **`user.ltx`** file.")
+        st.write("This will load my own graphics settings into your **`user.ltx`** (game settings) file, which you can download and use to replace your current **`user.ltx`** file.")
         st.write("Upload your **`user.ltx`** file (**located in the `Anomaly/appdata/` folder**) below.")
         st.write("Then, download the converted file, drag it into your **`Anomaly/appdata/`** folder and replace the existing file when prompted.")
 
