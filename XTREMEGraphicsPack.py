@@ -298,6 +298,322 @@ sssmcm = """
         dynamic_tonemap_extended/storm_hemi_reduction_coeff = 0.9
         dynamic_tonemap_extended/storm_lowlum_reduction_coeff = 0.8        
 """
+graphicssettings = """
+r1_detail_textures on
+r1_dlights on
+r1_dlights_clip 40.
+r1_fog_luminance 1.
+r1_glows_per_frame 16
+r1_lmodel_lerp 0.1
+r1_pps_u 0.
+r1_pps_v 0.
+r1_software_skinning 0
+r1_ssa_lod_a 64.
+r1_ssa_lod_b 48.
+r2_aa off
+r2_aa_break (0.800000, 0.100000, 0.000000)
+r2_aa_kernel 0.5
+r2_aa_weight (0.250000, 0.250000, 0.000000)
+r2_allow_r1_lights off
+r2_detail_bump on
+r2_dof -1.000000,0.000000,800.000000
+r2_dof_enable on
+r2_dof_radius 0.25
+r2_dof_sky 30.
+r2_drops_control (0.000000, 0.000000, 0.000000)
+r2_exp_donttest_shad off
+r2_gi off
+r2_gi_clip 0.001
+r2_gi_depth 1
+r2_gi_photons 16
+r2_gi_refl 0.9
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_ls_bloom_fast off
+r2_ls_bloom_kernel_b 0.1
+r2_ls_bloom_kernel_g 1.
+r2_ls_bloom_kernel_scale 0.05
+r2_ls_bloom_speed 100.
+r2_ls_bloom_threshold 0.
+r2_ls_depth_bias -0.00005
+r2_ls_depth_scale 1.00001
+r2_ls_dsm_kernel 0.7
+r2_ls_psm_kernel 0.7
+r2_ls_squality 1.
+r2_ls_ssm_kernel 0.7
+r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
+r2_mblur 0.02867
+r2_mblur_enabled on
+r2_parallax_h 0.
+r2_qsync 0
+r2_shadow_cascede_old off
+r2_slight_fade 0.5
+r2_smaa off
+r2_soft_particles on
+r2_soft_water on
+r2_ss_sunshafts_length 1.
+r2_ss_sunshafts_radius 1.
+r2_ssa_lod_a 32.
+r2_ssa_lod_b 32.
+r2_ssao st_opt_off
+r2_ssao_blur off
+r2_ssao_half_data off
+r2_ssao_hbao off
+r2_ssao_hdao off
+r2_ssao_mode disabled
+r2_ssao_opt_data on
+r2_steep_parallax on
+r2_sun on
+r2_sun_depth_far_bias -0.00002
+r2_sun_depth_far_scale 0.99988
+r2_sun_depth_near_bias 0.00007
+r2_sun_depth_near_scale 0.9998
+r2_sun_details on
+r2_sun_far 100.
+r2_sun_focus on
+r2_sun_lumscale 1.5
+r2_sun_lumscale_amb 1.5
+r2_sun_lumscale_hemi 1.41
+r2_sun_near 15.
+r2_sun_near_border 0.75
+r2_sun_quality st_opt_medium
+r2_sun_tsm on
+r2_sun_tsm_bias 0.5
+r2_sun_tsm_proj 0.3
+r2_sunshafts_min 0.
+r2_sunshafts_mode volumetric
+r2_sunshafts_quality st_opt_low
+r2_sunshafts_value 0.5
+r2_terrain_z_prepass off
+r2_tnmp_a 0.15
+r2_tnmp_b 0.5
+r2_tnmp_c 0.1
+r2_tnmp_d 0.2
+r2_tnmp_e 0.2
+r2_tnmp_exposure 0.16033
+r2_tnmp_f 0.3
+r2_tnmp_gamma 0.76667
+r2_tnmp_onoff 0.
+r2_tnmp_w 1.12
+r2_tonemap on
+r2_tonemap_adaptation 3.
+r2_tonemap_amount 1.
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+r2_volumetric_lights on
+r2_wait_sleep 0
+r2_water_reflections on
+r2_zfill off
+r2_zfill_depth 0.25
+r2em 0.
+r3_dynamic_wet_surfaces on
+r3_dynamic_wet_surfaces_far 30.
+r3_dynamic_wet_surfaces_near 70.
+r3_dynamic_wet_surfaces_sm_res 128
+r3_minmax_sm off
+r3_msaa st_opt_off
+r3_msaa_alphatest st_opt_atest_msaa_dx10_1
+r3_use_dx10_1 on
+r3_volumetric_smoke on
+r4_enable_tessellation on
+r4_hdr10_bloom_blur_passes 20
+r4_hdr10_bloom_blur_scale 1.
+r4_hdr10_bloom_intensity 0.06
+r4_hdr10_bloom_on 0
+r4_hdr10_brightness 0.
+r4_hdr10_colorspace 2
+r4_hdr10_contrast 0.
+r4_hdr10_contrast_middle_gray 0.5
+r4_hdr10_exposure 2.
+r4_hdr10_flare_blur_passes 12
+r4_hdr10_flare_blur_scale 1.
+r4_hdr10_flare_center_falloff 1.1
+r4_hdr10_flare_ghost_ca 3.
+r4_hdr10_flare_ghost_dispersal 0.6
+r4_hdr10_flare_ghost_intensity 0.04
+r4_hdr10_flare_ghosts 1
+r4_hdr10_flare_halo_ca 10.
+r4_hdr10_flare_halo_intensity 0.04
+r4_hdr10_flare_halo_scale 0.47
+r4_hdr10_flare_lens_color (1.000000, 0.700000, 1.000000)
+r4_hdr10_flare_on 0
+r4_hdr10_flare_power 0.04
+r4_hdr10_flare_threshold 0.
+r4_hdr10_gamma 1.1
+r4_hdr10_on 0
+r4_hdr10_pda_intensity 1.
+r4_hdr10_saturation 0.
+r4_hdr10_sun_dawn_begin 4.5
+r4_hdr10_sun_dawn_end 6.
+r4_hdr10_sun_dusk_begin 18.5
+r4_hdr10_sun_dusk_end 21.
+r4_hdr10_sun_inner_radius 0.2
+r4_hdr10_sun_intensity 80.
+r4_hdr10_sun_on 0
+r4_hdr10_sun_outer_radius 0.4
+r4_hdr10_tonemap_mode 1
+r4_hdr10_tonemapper 0
+r4_hdr10_ui_nits 400.
+r4_hdr10_ui_saturation 0.5
+r4_hdr10_whitepoint_nits 400.
+r4_wireframe off
+r__3Dfakescope 1
+r__actor_shadow on
+r__bloom_thresh (0.700000, 0.800000, 0.900000, 0.000000)
+r__bloom_weight (0.330000, 0.330000, 0.330000, 0.000000)
+r__clear_models_on_unload off
+r__color_grading (0.300000, 0.500000, 0.500000)
+r__detail_density 0.34
+r__detail_height 0.9
+r__detail_radius 150
+r__dtex_range 50.
+r__enable_grass_shadow off
+r__exposure 0.65
+r__fakescope 1
+r__framelimit 0
+r__gamma 1.
+r__geometry_lod 1.5
+r__heatvision 0
+r__lens_flares on
+r__nightvision 0
+r__no_ram_textures on
+r__no_scale_on_fade off
+r__optimize_dynamic_geom 0
+r__optimize_shadow_geom on
+r__optimize_static_geom 0
+r__saturation 1.2
+r__supersample 1
+r__tf_aniso 16
+r__tf_mipbias -0.5
+r__use_precompiled_shaders on
+r__wallmark_ttl 50.
+r_screenshot_mode png
+render_short_tracers 1
+renderer renderer_r4
+rs_c_brightness 0.985
+rs_c_contrast 0.92
+rs_c_gamma 1.
+rs_cam_pos off
+rs_refresh_60hz off
+rs_screenmode borderless
+rs_skeleton_update 32
+rs_stats off
+rs_v_sync off
+rs_vis_distance 1.
+s3ds_param_1 (4.000000, 4.000000, 0.300000, 0.000000)
+s3ds_param_2 (0.000000, 0.000000, 0.000000, 1.500000)
+s3ds_param_3 (0.000000, 0.000000, 0.000000, 0.020000)
+s3ds_param_4 (1.000000, 1.000000, 1.000000, 1.000000)
+scope_2dtexactive 0
+scope_blur_inner 0.1
+scope_blur_outer 1.
+scope_brightness 1.
+scope_ca 0.003
+scope_factor 1.
+scope_fog_interp 0.15
+scope_fog_radius 1.25
+scope_fog_sharp 4.
+scope_fog_swayAim 0.66
+scope_fog_swayMove 0.25
+scope_fog_travel 0.25
+scope_radius 0.
+sds_enable on
+sds_speed_enable on
+sds_zoom_enable on
+shader_param_1 (1.000000, 1.000000, 1.000000, 0.100000)
+shader_param_2 (0.000000, 0.000000, 0.000000, 0.000000)
+shader_param_3 (0.838000, 0.847000, 0.852000, -0.005000)
+shader_param_4 (1.120000, 1.120000, 1.130000, -0.420000)
+shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
+shader_param_6 (8.016100, 10.000500, 0.800000, 0.120000)
+shader_param_7 (100.000000, 0.500000, 0.000000, 0.000000)
+shader_param_8 (0.000000, 0.000000, 0.000000, 0.000000)
+sil_glow_color (1.000000, 0.000000, 0.000000)
+sil_glow_cool_temp_rate 0.01
+sil_glow_max_temp 0.15
+sil_glow_shot_temp 0.004
+snd_acceleration on
+snd_cache_size 256
+snd_device OpenAL Soft
+snd_doppler_power 1.8
+snd_doppler_smoothing 15
+snd_efx on
+snd_targets 256
+snd_volume_eff 1.
+snd_volume_music 0.
+ssfx_ao (2.000000, 4.000000, 1.000000, 2.500000)
+ssfx_ao_quality 4
+ssfx_ao_setup1 (150.000000, 1.000000, 0.750000, 0.000000)
+ssfx_blood_decals (0.600000, 0.600000, 0.000000, 0.000000)
+ssfx_bloom_1 (8.000000, 1.000000, 0.000000, 1.000000)
+ssfx_bloom_2 (2.000000, 1.000000, 0.000000, 1.500000)
+ssfx_bloom_use_presets 0
+ssfx_florafixes_1 (0.150000, 0.180000, 0.140000, 0.150000)
+ssfx_florafixes_2 (2.000000, 1.000000, 0.000000, 0.000000)
+ssfx_gloss_factor 0.69639
+ssfx_gloss_method 1
+ssfx_gloss_minmax (0.700000, 0.960000, 0.000000)
+ssfx_grass_interactive (1.000000, 7.000000, 1000.000000, 1.000000)
+ssfx_grass_shadows (0.000000, 0.350000, 30.000000, 0.000000)
+ssfx_hud_drops_1 (0.000000, 0.000000, 30.000000, 0.050000)
+ssfx_hud_drops_2 (0.225000, 1.500000, 0.400000, 2.000000)
+ssfx_hud_hemi 0.3
+ssfx_il (6.666667, 4.000000, 0.550000, 5.000000)
+ssfx_il_quality 32
+ssfx_il_setup1 (150.000000, 0.950000, 0.620000, 0.000000)
+ssfx_int_grass_params_1 (1.000000, 2.500000, 1.000000, 25.000000)
+ssfx_int_grass_params_2 (1.500000, 5.000000, 0.300000, 2.000000)
+ssfx_is_underground 0
+ssfx_lightsetup_1 (0.600000, 0.600000, 0.000000, 0.000000)
+ssfx_lut (1.000000, 13.000000, 0.000000, 0.000000)
+ssfx_pom (36.000000, 40.000000, 0.050000, 0.000000)
+ssfx_pom_refine 1
+ssfx_rain_1 (1.100000, 0.030000, 0.700000, 2.000000)
+ssfx_rain_2 (1.000000, 0.000000, 2.500000, 1.000000)
+ssfx_rain_3 (0.200000, 3.000000, 0.000000, 0.000000)
+ssfx_rain_drops_setup (2500.000000, 15.000000, 0.000000, 0.000000)
+ssfx_shadow_bias (0.400000, 0.030000, 0.000000)
+ssfx_shadow_cascades (20.000000, 60.000000, 160.000000)
+ssfx_shadows (256.000000, 1536.000000, 0.000000)
+ssfx_ssr (1.000000, 0.100000, 0.000000, 0.000000)
+ssfx_ssr_2 (1.100000, 1.200000, 1.000000, 0.100000)
+ssfx_ssr_quality 0
+ssfx_sss (1.000000, 1.000000, 0.000000, 0.000000)
+ssfx_sss_quality (24.000000, 8.000000, 1.000000, 1.000000)
+ssfx_terrain_grass_align 1
+ssfx_terrain_grass_slope 1.
+ssfx_terrain_offset (-0.120000, -0.050000, -0.150000, 0.000000)
+ssfx_terrain_pom (36.000000, 20.000000, 0.040000, 1.000000)
+ssfx_terrain_pom_refine 1
+ssfx_terrain_quality (20.000000, 0.000000, 0.000000, 0.000000)
+ssfx_volumetric (1.000000, 3.000000, 5.000000, 1.000000)
+ssfx_water (1.000000, 0.800000, 1.000000, 0.000000)
+ssfx_water_quality (1.000000, 2.000000, 0.000000)
+ssfx_water_setup1 (0.600000, 3.000000, 0.300000, 0.050000)
+ssfx_water_setup2 (0.800000, 6.000000, 0.300000, 0.500000)
+ssfx_wetness_multiplier (1.400000, 0.500000, 0.000000)
+ssfx_wetsurfaces_1 (0.500000, 1.400000, 0.700000, 1.250000)
+ssfx_wetsurfaces_2 (0.800000, 1.500000, 0.200000, 0.350000)
+ssfx_wind_grass (10.000001, 3.000000, 3.000000, 1.000000)
+ssfx_wind_trees (12.000001, 0.200000, 0.300000, 0.450000)
+ssfx_wpn_dof_1 (0.150000, 0.400000, 0.000000, 1.100000)
+ssfx_wpn_dof_2 0.15
+string_table_error_msg 0
+telekinetic_objects_include_corpses 0
+texture_lod 2
+time_factor 1.000000
+use_english_text_for_missing_translations 1
+vid_mode 2560x1440
+viewport_near 0.2
+weapon_sway on
+wpn_aim_toggle off
+wpn_degradation 0.5
+zoom_step_count 3.
+"""
+caminert = """
+cam_inert 0.55
+cam_slide_inert 0.25
+"""
 
 if page == "Home":
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
@@ -350,7 +666,7 @@ else:
 
     elif page == "Load Atmospheric Preset":
 
-        st.write("This will load the settings from the **`AtmosXTREME`** atmospheric preset file into a copy of your game settings file, which you can download and use to replace your **`user.ltx`** file.")
+        st.write("This will load the settings from the **`XTREME`** atmospheric preset file into a copy of your game settings file, which you can download and use to replace your **`user.ltx`** file.")
         st.write("Upload your **`user.ltx`** file (**located in the `Anomaly/appdata/` folder**) below.")
         st.write("Then, download the converted file, drag it into your **`Anomaly/appdata/`** folder and replace the existing file when prompted.")
 
@@ -386,3 +702,31 @@ else:
                 strio = StringIO(userfile.getvalue().decode("utf-8"))
                 userout = strio.read() + sssmcm
                 download = st.download_button("Download Converted File", data=userout, file_name="axr_options.ltx")
+
+    elif page == "Awesomedude's Graphics Settings":
+
+        st.write("This will load my own graphics settings into your **`user.ltx`** file, which you can download and use to replace your current **`user.ltx`** file.")
+        st.write("Upload your **`user.ltx`** file (**located in the `Anomaly/appdata/` folder**) below.")
+        st.write("Then, download the converted file, drag it into your **`Anomaly/appdata/`** folder and replace the existing file when prompted.")
+
+        userfile = st.file_uploader("")
+        
+        if userfile != None:
+
+            if userfile.name != "user.ltx":
+                st.subheader("This is not a valid game settings file. Please use a valid file.")
+
+            else:
+
+                write = ""
+
+                if st.checkbox("Graphics Settings", True):
+                    write += graphicssettings
+
+                if st.checkbox("Camera Inertia Settings"):
+                    write += caminert
+
+                strio = StringIO(userfile.getvalue().decode("utf-8"))
+                userout = strio.read() + write
+                download = st.download_button("Download Converted File", data=userout, file_name="user.ltx")
+
