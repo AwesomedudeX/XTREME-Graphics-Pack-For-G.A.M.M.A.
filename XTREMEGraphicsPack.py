@@ -3,7 +3,7 @@ from io import StringIO
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
-page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS"])
+page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings"])
 atmospreset = """
 r__color_grading (0, 0, 0)
 
