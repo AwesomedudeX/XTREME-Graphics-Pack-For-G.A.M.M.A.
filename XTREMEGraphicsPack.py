@@ -125,20 +125,20 @@ sssmcm = """
         ssfx_module/il/quality_mcm       = 16
         ssfx_module/il/res_mcm           = 0.15
         ssfx_module/il/vibrance_mcm      = 0.6
-        ssfx_module/inter_grass/anomalies_distance_mcm = 25
+        ssfx_module/inter_grass/anomalies_distance_mcm = 30
         ssfx_module/inter_grass/enable_anomalies_mcm = true
         ssfx_module/inter_grass/enable_mcm = true
         ssfx_module/inter_grass/enable_mutants_mcm = true
         ssfx_module/inter_grass/enable_player_mcm = true
         ssfx_module/inter_grass/explosions_speed_mcm = 5
         ssfx_module/inter_grass/explosions_str_mcm = 1
-        ssfx_module/inter_grass/horizontal_str_mcm = 1
+        ssfx_module/inter_grass/horizontal_str_mcm = 2
         ssfx_module/inter_grass/max_distance_mcm = 2000
         ssfx_module/inter_grass/max_entities_mcm = 8
-        ssfx_module/inter_grass/radius_mcm = 1
+        ssfx_module/inter_grass/radius_mcm = 1.4
         ssfx_module/inter_grass/shooting_range_mcm = 2
         ssfx_module/inter_grass/shooting_str_mcm = 0.3
-        ssfx_module/inter_grass/vertical_str_mcm = 1
+        ssfx_module/inter_grass/vertical_str_mcm = 2
         ssfx_module/parallax/ao_mcm      = 0.6
         ssfx_module/parallax/height_mcm  = 0.035
         ssfx_module/parallax/quality_mcm = 36
@@ -150,8 +150,8 @@ sssmcm = """
         ssfx_module/shadows/volumetric_force_mcm = true
         ssfx_module/shadows/volumetric_int_mcm = 0.5
         ssfx_module/shadows/volumetric_quality_mcm = 4
-        ssfx_module/shw_cascades/grass_shw_distance_mcm = 66
-        ssfx_module/shw_cascades/grass_shw_nondir_maxdistance_mcm = 30
+        ssfx_module/shw_cascades/grass_shw_distance_mcm = 100
+        ssfx_module/shw_cascades/grass_shw_nondir_maxdistance_mcm = 50
         ssfx_module/shw_cascades/grass_shw_quality_mcm = 1
         ssfx_module/shw_cascades/size_1_mcm = 14
         ssfx_module/shw_cascades/size_2_mcm = 40
@@ -194,7 +194,7 @@ sssmcm = """
         ssfx_module/ssfx_rain_module/ssfx_rain_main/width_mcm = 0.03
         ssfx_module/ssfx_wetness/ssfx_gloss/auto_gloss_max_mcm = 0.96
         ssfx_module/ssfx_wetness/ssfx_gloss/auto_gloss_mcm = true
-        ssfx_module/ssfx_wetness/ssfx_gloss/max_gloss_mcm = 0.96
+        ssfx_module/ssfx_wetness/ssfx_gloss/max_gloss_mcm = 0.95
         ssfx_module/ssfx_wetness/ssfx_gloss/min_gloss_mcm = 0.7
         ssfx_module/ssfx_wetness/ssfx_gloss/specular_color_mcm = 0.6
         ssfx_module/ssfx_wetness/ssfx_gloss/specular_int_mcm = 0.6
@@ -296,7 +296,10 @@ sssmcm = """
         dynamic_tonemap_extended/storm_amb_reduction_coeff = 0.75
         dynamic_tonemap_extended/storm_amount_addition = 0.3
         dynamic_tonemap_extended/storm_hemi_reduction_coeff = 0.9
-        dynamic_tonemap_extended/storm_lowlum_reduction_coeff = 0.8        
+        dynamic_tonemap_extended/storm_lowlum_reduction_coeff = 0.8
+        dynamic_zoom_sound/dzs_mode      = 1
+        dynamic_zoom_sound/dzs_sound_type = 1
+        dynamic_zoom_sound/dzs_volume    = 0.3
 """
 graphicssettings = """
 r1_detail_textures on
@@ -339,15 +342,15 @@ r2_ls_depth_bias -0.00005
 r2_ls_depth_scale 1.00001
 r2_ls_dsm_kernel 0.7
 r2_ls_psm_kernel 0.7
-r2_ls_squality 1.
+r2_ls_squality 3.
 r2_ls_ssm_kernel 0.7
 r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
-r2_mblur 0.02867
+r2_mblur 0.0485
 r2_mblur_enabled on
 r2_parallax_h 0.
 r2_qsync 0
 r2_shadow_cascede_old off
-r2_slight_fade 0.5
+r2_slight_fade 1.
 r2_smaa off
 r2_soft_particles on
 r2_soft_water on
@@ -372,8 +375,8 @@ r2_sun_details on
 r2_sun_far 100.
 r2_sun_focus on
 r2_sun_lumscale 1.5
-r2_sun_lumscale_amb 1.5
-r2_sun_lumscale_hemi 1.41
+r2_sun_lumscale_amb 0.94276
+r2_sun_lumscale_hemi 0.4
 r2_sun_near 15.
 r2_sun_near_border 0.75
 r2_sun_quality st_opt_medium
@@ -397,9 +400,9 @@ r2_tnmp_onoff 0.
 r2_tnmp_w 1.12
 r2_tonemap on
 r2_tonemap_adaptation 3.
-r2_tonemap_amount 1.
-r2_tonemap_lowlum 0.55
-r2_tonemap_middlegray 1.4
+r2_tonemap_amount 0.65
+r2_tonemap_lowlum 0.25
+r2_tonemap_middlegray 1.04276
 r2_volumetric_lights on
 r2_wait_sleep 0
 r2_water_reflections on
@@ -462,13 +465,13 @@ r__actor_shadow on
 r__bloom_thresh (0.700000, 0.800000, 0.900000, 0.000000)
 r__bloom_weight (0.330000, 0.330000, 0.330000, 0.000000)
 r__clear_models_on_unload off
-r__color_grading (0.300000, 0.500000, 0.500000)
+r__color_grading (0.000000, 0.000000, 0.000000)
 r__detail_density 0.34
 r__detail_height 0.9
 r__detail_radius 150
 r__dtex_range 50.
 r__enable_grass_shadow off
-r__exposure 0.65
+r__exposure 1.
 r__fakescope 1
 r__framelimit 0
 r__gamma 1.
@@ -481,7 +484,7 @@ r__no_scale_on_fade off
 r__optimize_dynamic_geom 0
 r__optimize_shadow_geom on
 r__optimize_static_geom 0
-r__saturation 1.2
+r__saturation 1.15
 r__supersample 1
 r__tf_aniso 16
 r__tf_mipbias -0.5
@@ -490,8 +493,8 @@ r__wallmark_ttl 50.
 r_screenshot_mode png
 render_short_tracers 1
 renderer renderer_r4
-rs_c_brightness 0.985
-rs_c_contrast 0.92
+rs_c_brightness 1.
+rs_c_contrast 1.
 rs_c_gamma 1.
 rs_cam_pos off
 rs_refresh_60hz off
@@ -520,18 +523,22 @@ scope_radius 0.
 sds_enable on
 sds_speed_enable on
 sds_zoom_enable on
-shader_param_1 (1.000000, 1.000000, 1.000000, 0.100000)
-shader_param_2 (0.000000, 0.000000, 0.000000, 0.000000)
+shader_param_1 (0.990000, 1.000000, 0.970000, -0.200000)
+shader_param_2 (0.000000, 0.000000, 0.000000, 0.100000)
 shader_param_3 (0.838000, 0.847000, 0.852000, -0.005000)
-shader_param_4 (1.120000, 1.120000, 1.130000, -0.420000)
+shader_param_4 (1.120000, 1.120000, 1.130000, -0.400000)
 shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
 shader_param_6 (8.016100, 10.000500, 0.800000, 0.120000)
-shader_param_7 (100.000000, 0.500000, 0.000000, 0.000000)
-shader_param_8 (0.000000, 0.000000, 0.000000, 0.000000)
+shader_param_7 (1.000000, 0.550000, 0.000000, 0.000000)
+shader_param_8 (0.000000, 10.300000, 100.000000, 10.000000)
 sil_glow_color (1.000000, 0.000000, 0.000000)
 sil_glow_cool_temp_rate 0.01
 sil_glow_max_temp 0.15
 sil_glow_shot_temp 0.004
+slot_0 medkit
+slot_1 bandage
+slot_2 medkit_army
+slot_3 stimpack
 snd_acceleration on
 snd_cache_size 256
 snd_device OpenAL Soft
@@ -541,74 +548,64 @@ snd_efx on
 snd_targets 256
 snd_volume_eff 1.
 snd_volume_music 0.
-ssfx_ao (2.000000, 4.000000, 1.000000, 2.500000)
-ssfx_ao_quality 4
-ssfx_ao_setup1 (150.000000, 1.000000, 0.750000, 0.000000)
+ssfx_ao (2.000000, 10.000000, 0.100000, 1.000000)
+ssfx_ao_quality 8
+ssfx_ao_setup1 (150.000000, 1.000000, 0.400000, 0.060000)
 ssfx_blood_decals (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_bloom_1 (8.000000, 1.000000, 0.000000, 1.000000)
-ssfx_bloom_2 (2.000000, 1.000000, 0.000000, 1.500000)
+ssfx_bloom_1 (10.000000, 1.000000, 0.000000, 0.600000)
+ssfx_bloom_2 (1.000000, 1.350000, 1.500000, 0.800000)
 ssfx_bloom_use_presets 0
 ssfx_florafixes_1 (0.150000, 0.180000, 0.140000, 0.150000)
-ssfx_florafixes_2 (2.000000, 1.000000, 0.000000, 0.000000)
-ssfx_gloss_factor 0.69639
+ssfx_florafixes_2 (4.600000, 0.380000, 0.000000, 0.000000)
+ssfx_gloss_factor 0.672
 ssfx_gloss_method 1
-ssfx_gloss_minmax (0.700000, 0.960000, 0.000000)
-ssfx_grass_interactive (1.000000, 7.000000, 1000.000000, 1.000000)
-ssfx_grass_shadows (0.000000, 0.350000, 30.000000, 0.000000)
+ssfx_gloss_minmax (0.700000, 0.950000, 0.000000)
+ssfx_grass_interactive (1.000000, 8.000000, 2000.000000, 1.000000)
+ssfx_grass_shadows (1.000000, 1.000000, 50.000000, 0.000000)
 ssfx_hud_drops_1 (0.000000, 0.000000, 30.000000, 0.050000)
 ssfx_hud_drops_2 (0.225000, 1.500000, 0.400000, 2.000000)
-ssfx_hud_hemi 0.3
-ssfx_il (6.666667, 4.000000, 0.550000, 5.000000)
-ssfx_il_quality 32
-ssfx_il_setup1 (150.000000, 0.950000, 0.620000, 0.000000)
-ssfx_int_grass_params_1 (1.000000, 2.500000, 1.000000, 25.000000)
-ssfx_int_grass_params_2 (1.500000, 5.000000, 0.300000, 2.000000)
+ssfx_hud_hemi 0.
+ssfx_il (6.666667, 4.000000, 0.600000, 0.500000)
+ssfx_il_quality 16
+ssfx_il_setup1 (150.000000, 1.000000, 1.000000, 0.000000)
+ssfx_int_grass_params_1 (1.400000, 2.000000, 2.000000, 30.000000)
+ssfx_int_grass_params_2 (1.000000, 5.000000, 0.300000, 2.000000)
 ssfx_is_underground 0
 ssfx_lightsetup_1 (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_lut (1.000000, 13.000000, 0.000000, 0.000000)
-ssfx_pom (36.000000, 40.000000, 0.050000, 0.000000)
+ssfx_lut (0.500000, 1.000000, 0.000000, 0.000000)
+ssfx_pom (36.000000, 40.000000, 0.035000, 0.600000)
 ssfx_pom_refine 1
 ssfx_rain_1 (1.100000, 0.030000, 0.700000, 2.000000)
 ssfx_rain_2 (1.000000, 0.000000, 2.500000, 1.000000)
 ssfx_rain_3 (0.200000, 3.000000, 0.000000, 0.000000)
 ssfx_rain_drops_setup (2500.000000, 15.000000, 0.000000, 0.000000)
 ssfx_shadow_bias (0.400000, 0.030000, 0.000000)
-ssfx_shadow_cascades (20.000000, 60.000000, 160.000000)
+ssfx_shadow_cascades (14.000000, 40.000000, 126.000000)
 ssfx_shadows (256.000000, 1536.000000, 0.000000)
-ssfx_ssr (1.000000, 0.100000, 0.000000, 0.000000)
-ssfx_ssr_2 (1.100000, 1.200000, 1.000000, 0.100000)
+ssfx_ssr (1.000000, 0.250000, 0.000000, 0.000000)
+ssfx_ssr_2 (1.150000, 1.300000, 0.450000, 0.050000)
 ssfx_ssr_quality 0
 ssfx_sss (1.000000, 1.000000, 0.000000, 0.000000)
 ssfx_sss_quality (24.000000, 8.000000, 1.000000, 1.000000)
 ssfx_terrain_grass_align 1
-ssfx_terrain_grass_slope 1.
+ssfx_terrain_grass_slope 0.84444
 ssfx_terrain_offset (-0.120000, -0.050000, -0.150000, 0.000000)
-ssfx_terrain_pom (36.000000, 20.000000, 0.040000, 1.000000)
+ssfx_terrain_pom (36.000000, 40.000000, 0.040000, 1.000000)
 ssfx_terrain_pom_refine 1
 ssfx_terrain_quality (20.000000, 0.000000, 0.000000, 0.000000)
-ssfx_volumetric (1.000000, 3.000000, 5.000000, 1.000000)
+ssfx_volumetric (1.000000, 0.500000, 4.000000, 1.000000)
 ssfx_water (1.000000, 0.800000, 1.000000, 0.000000)
 ssfx_water_quality (1.000000, 2.000000, 0.000000)
 ssfx_water_setup1 (0.600000, 3.000000, 0.300000, 0.050000)
-ssfx_water_setup2 (0.800000, 6.000000, 0.300000, 0.500000)
+ssfx_water_setup2 (0.860000, 6.000000, 0.300000, 0.500000)
 ssfx_wetness_multiplier (1.400000, 0.500000, 0.000000)
 ssfx_wetsurfaces_1 (0.500000, 1.400000, 0.700000, 1.250000)
 ssfx_wetsurfaces_2 (0.800000, 1.500000, 0.200000, 0.350000)
-ssfx_wind_grass (10.000001, 3.000000, 3.000000, 1.000000)
-ssfx_wind_trees (12.000001, 0.200000, 0.300000, 0.450000)
+ssfx_wind_grass (9.700000, 1.500000, 1.600000, 0.500000)
+ssfx_wind_trees (11.100000, 0.170000, 0.900000, 0.100000)
 ssfx_wpn_dof_1 (0.150000, 0.400000, 0.000000, 1.100000)
 ssfx_wpn_dof_2 0.15
-string_table_error_msg 0
-telekinetic_objects_include_corpses 0
-texture_lod 2
-time_factor 1.000000
-use_english_text_for_missing_translations 1
-vid_mode 2560x1440
-viewport_near 0.2
-weapon_sway on
-wpn_aim_toggle off
-wpn_degradation 0.5
-zoom_step_count 3."""
+"""
 caminert = """
 cam_inert 0.55
 cam_slide_inert 0.25"""
@@ -616,9 +613,160 @@ fov = """
 fov 100.
 hud_fov 0.7
 hud_fov_aim_factor 0."""
+mainlist = {
+
+    "base shaders": """
+**Enhanced Shaders & Colour Grading 1.10:** Improved shaders and color grading methods.
+
+**Beef's NVGs Improved 1.5:** Improved night vision goggle overlays by TheRealBeef.
+
+**Screen Space Shaders 22:** Screen space shaders with volumetric lighting and some post-processing effects.
+    """,
+
+    "shaders": """
+**Atmospherics GAMMA 2.67:** Completely revamps shaders and weather, as well as color grading and LUTs to give the game a realistic and immersive look.
+
+**HollywoodFX V3.1.5:** Adds cinematic VFX for gunshots, explosions, and other effects, as well as better sounds for them.
+
+**Shaders Look Better (Motion Blur & Shaders Improvements) V1.2.0:** Improves shaders and motion blur to be smoother and more realistic.
+
+**Dark Signal Weather and Ambiance Audio - Shrike:** G.A.M.M.A.'s version of this mod, included for compatibility purposes.
+
+    """,
+
+    "adegazr": """
+A texture multipack that includes a series of texture packs; most notably Zone Reality, Aydin's Grass Textures and some Re\:Pack-series texture packs.
+    """,
+
+    "other textures": """
+**Re.Pack PDA Package V1.3 (16K PDA Maps):** Adds 16K PDA maps with much better zooming capability.
+
+**Re.Pack Signs V1.0:** Adds 4K textures for signs, with added details like bullet holes, moss or cracks.
+
+**Re.Pack Pseudogiant 1.7:** Adds a new high-definition texture for pseudogiants.
+
+**Re.Pack Crow 1.0:** Adds a new high-definition texture for crows.
+
+**Vehicle Textures Redux V1.3.1:** Adds redone 4K textures for vehicles,
+    """,
+
+    "mask textures": """
+**Grok's Masks and Reflections 2.1.0:** Redone mask lighting effects with reflections and refractions, using blurred versions of Nav's 4K Mask Textures.
+
+**Drunk's 4K Mask Textures:** Adds realistic 4K mask textures, complete with droplets and a somewhat blurred overlay.
+    """
+
+}
+optionalslist = {
+
+    "seasonal": """
+**Late Fall v1.0:** A mod that aims to represent the way the end of Fall or the beginning of Winter would look.
+
+**Project I.N.V.E.R.N.O. v1.03:** A mod that turns the Zone into a Winter Wonderland, complete with snowy terrain, snowy trees and snowy weather.
+
+**Aydin's Grass Tweaks 4.0:** A recolored version of the Golden Autumn Retexture mod, made to fit different seasons.
+
+**Re\:Pack Foliage Package 1.2:** Adds 16K textures to leaves.
+
+**C-Consciousness Grass Overhaul v0.55:** Adds 8K foliage, with recolors and resizing to fit each season.
+
+**Rotten Life Ground Textures:** Adds terrain textures, available in Summer, Fall and Late Fall.
+    """,
+
+    "summer": """
+**Aydin's Grass Tweaks 4.0**
+
+**Re\:Pack Foliage Package**
+
+**C-Consciousness Grass Overhaul v0.55**
+    """,
+
+    "late fall": """
+**Late Fall v1.0**
+
+**Aydin's Grass Tweaks 4.0**
+
+**Re\:Pack Foliage Package**
+
+**C-Consciousness Grass Overhaul v0.55**
+    """,
+
+    "late fall snowy": """
+**Project I.N.V.E.R.N.O. v1.03**
+
+**Late Fall v1.0**
+
+**Aydin's Grass Tweaks 4.0**
+
+**Re\:Pack Foliage Package**
+
+**C-Consciousness Grass Overhaul v0.55**
+    """,
+
+    "winter": """
+**Project I.N.V.E.R.N.O. v1.03:**
+    """,
+
+    "othermods": """
+**Misery-Based Terrain 2.8:** Adds muddy terrain textures.
+
+**Apocalyptic Blowout Overhaul 4.0.1:** Revamps blowouts to look incredibly beautiful.
+
+**Weather Expansion for Atmospherics 1.66b:** Adds a wide variety of weathers to the game, all of which look realistic, yet cinematic.
+
+**Awesomedude's Weather Edits For Weather Expansion:** My own edits to the sunshafts during sunsets and sunrise to make them more cinematic - REQUIRES WEATHER EXPANSION.
+
+**Atmospherics Pre-SSS 22 LUTs:** The LUTs from Atmospherics before the Screen Space Shaders 22 update. Courtesy of Shahryar.
+    """
+
+}
 
 if page == "Home":
+    
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
+    st.write("---")
+    st.header("Mods Included With The Pack:")
+    st.write(":grey[Textures are shown in the order in which they are loaded]")
+    
+    c1, c2 = st.columns(2)
+    ex1, ex2 = c1.expander("**Main Pack**"), c2.expander("**Optionals Pack**")
+
+    with ex1:
+
+        st.header("Base Shaders:")
+        st.write(mainlist["base shaders"])
+
+        st.header("Shaders & VFX:")
+        st.write(mainlist["shaders"])
+
+        st.header("ADEGAZR+:")
+        st.write(mainlist["adegazr"])
+
+        st.header("Other Textures:")
+        st.write(mainlist["other textures"])
+        
+        st.header("Mask Textures:")
+        st.write(mainlist["mask textures"])
+
+    with ex2:
+        st.header("Seasonal Mods:")
+        st.write(optionalslist["seasonal"])
+
+        st.subheader("Summer/Autumn:")
+        st.write(optionalslist["summer"])
+
+        st.subheader("Late Fall (no snow):")
+        st.write(optionalslist["late fall"])
+
+        st.subheader("Late Fall (snowy weather):")
+        st.write(optionalslist["late fall snowy"])
+        
+        st.subheader("Winter:")
+        st.write(optionalslist["winter"])
+
+        st.header("Other Mods:")
+        st.write(optionalslist["othermods"])
+
 
 else:
 
