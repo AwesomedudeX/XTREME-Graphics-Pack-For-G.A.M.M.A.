@@ -613,11 +613,7 @@ fov = """
 fov 100.
 hud_fov 0.7
 hud_fov_aim_factor 0."""
-home = """
-This graphics pack is a nice and easy way to make your game look so much better. It features a series of mods to improve shaders, VFX, textures and overall visual fidelity.
-
-**INSTALLATION:**
-
+installation = """
 Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2024.12.9/STALKER-Anomaly-modded-exes_2024.12.9.zip. Then, open the downloaded file in 7Zip, and just drag and drop everything in the file into your Anomaly folder; replace the existing files when prompted.
 
 Then, download and install these files **in the order shown** using the links below; install them like any other mod in MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
@@ -746,7 +742,9 @@ if page == "Home":
     
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
     st.write("---")
-    st.write(home)
+    st.write("This graphics pack is a nice and easy way to make your game look so much better. It features a series of mods to improve shaders, VFX, textures and overall visual fidelity.")
+    st.header("Installation:")
+    st.write(installation)
     st.write("---")
 
     st.header("Mods Included With The Pack:")
