@@ -41,17 +41,20 @@ disabledmods = {
 
 ":green[**G.A.M.M.A.**]": {
 
-    "shaders": """-G.A.M.M.A. No Masks Textures
--G.A.M.M.A. Weathers
--304- Dark Signal Weather and Ambiance Audio - Shrike
--290- Atmospherics Shaders Weathers and Reshade Latest - Hippobot
--190- Screen Space Shaders 20 - Ascii1457
+    "mask textures": """-G.A.M.M.A. No Masks Textures
+-129- Mask Reflections - shader fix - Grokitach
+""",
+
+    "base shaders": """-190- Screen Space Shaders 20 - Ascii1457
 -189- Beef's NVG - theRealBeef
 -188- Enhanced Shaders - KennShade
--129- Mask Reflections - shader fix - Grokitach
+""",
+
+    "shaders": """-G.A.M.M.A. Weathers
+-304- Dark Signal Weather and Ambiance Audio - Shrike
+-290- Atmospherics Shaders Weathers and Reshade Latest - Hippobot
 -36- Better Rain texture - Detron
 -35- Wet Surfaces Fix - CryoManne
--26- High Res PDA Maps - Bazingarrey
 -24- Skies Redux - d_nan
 """,
 
@@ -818,19 +821,26 @@ else:
                     st.subheader("What options did you select when installing the pack?")
                     
                     baseshaders = st.checkbox("Base Shaders (REGULAR OR WINTER)", value=True)
-                    shaders = st.checkbox("Shaders & VFX")
-                    textures = st.checkbox("ADEGAZR+ Texture Multipack")                    
+                    shaders = st.checkbox("Shaders and VFX")
+                    textures = st.checkbox("Main Textures")                    
+                    masks = st.checkbox("Mask Textures and VFX")
                     maps = st.checkbox("Re\:Pack 16K PDA Maps")
-                    seasonal = st.checkbox("Any Seasonal Pack (Summer, Autumn, Winter or either Late Fall pack)")
+                    seasonal = st.checkbox("Any Seasonal Pack (Summer, Autumn, Winter or Late Fall)")
 
                     userout = userfile
 
-                    if shaders or baseshaders:
+                    if baseshaders:
+                        userout = disabledmods[version]["base shaders"] + userout
+
+                    if shaders:
                         userout = disabledmods[version]["shaders"] + userout
 
                     if textures or seasonal:
                         userout = disabledmods[version]["textures"] + userout
                         
+                    if masks:
+                        userout = disabledmods[version]["mask textures"] + userout
+
                     if maps:
                         userout = disabledmods[version]["maps"] + userout
 
