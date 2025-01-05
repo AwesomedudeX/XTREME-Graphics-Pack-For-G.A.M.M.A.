@@ -746,6 +746,9 @@ if page == "Home":
     
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
     st.write("---")
+    st.write(home)
+    st.write("---")
+
     st.header("Mods Included With The Pack:")
     st.write(":grey[Textures are shown in the order in which they are loaded]")
     
