@@ -654,8 +654,8 @@ mainlist = {
 
     """,
 
-    "adegazr": """
-A texture multipack that includes a series of texture packs; most notably Zone Reality, Aydin's Grass Textures and some Re\:Pack-series texture packs.
+    "Rotten Life": """
+A texture multipack that includes a series of old-themed 4K and 8K textures, which give structures in the Zone a cozy, yet run-down and scrappy look.
     """,
 
     "other textures": """
@@ -690,7 +690,7 @@ optionalslist = {
 
 **C-Consciousness Grass Overhaul v0.55:** Adds 8K foliage, with recolors and resizing to fit each season.
 
-**Rotten Life Ground Textures:** Adds terrain textures, available in Summer, Fall and Late Fall.
+**Rotten Life Ground Textures:** Adds 4K realistic terrain textures, available in Summer, Fall and Late Fall.
     """,
 
     "summer": """
@@ -764,8 +764,8 @@ if page == "Home":
         st.header("Shaders & VFX:")
         st.write(mainlist["shaders"])
 
-        st.header("ADEGAZR+:")
-        st.write(mainlist["adegazr"])
+        st.header("Rotten Life:")
+        st.write(mainlist["Rotten Life"])
 
         st.header("Other Textures:")
         st.write(mainlist["other textures"])
