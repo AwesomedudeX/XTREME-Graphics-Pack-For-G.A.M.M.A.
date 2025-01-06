@@ -654,12 +654,14 @@ mainlist = {
 
     """,
 
-    "Rotten Life": """
-A texture multipack that includes a series of old-themed 4K and 8K textures, which give structures in the Zone a cozy, yet run-down and scrappy look.
-    """,
+    "main textures": """
+**Rotten Life Texture Pack**: A texture pack that adds old-themed 4K and 8K textures, which give structures in the Zone a cozy, yet run-down and scrappy look.
 
-    "other textures": """
-**Re.Pack PDA Package V1.3 (16K PDA Maps):** Adds 16K PDA maps with much better zooming capability.
+**Re.Pack Doors V1.0:** Adds 4K textures to doors.
+
+**Re.Pack Glass & Windows V1.5:** Adds 4K textures to glass and windows, complete with scratches, dust, dirt and cracks for added immersion.
+
+**Re.Pack Barbed Wire V1.1:** Adds 4K textures to barbed wire.
 
 **Re.Pack Signs V1.0:** Adds 4K textures for signs, with added details like bullet holes, moss or cracks.
 
@@ -761,14 +763,11 @@ if page == "Home":
         st.header("Base Shaders:")
         st.write(mainlist["base shaders"])
 
+        st.header("Main Textures:")
+        st.write(mainlist["main textures"])
+
         st.header("Shaders & VFX:")
         st.write(mainlist["shaders"])
-
-        st.header("Rotten Life:")
-        st.write(mainlist["Rotten Life"])
-
-        st.header("Other Textures:")
-        st.write(mainlist["other textures"])
         
         st.header("Mask Textures:")
         st.write(mainlist["mask textures"])
