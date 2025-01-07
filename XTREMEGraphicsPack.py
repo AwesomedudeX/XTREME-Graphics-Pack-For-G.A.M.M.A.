@@ -105,7 +105,7 @@ disabledmods = {
 sssmcm = """
 ![mcm]
         ssfx_module/ao/blur_mcm          = 0.1
-        ssfx_module/ao/distance_mcm      = 150
+        ssfx_module/ao/distance_mcm      = 300
         ssfx_module/ao/flora_int_mcm     = 0.4
         ssfx_module/ao/global_int_mcm    = 2
         ssfx_module/ao/hud_int_mcm       = 1
@@ -146,13 +146,13 @@ sssmcm = """
         ssfx_module/parallax/height_mcm  = 0.035
         ssfx_module/parallax/quality_mcm = 36
         ssfx_module/parallax/range_mcm   = 40
-        ssfx_module/parallax/refine_mcm  = true
+        ssfx_module/parallax/refine_mcm  = false
         ssfx_module/shadows/lod_max_mcm  = 0
         ssfx_module/shadows/lod_min_mcm  = 1
         ssfx_module/shadows/lod_quality_mcm = 3
         ssfx_module/shadows/volumetric_force_mcm = true
         ssfx_module/shadows/volumetric_int_mcm = 0.5
-        ssfx_module/shadows/volumetric_quality_mcm = 4
+        ssfx_module/shadows/volumetric_quality_mcm = 3
         ssfx_module/shw_cascades/grass_shw_distance_mcm = 100
         ssfx_module/shw_cascades/grass_shw_nondir_maxdistance_mcm = 50
         ssfx_module/shw_cascades/grass_shw_quality_mcm = 1
@@ -300,9 +300,6 @@ sssmcm = """
         dynamic_tonemap_extended/storm_amount_addition = 0.3
         dynamic_tonemap_extended/storm_hemi_reduction_coeff = 0.9
         dynamic_tonemap_extended/storm_lowlum_reduction_coeff = 0.8
-        dynamic_zoom_sound/dzs_mode      = 1
-        dynamic_zoom_sound/dzs_sound_type = 1
-        dynamic_zoom_sound/dzs_volume    = 0.3
 """
 graphicssettings = """
 r1_detail_textures on
@@ -682,9 +679,7 @@ mainlist = {
 optionalslist = {
 
     "seasonal": """
-**Late Fall v1.0:** A mod that aims to represent the way the end of Fall or the beginning of Winter would look.
-
-**Project I.N.V.E.R.N.O. v1.03:** A mod that turns the Zone into a Winter Wonderland, complete with snowy terrain, snowy trees and snowy weather.
+**Graupel's Winter Mod v1.0.2:** A mod that turns the Zone into a bright Winter wonderland, or an accurate representation of the early stages of Winter.
 
 **Aydin's Grass Tweaks 4.0:** A recolored version of the Golden Autumn Retexture mod, made to fit different seasons.
 
@@ -701,22 +696,22 @@ optionalslist = {
 **Re\:Pack Foliage Package**
 
 **C-Consciousness Grass Overhaul v0.55**
+
+**Rotten Life Ground Textures**
     """,
 
     "late fall": """
-**Late Fall v1.0**
-
 **Aydin's Grass Tweaks 4.0**
 
 **Re\:Pack Foliage Package**
 
 **C-Consciousness Grass Overhaul v0.55**
+
+**Rotten Life Ground Textures**
     """,
 
-    "late fall snowy": """
-**Project I.N.V.E.R.N.O. v1.03**
-
-**Late Fall v1.0**
+    "early winter": """
+**Graupel's Winter Mod v 1.0.2**
 
 **Aydin's Grass Tweaks 4.0**
 
@@ -726,19 +721,23 @@ optionalslist = {
     """,
 
     "winter": """
-**Project I.N.V.E.R.N.O. v1.03:**
+**Graupel's Winter Mod v1.0.2**
     """,
 
-    "othermods": """
-**Misery-Based Terrain 2.8:** Adds muddy terrain textures.
-
+    "weather": """
 **Apocalyptic Blowout Overhaul 4.0.1:** Revamps blowouts to look incredibly beautiful.
 
 **Weather Expansion for Atmospherics 1.66b:** Adds a wide variety of weathers to the game, all of which look realistic, yet cinematic.
 
-**Awesomedude's Weather Edits For Weather Expansion:** My own edits to the sunshafts during sunsets and sunrise to make them more cinematic - REQUIRES WEATHER EXPANSION.
+**Awesomedude's Weather Edits For Weather Expansion:** My own edits to the sunshafts during sunsets and sunrise to make them more cinematic - REQUIRES WEATHER EXPANSION.    
+    """,
 
-**Atmospherics Pre-SSS 22 LUTs:** The LUTs from Atmospherics before the Screen Space Shaders 22 update. Courtesy of Shahryar.
+    "luts": """
+    **Atmospherics Pre-SSS 22 LUTs:** The LUTs from Atmospherics before the Screen Space Shaders 22 update. Courtesy of Shahryar.
+""",
+
+    "othermods": """
+**Misery-Based Terrain 2.8:** Adds muddy terrain textures.
     """
 
 }
@@ -779,18 +778,23 @@ if page == "Home":
         st.subheader("Summer/Autumn:")
         st.write(optionalslist["summer"])
 
-        st.subheader("Late Fall (no snow):")
+        st.subheader("Late Fall:")
         st.write(optionalslist["late fall"])
 
-        st.subheader("Late Fall (snowy weather):")
-        st.write(optionalslist["late fall snowy"])
+        st.subheader("Early Winter:")
+        st.write(optionalslist["early winter"])
         
         st.subheader("Winter:")
         st.write(optionalslist["winter"])
 
+        st.header("XTREME Weather:")
+        st.write(optionalslist["weather"])
+
+        st.header("XTREME LUTs:")
+        st.write(optionalslist["luts"])
+
         st.header("Other Mods:")
         st.write(optionalslist["othermods"])
-
 
 else:
 
