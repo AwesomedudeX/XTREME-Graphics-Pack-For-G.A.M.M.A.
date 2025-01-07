@@ -711,7 +711,7 @@ optionalslist = {
     """,
 
     "early winter": """
-**Graupel's Winter Mod v 1.0.2**
+**Graupel's Winter Mod v1.0.2**
 
 **Aydin's Grass Tweaks 4.0**
 
