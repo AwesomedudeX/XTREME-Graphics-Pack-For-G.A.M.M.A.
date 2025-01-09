@@ -345,7 +345,7 @@ r2_ls_psm_kernel 0.7
 r2_ls_squality 3.
 r2_ls_ssm_kernel 0.7
 r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
-r2_mblur 0.0485
+r2_mblur 0.03815
 r2_mblur_enabled on
 r2_parallax_h 0.
 r2_qsync 0
@@ -375,7 +375,7 @@ r2_sun_details on
 r2_sun_far 100.
 r2_sun_focus on
 r2_sun_lumscale 1.5
-r2_sun_lumscale_amb 0.94276
+r2_sun_lumscale_amb 0.95
 r2_sun_lumscale_hemi 0.4
 r2_sun_near 15.
 r2_sun_near_border 0.75
@@ -402,7 +402,7 @@ r2_tonemap on
 r2_tonemap_adaptation 3.
 r2_tonemap_amount 0.65
 r2_tonemap_lowlum 0.25
-r2_tonemap_middlegray 1.04276
+r2_tonemap_middlegray 1.25
 r2_volumetric_lights on
 r2_wait_sleep 0
 r2_water_reflections on
@@ -466,13 +466,13 @@ r__bloom_thresh (0.700000, 0.800000, 0.900000, 0.000000)
 r__bloom_weight (0.330000, 0.330000, 0.330000, 0.000000)
 r__clear_models_on_unload off
 r__color_grading (0.000000, 0.000000, 0.000000)
-r__detail_density 0.34
-r__detail_height 0.9
+r__detail_density 0.58
+r__detail_height 0.7
 r__detail_radius 150
 r__dtex_range 50.
 r__enable_grass_shadow off
 r__exposure 1.
-r__fakescope 1
+r__fakescope 0
 r__framelimit 0
 r__gamma 1.
 r__geometry_lod 1.5
@@ -482,7 +482,7 @@ r__nightvision 0
 r__no_ram_textures on
 r__no_scale_on_fade off
 r__optimize_dynamic_geom 0
-r__optimize_shadow_geom on
+r__optimize_shadow_geom off
 r__optimize_static_geom 0
 r__saturation 1.15
 r__supersample 1
@@ -502,7 +502,7 @@ rs_screenmode borderless
 rs_skeleton_update 32
 rs_stats off
 rs_v_sync off
-rs_vis_distance 1.
+rs_vis_distance 1.5
 s3ds_param_1 (4.000000, 4.000000, 0.300000, 0.000000)
 s3ds_param_2 (0.000000, 0.000000, 0.000000, 1.500000)
 s3ds_param_3 (0.000000, 0.000000, 0.000000, 0.020000)
@@ -537,8 +537,8 @@ sil_glow_max_temp 0.15
 sil_glow_shot_temp 0.004
 slot_0 medkit
 slot_1 bandage
-slot_2 medkit_army
-slot_3 stimpack
+slot_2 cigarettes_russian
+slot_3 salicidic_acid
 snd_acceleration on
 snd_cache_size 256
 snd_device OpenAL Soft
@@ -550,7 +550,7 @@ snd_volume_eff 1.
 snd_volume_music 0.
 ssfx_ao (2.000000, 10.000000, 0.100000, 1.000000)
 ssfx_ao_quality 8
-ssfx_ao_setup1 (150.000000, 1.000000, 0.400000, 0.060000)
+ssfx_ao_setup1 (300.000000, 1.000000, 0.400000, 0.060000)
 ssfx_blood_decals (0.600000, 0.600000, 0.000000, 0.000000)
 ssfx_bloom_1 (10.000000, 1.000000, 0.000000, 0.600000)
 ssfx_bloom_2 (1.000000, 1.350000, 1.500000, 0.800000)
@@ -572,9 +572,9 @@ ssfx_int_grass_params_1 (1.400000, 2.000000, 2.000000, 30.000000)
 ssfx_int_grass_params_2 (1.000000, 5.000000, 0.300000, 2.000000)
 ssfx_is_underground 0
 ssfx_lightsetup_1 (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_lut (0.500000, 1.000000, 0.000000, 0.000000)
+ssfx_lut (1.000000, 13.000000, 0.000000, 0.000000)
 ssfx_pom (36.000000, 40.000000, 0.035000, 0.600000)
-ssfx_pom_refine 1
+ssfx_pom_refine 0
 ssfx_rain_1 (1.100000, 0.030000, 0.700000, 2.000000)
 ssfx_rain_2 (1.000000, 0.000000, 2.500000, 1.000000)
 ssfx_rain_3 (0.200000, 3.000000, 0.000000, 0.000000)
@@ -589,11 +589,11 @@ ssfx_sss (1.000000, 1.000000, 0.000000, 0.000000)
 ssfx_sss_quality (24.000000, 8.000000, 1.000000, 1.000000)
 ssfx_terrain_grass_align 1
 ssfx_terrain_grass_slope 0.84444
-ssfx_terrain_offset (-0.120000, -0.050000, -0.150000, 0.000000)
+ssfx_terrain_offset (-0.100000, -0.050000, -0.100000, 0.000000)
 ssfx_terrain_pom (36.000000, 40.000000, 0.040000, 1.000000)
 ssfx_terrain_pom_refine 1
 ssfx_terrain_quality (20.000000, 0.000000, 0.000000, 0.000000)
-ssfx_volumetric (1.000000, 0.500000, 4.000000, 1.000000)
+ssfx_volumetric (1.000000, 0.500000, 3.000000, 1.000000)
 ssfx_water (1.000000, 0.800000, 1.000000, 0.000000)
 ssfx_water_quality (1.000000, 2.000000, 0.000000)
 ssfx_water_setup1 (0.600000, 3.000000, 0.300000, 0.050000)
@@ -603,7 +603,7 @@ ssfx_wetsurfaces_1 (0.500000, 1.400000, 0.700000, 1.250000)
 ssfx_wetsurfaces_2 (0.800000, 1.500000, 0.200000, 0.350000)
 ssfx_wind_grass (9.700000, 1.500000, 1.600000, 0.500000)
 ssfx_wind_trees (11.100000, 0.170000, 0.900000, 0.100000)
-ssfx_wpn_dof_1 (0.150000, 0.400000, 0.000000, 1.100000)
+ssfx_wpn_dof_1 (0.000000, 0.000000, 0.000000, 1.100000)
 ssfx_wpn_dof_2 0.15
 """
 caminert = """
@@ -621,8 +621,6 @@ Then, download and install these files **in the order shown** using the links be
 **XTREME GRAPHICS PACK: https://drive.google.com/uc?export=download&id=1aupGl8Ze-DDeCB05RG4EodRaYy3KdEjr**
 
 **XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1uMTWwi6ea_9QWnRIW8gAZcPswmZHbPEG**
-
-**XTREME GRAPHICS PACK LUTS: https://drive.google.com/uc?export=download&id=1ibD7df8v-N3BjSsBtuA6Z2qJa4o4pSAK**
 
 **RESHADE: https://drive.google.com/uc?export=download&id=1k_nM1rgbatpw-FLxl3c4g90mx7I_6IOn**
 
@@ -685,7 +683,7 @@ optionalslist = {
 
 **Re\:Pack Foliage Package 1.2:** Adds 16K textures to leaves.
 
-**C-Consciousness Grass Overhaul v0.55:** Adds 8K foliage, with recolors and resizing to fit each season.
+**C-Consciousness Grass Overhaul v0.55:** Adds 8K foliage, with recolors and resizing to fit each season. Made by **Huh?**, with help from **Hoddminir** and poppy textures from **https://pngimg.com**.
 
 **Rotten Life Ground Textures:** Adds 4K realistic terrain textures, available in Summer, Fall and Late Fall.
     """,
@@ -741,12 +739,34 @@ optionalslist = {
     """
 
 }
+screenshots = [
+    "Cinematic Late Fall Cordon Sunrise",
+    "Late Fall Cordon Sunrise 1",
+    "Late Fall Cordon Sunrise 2",
+    "Summer Cordon Sunset 1",
+    "Summer Cordon Sunset 2",
+    "Winter Wonderland",
+    "Late Fall Cordon Red Sunset",
+    "Rookie Village Campfire"
+    ""
+]
 
 if page == "Home":
     
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
-    st.write("---")
     st.write("This graphics pack is a nice and easy way to make your game look so much better. It features a series of mods to improve shaders, VFX, textures and overall visual fidelity.")
+
+    st.write("---")
+
+    with st.expander("**Preview Screenshots**"):
+
+        st.header("Preview Screenshots:")
+
+        for img in screenshots:
+            st.image(img+".png", img)
+
+    st.write("---")
+
     st.header("Installation:")
     st.write(installation)
     st.write("---")
