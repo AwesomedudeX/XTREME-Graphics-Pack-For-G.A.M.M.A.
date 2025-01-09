@@ -3,7 +3,7 @@ from io import StringIO
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
-page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings"])
+page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "**STALKER XTREME** Modlist Compatibility"])
 atmospreset = """
 r__color_grading (0, 0, 0)
 
@@ -751,6 +751,75 @@ screenshots = [
     ""
 ]
 
+xtrememodlist = """
+-95- Doom-like weapon inspection - Grokitach
+-94- Tacticool scopes - jaymorrow
+-G.A.M.M.A. Disable WPO Overheat
+-282- GAMMA Loading Screens - CS Eden
+-25- High Res Loading Screens - Bazingarrey
+-G.A.M.M.A. No Masks Textures
+-G.A.M.M.A. Wepl Hit Effects Rework
+-G.A.M.M.A. Vices are free
+-G.A.M.M.A. Soundtrack
+-G.A.M.M.A. Short Psi Storms
+-G.A.M.M.A. Reliable Animation Settings
+-G.A.M.M.A. No Copyrighted Music
+-G.A.M.M.A. MCM values - Rename to keep your personal changes
+-394- Return Menu Music - Mirrowel
+-311- NPC Stop Looting Dead Bodies - DTTheGunslinger
+-365- Boomsticks and Sharpsticks 2022 Guns - Mitch & Team
+-314- Retrogue's Additional Weapons - Retrogue
+-245- Hideout Furniture 1.2.0 - Aoldri
+-76- Boomsticks and Sharpsticks New (keep disabled) - Mich
+-302- Minimalist companion UI moddb - Kageeskl
+-271- G.A.M.M.A. Large Files - GAMMA Team
+-203- YACS Better Campfire Saves (forces campfire saves but they are better) - Ishmaeel
+-108- Remove dropping weapons from damage - Great_Day
+-50- Disable Burnt Fuzz - _STYX_
+-20- EFT footsteps and tinnitus 1.1 - Souvlakii
+-2- Main Menu Theme - Deathcard Cabin - Grokitach
+-18- Ambient Music Pack - Wojach
+-17- Inventory open close sound - HollidayW
+-16- Hit Effects - Wepl
+-15- Voiced Actor - DesmanMetzger
+-13- Quieter Wood Boxes Breaking - cringeybabey
+-G.A.M.M.A. No harmonica
+-G.A.M.M.A. Minimalist HUD
+-XTREME Disabled_separator
++G.A.M.M.A. MCM values
++Advanced Stamina System (ASS) 1.10 - TheMrDemonized
++Toxic Rain 0.74
++[livvan] Stressful Zone 1.06.03
++Awesomedude's Cold System Adjustments (REQUIRES COLD SYSTEM)
++Cold System 0.6
+-310- Tactical Fonts for Anomaly 4k - CryoManne
+-309- Tactical Fonts for Anomaly 2k - CryoManne
+-[AlphaLion] Reworked Status Icons 1.5 - Alt Color
+-[AlphaLion] Reworked Status Icons 1.5 - Alt
++[AlphaLion] Reworked Status Icons 1.5 - Default
+-XTREME OPTIONAL_separator
++[relax_68] Improved Main Menu 1.0.0 ALPHA
++UI Rework G.A.M.M.A. Style - Sota
+-XTREME Gameplay & HUD_separator
++ReShade 6.3.3 DX11
++XTREME Graphics Pack Optionals
++XTREME Graphics Pack
+-XTREME Graphics_separator
++Re.Tune Anomaly Footsteps V4
++Re.Tune Exoskeletons and Nosorogs
++Re.Tune Bullet Cracks and Impacts
++Re.Tune Grenade SFX V2
++Re.Tune Ambience Sounds V3.1
++Dynamic Zoom Click Sound V1.3
++Voiced Actor Expanded 2.1 RU - PICK ONE
+-Voiced Actor Expanded 2.1 EN - PICK ONE
++[ ISFX ] Improved Special Sound Effects
++[Haruka] Mags Redux Sounds
++Anomaly Radios Extended
++Stalker Anomaly Radio Revamp - РАДИО ОБНОВЛЕНИЕ
+-XTREME Audio_separator
+"""
+
 if page == "Home":
     
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
@@ -938,3 +1007,26 @@ else:
                 userout = strio.read() + write
                 download = st.download_button("Download Converted File", data=userout, file_name="user.ltx")
 
+    elif page == "**STALKER XTREME** Modlist Compatibility":
+        
+        st.write("This will edit your MO2 modlist file to disable the mods that should be disabled, while keeping the rest of your modlist intact.")
+        st.write("Before you start, open MO2, click on your profile at the top (by default, it's **`G.A.M.M.A.`**) and click **`<Manage...>`**. Then, select your profile, and click **`Copy`**. After that, just enter a name (maybe **`XTREME`**) and hit **`OK`**.")
+        st.write("Once that's done, upload your **`modlist.txt`** file - **located in your current profile's folder (`GAMMA/profiles/yourprofile/`)**.")
+        st.write("Finally, download the converted file, drag it into your **`GAMMA/profiles/yourprofile/`** folder and replace the existing file when prompted.")
+        st.write("If you have **XTREME Graphics Pack** installed, and you haven't renamed it to anything other than the default, it will be automatically placed under the **XTREME Graphics** separator. If any part of XGP is disabled and at the bottom of the modlist, you will have to move it back into position and re-enable it for it to work.")
+
+        userfile = st.file_uploader("")
+        
+        if userfile != None:
+
+            if userfile.name != "modlist.txt":
+                st.subheader("This is not a valid modlist file. Please use a valid file.")
+
+            else:
+
+                strio = StringIO(userfile.getvalue().decode("utf-8"))
+                userfile = strio.read()
+
+                userout = xtrememodlist + userfile
+
+                download = st.download_button("Download Converted File", data=userout, file_name="modlist.txt")
