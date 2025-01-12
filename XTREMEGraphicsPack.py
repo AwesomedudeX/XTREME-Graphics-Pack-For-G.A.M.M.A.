@@ -798,6 +798,14 @@ xtrememodlist = """
 -[AlphaLion] Reworked Status Icons 1.5 - Alt
 +[AlphaLion] Reworked Status Icons 1.5 - Default
 -XTREME OPTIONAL_separator
++Wrist Watch Key
++ReadWatch v1.0
+-[HarukaSai] Quick Action Wheel (BUGGY)
++DynaHUD 1.19
++BHSRO G.A.M.M.A. 0.9.3 Patch
++BHSRO Old Surgical Kit Animation
++[Maka] THAP Rework 2.3 FIXED EXO ANIMS
++BHS Realistic Overhaul 0.87 BETA
 +[relax_68] Improved Main Menu 1.0.0 ALPHA
 +UI Rework G.A.M.M.A. Style - Sota
 -XTREME Gameplay & HUD_separator
