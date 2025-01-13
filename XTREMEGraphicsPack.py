@@ -798,6 +798,8 @@ xtrememodlist = """
 -[AlphaLion] Reworked Status Icons 1.5 - Alt
 +[AlphaLion] Reworked Status Icons 1.5 - Default
 -XTREME OPTIONAL_separator
++[ZoraZ] Sprint Cancel Aim and Lean Toggle
++[ITsPorky] Toggle Auto Run V1.0.2
 +Wrist Watch Key
 +ReadWatch v1.0
 -[HarukaSai] Quick Action Wheel (BUGGY)
