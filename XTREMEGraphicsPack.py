@@ -736,12 +736,100 @@ screenshots = [
 
 xtrememodlist = {
 
-    "hud": """
--282- GAMMA Loading Screens - CS Eden
--25- High Res Loading Screens - Bazingarrey
+"audio": """
++Re.Tune Anomaly Footsteps V4
++Re.Tune Exoskeletons and Nosorogs
++Re.Tune Bullet Cracks and Impacts
++Re.Tune Grenade SFX V2
++Re.Tune Ambience Sounds V3.1
++Dynamic Zoom Click Sound V1.3
++Voiced Actor Expanded 2.1 RU - PICK ONE
+-Voiced Actor Expanded 2.1 EN - PICK ONE
++[ ISFX ] Improved Special Sound Effects
++[Haruka] Mags Redux Sounds
++Anomaly Radios Extended
++Stalker Anomaly Radio Revamp - РАДИО ОБНОВЛЕНИЕ
+-XTREME Audio_separator
 """,
 
-    "disabled": """
+"mags": """
++Mags_Redux_Models_Update_
++MrBs_Extra_Mags_for_MagsRedux
++[Shinesparkler] GAMMA Mags Redux Fixes 1.2.4
+-XTREME Weapons_separator
+""",
+
+"heatvision": """
++HeatVision V1.3 [DLTX]
+""",
+
+"graphics": """
++ReShade 6.3.3 DX11
++XTREME Graphics Pack Optionals
++XTREME Graphics Pack
+-XTREME Graphics_separator""",
+
+"gameplay0": """
+-XTREME Gameplay & HUD_separator
+""",
+
+"ammocheck1": """
++261- Ammo Check - Ishmaeel
+""",
+
+"hud1": """
++[relax_68] Improved Main Menu 1.0.0 ALPHA
++UI Rework G.A.M.M.A. Style - Sota
+""",
+
+"gameplay1": """
++Wrist Watch Key
++ReadWatch v1.0
+-[HarukaSai] Quick Action Wheel (BUGGY)
++DynaHUD 1.19
++BHSRO G.A.M.M.A. 0.9.3 Patch
++BHSRO Old Surgical Kit Animation
++[Maka] THAP Rework 2.3 FIXED EXO ANIMS
++BHS Realistic Overhaul 0.87 BETA
++[relax_68] Improved Main Menu 1.0.0 ALPHA
++UI Rework G.A.M.M.A. Style - Sota
+""",
+
+"ammocheck2": """
++OneKey Weapon Controls
+""",
+
+"gameplay2": """
++Draggable Hud Editor
++Awesomedude's Consumables Uses Adjustments (OPTIONAL - VERY USEFUL)
++Disassembly Animation Freedom - Krebou
++NPC Close Combat Enhanced - RavenAscendant
++Proper Jam Chance - Literally Faust
++Quick Melee Reworked V1.6A
++[Utjan] Immersive Skinning
++[Utjan] PDA Hacking v1.2
++NPC Wounds And Treatment
++Mugging Squads 1.4 - TheMrDemonized
++[Haruka] Laser and Torch MCM Keybinding
++[ZoraZ] Sprint Cancel Aim and Lean Toggle
++[ITsPorky] Toggle Auto Run V1.0.2
+""",
+
+"optionals": """
++G.A.M.M.A. MCM values
++Advanced Stamina System (ASS) 1.10 - TheMrDemonized
++Toxic Rain 0.74
++[livvan] Stressful Zone 1.06.03
++Awesomedude's Cold System Adjustments (REQUIRES COLD SYSTEM)
++Cold System 0.6
+-310- Tactical Fonts for Anomaly 4k - CryoManne
+-309- Tactical Fonts for Anomaly 2k - CryoManne
+-[AlphaLion] Reworked Status Icons 1.5 - Alt Color
+-[AlphaLion] Reworked Status Icons 1.5 - Alt
++[AlphaLion] Reworked Status Icons 1.5 - Default
+-XTREME OPTIONAL_separator""",
+
+"disabled": """
 -95- Doom-like weapon inspection - Grokitach
 -94- Tacticool scopes - jaymorrow
 -G.A.M.M.A. Disable WPO Overheat
@@ -774,55 +862,9 @@ xtrememodlist = {
 -G.A.M.M.A. Minimalist HUD
 -XTREME Disabled_separator""",
 
-"optionals": """
-+G.A.M.M.A. MCM values
-+Advanced Stamina System (ASS) 1.10 - TheMrDemonized
-+Toxic Rain 0.74
-+[livvan] Stressful Zone 1.06.03
-+Awesomedude's Cold System Adjustments (REQUIRES COLD SYSTEM)
-+Cold System 0.6
--310- Tactical Fonts for Anomaly 4k - CryoManne
--309- Tactical Fonts for Anomaly 2k - CryoManne
--[AlphaLion] Reworked Status Icons 1.5 - Alt Color
--[AlphaLion] Reworked Status Icons 1.5 - Alt
-+[AlphaLion] Reworked Status Icons 1.5 - Default
--XTREME OPTIONAL_separator""",
-
-"gameplay": """
-+[ZoraZ] Sprint Cancel Aim and Lean Toggle
-+[ITsPorky] Toggle Auto Run V1.0.2
-+Wrist Watch Key
-+ReadWatch v1.0
--[HarukaSai] Quick Action Wheel (BUGGY)
-+DynaHUD 1.19
-+BHSRO G.A.M.M.A. 0.9.3 Patch
-+BHSRO Old Surgical Kit Animation
-+[Maka] THAP Rework 2.3 FIXED EXO ANIMS
-+BHS Realistic Overhaul 0.87 BETA
-+[relax_68] Improved Main Menu 1.0.0 ALPHA
-+UI Rework G.A.M.M.A. Style - Sota
--XTREME Gameplay & HUD_separator""",
-
-"graphics": """
-+ReShade 6.3.3 DX11
-+XTREME Graphics Pack Optionals
-+XTREME Graphics Pack
--XTREME Graphics_separator""",
-
-"audio": """
-+Re.Tune Anomaly Footsteps V4
-+Re.Tune Exoskeletons and Nosorogs
-+Re.Tune Bullet Cracks and Impacts
-+Re.Tune Grenade SFX V2
-+Re.Tune Ambience Sounds V3.1
-+Dynamic Zoom Click Sound V1.3
-+Voiced Actor Expanded 2.1 RU - PICK ONE
--Voiced Actor Expanded 2.1 EN - PICK ONE
-+[ ISFX ] Improved Special Sound Effects
-+[Haruka] Mags Redux Sounds
-+Anomaly Radios Extended
-+Stalker Anomaly Radio Revamp - РАДИО ОБНОВЛЕНИЕ
--XTREME Audio_separator
+"hud2": """
+-282- GAMMA Loading Screens - CS Eden
+-25- High Res Loading Screens - Bazingarrey
 """
 
 }
@@ -1037,21 +1079,56 @@ else:
 
                 st.subheader("What parts of STALKER XTREME do you want to use?")
 
-                audio = st.checkbox("XTREME Audio")
-                graphics = st.checkbox("XTREME Graphics")
-                gameplay = st.checkbox("XTREME Gameplay")
-                optionals = st.checkbox("XTREME Optionals")
-                disabled = st.checkbox("Recommended Disabled GAMMA Mods")
-                
+                if st.checkbox("Select All"):
+                    selectall = True
+
+                else:
+                    selectall = False
+
+                audio = st.checkbox("XTREME Audio", selectall)
+                graphics = st.checkbox("XTREME Graphics", selectall)
+                hud = st.checkbox("XTREME HUD", selectall)
+                gameplay = st.checkbox("XTREME Gameplay", selectall)
+                optionals = st.checkbox("XTREME Optionals", selectall)
+                disabled = st.checkbox("Recommended Disabled GAMMA Mods", selectall)
+
+                heatvision = st.checkbox("Heat Vision Optics", selectall)
+                ammocheck = st.checkbox("Ammo Check", selectall)
+
+                if ammocheck:
+                    mags = st.checkbox("Mags Redux", selectall)
+                else:
+                    mags = False
 
                 if audio:
                     userout = xtrememodlist["audio"] + userout
 
+                if mags:
+                    userout = xtrememodlist["mags"] + userout
+                
+                if heatvision:
+                    userout = xtrememodlist["heatvision"] + userout
+
                 if graphics:
                     userout = xtrememodlist["graphics"] + userout
 
+                if gameplay or hud or ammocheck:
+                    userout = xtrememodlist["gameplay0"] + userout
+
+                if ammocheck:
+                    userout = xtrememodlist["ammocheck1"] + userout
+
+                if hud:
+                    userout = xtrememodlist["hud1"] + userout
+
                 if gameplay:
-                    userout = xtrememodlist["gameplay"] + userout
+                    userout = xtrememodlist["gameplay1"] + userout
+
+                if ammocheck:
+                    userout = xtrememodlist["ammocheck2"] + userout
+
+                if gameplay:
+                    userout = xtrememodlist["gameplay2"] + userout
 
                 if optionals:
                     userout = xtrememodlist["optionals"] + userout
@@ -1059,8 +1136,7 @@ else:
                 if disabled:
                     userout = xtrememodlist["disabled"] + userout
 
-                if gameplay:
-                    userout = xtrememodlist["hud"] + userout
-
+                if hud:
+                    userout = xtrememodlist["hud2"] + userout
 
                 download = st.download_button("Download Converted File", data=userout, file_name="modlist.txt")
