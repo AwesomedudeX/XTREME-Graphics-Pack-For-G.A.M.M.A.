@@ -32,9 +32,9 @@ r2_sun_depth_far_scale 0.99988
 r2_sun_tsm_bias 0.5
 ssfx_hud_hemi 0
 
-shader_param_1 (0.99, 1, 0.97, -0.2)
+shader_param_1 (0.99, 1, 0.97, -0.1)
 shader_param_2 (0, 0, 0, 0.1)
-shader_param_3 (0.838, 0.847, 0.852, -0.005)
+shader_param_3 (0.838, 0.847, 0.852, 0.1)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """
 disabledmods = {
@@ -345,7 +345,7 @@ r2_ls_psm_kernel 0.7
 r2_ls_squality 3.
 r2_ls_ssm_kernel 0.7
 r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
-r2_mblur 0.03815
+r2_mblur 0.02816
 r2_mblur_enabled on
 r2_parallax_h 0.
 r2_qsync 0
@@ -375,15 +375,15 @@ r2_sun_details on
 r2_sun_far 100.
 r2_sun_focus on
 r2_sun_lumscale 1.5
-r2_sun_lumscale_amb 0.95
-r2_sun_lumscale_hemi 0.4
+r2_sun_lumscale_amb 1.35
+r2_sun_lumscale_hemi 0.95
 r2_sun_near 15.
 r2_sun_near_border 0.75
 r2_sun_quality st_opt_medium
 r2_sun_tsm on
 r2_sun_tsm_bias 0.5
 r2_sun_tsm_proj 0.3
-r2_sunshafts_min 0.
+r2_sunshafts_min 0.01
 r2_sunshafts_mode volumetric
 r2_sunshafts_quality st_opt_low
 r2_sunshafts_value 0.5
@@ -400,9 +400,9 @@ r2_tnmp_onoff 0.
 r2_tnmp_w 1.12
 r2_tonemap on
 r2_tonemap_adaptation 3.
-r2_tonemap_amount 0.65
+r2_tonemap_amount 0.3
 r2_tonemap_lowlum 0.25
-r2_tonemap_middlegray 1.25
+r2_tonemap_middlegray 1.4
 r2_volumetric_lights on
 r2_wait_sleep 0
 r2_water_reflections on
@@ -466,13 +466,13 @@ r__bloom_thresh (0.700000, 0.800000, 0.900000, 0.000000)
 r__bloom_weight (0.330000, 0.330000, 0.330000, 0.000000)
 r__clear_models_on_unload off
 r__color_grading (0.000000, 0.000000, 0.000000)
-r__detail_density 0.58
+r__detail_density 0.68
 r__detail_height 0.7
 r__detail_radius 150
 r__dtex_range 50.
 r__enable_grass_shadow off
 r__exposure 1.
-r__fakescope 0
+r__fakescope 1
 r__framelimit 0
 r__gamma 1.
 r__geometry_lod 1.5
@@ -481,10 +481,10 @@ r__lens_flares on
 r__nightvision 0
 r__no_ram_textures on
 r__no_scale_on_fade off
-r__optimize_dynamic_geom 0
+r__optimize_dynamic_geom 1
 r__optimize_shadow_geom off
-r__optimize_static_geom 0
-r__saturation 1.15
+r__optimize_static_geom 2
+r__saturation 1.
 r__supersample 1
 r__tf_aniso 16
 r__tf_mipbias -0.5
@@ -502,7 +502,7 @@ rs_screenmode borderless
 rs_skeleton_update 32
 rs_stats off
 rs_v_sync off
-rs_vis_distance 1.5
+rs_vis_distance 1.
 s3ds_param_1 (4.000000, 4.000000, 0.300000, 0.000000)
 s3ds_param_2 (0.000000, 0.000000, 0.000000, 1.500000)
 s3ds_param_3 (0.000000, 0.000000, 0.000000, 0.020000)
@@ -523,31 +523,14 @@ scope_radius 0.
 sds_enable on
 sds_speed_enable on
 sds_zoom_enable on
-shader_param_1 (0.990000, 1.000000, 0.970000, -0.200000)
+shader_param_1 (0.990000, 1.000000, 0.970000, -0.100000)
 shader_param_2 (0.000000, 0.000000, 0.000000, 0.100000)
-shader_param_3 (0.838000, 0.847000, 0.852000, -0.005000)
+shader_param_3 (0.838000, 0.847000, 0.852000, 0.100000)
 shader_param_4 (1.120000, 1.120000, 1.130000, -0.400000)
 shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
-shader_param_6 (8.016100, 10.000500, 0.800000, 0.120000)
+shader_param_6 (0.000000, 1.000000, 0.000000, 0.000000)
 shader_param_7 (1.000000, 0.550000, 0.000000, 0.000000)
 shader_param_8 (0.000000, 10.300000, 100.000000, 10.000000)
-sil_glow_color (1.000000, 0.000000, 0.000000)
-sil_glow_cool_temp_rate 0.01
-sil_glow_max_temp 0.15
-sil_glow_shot_temp 0.004
-slot_0 medkit
-slot_1 bandage
-slot_2 cigarettes_russian
-slot_3 salicidic_acid
-snd_acceleration on
-snd_cache_size 256
-snd_device OpenAL Soft
-snd_doppler_power 1.8
-snd_doppler_smoothing 15
-snd_efx on
-snd_targets 256
-snd_volume_eff 1.
-snd_volume_music 0.
 ssfx_ao (2.000000, 10.000000, 0.100000, 1.000000)
 ssfx_ao_quality 8
 ssfx_ao_setup1 (300.000000, 1.000000, 0.400000, 0.060000)
@@ -557,7 +540,7 @@ ssfx_bloom_2 (1.000000, 1.350000, 1.500000, 0.800000)
 ssfx_bloom_use_presets 0
 ssfx_florafixes_1 (0.150000, 0.180000, 0.140000, 0.150000)
 ssfx_florafixes_2 (4.600000, 0.380000, 0.000000, 0.000000)
-ssfx_gloss_factor 0.672
+ssfx_gloss_factor 0.89822
 ssfx_gloss_method 1
 ssfx_gloss_minmax (0.700000, 0.950000, 0.000000)
 ssfx_grass_interactive (1.000000, 8.000000, 2000.000000, 1.000000)
@@ -572,8 +555,8 @@ ssfx_int_grass_params_1 (1.400000, 2.000000, 2.000000, 30.000000)
 ssfx_int_grass_params_2 (1.000000, 5.000000, 0.300000, 2.000000)
 ssfx_is_underground 0
 ssfx_lightsetup_1 (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_lut (1.000000, 13.000000, 0.000000, 0.000000)
-ssfx_pom (36.000000, 40.000000, 0.035000, 0.600000)
+ssfx_lut (1.000000, 9.000000, 0.000000, 0.000000)
+ssfx_pom (16.000000, 40.000000, 0.035000, 0.600000)
 ssfx_pom_refine 0
 ssfx_rain_1 (1.100000, 0.030000, 0.700000, 2.000000)
 ssfx_rain_2 (1.000000, 0.000000, 2.500000, 1.000000)
@@ -603,7 +586,7 @@ ssfx_wetsurfaces_1 (0.500000, 1.400000, 0.700000, 1.250000)
 ssfx_wetsurfaces_2 (0.800000, 1.500000, 0.200000, 0.350000)
 ssfx_wind_grass (9.700000, 1.500000, 1.600000, 0.500000)
 ssfx_wind_trees (11.100000, 0.170000, 0.900000, 0.100000)
-ssfx_wpn_dof_1 (0.000000, 0.000000, 0.000000, 1.100000)
+ssfx_wpn_dof_1 (0.150000, 0.400000, 0.000000, 1.100000)
 ssfx_wpn_dof_2 0.15
 """
 caminert = """
@@ -751,13 +734,17 @@ screenshots = [
     ""
 ]
 
-xtrememodlist = """
+xtrememodlist = {
+
+    "hud": """
+-282- GAMMA Loading Screens - CS Eden
+-25- High Res Loading Screens - Bazingarrey
+""",
+
+    "disabled": """
 -95- Doom-like weapon inspection - Grokitach
 -94- Tacticool scopes - jaymorrow
 -G.A.M.M.A. Disable WPO Overheat
--282- GAMMA Loading Screens - CS Eden
--25- High Res Loading Screens - Bazingarrey
--G.A.M.M.A. No Masks Textures
 -G.A.M.M.A. Wepl Hit Effects Rework
 -G.A.M.M.A. Vices are free
 -G.A.M.M.A. Soundtrack
@@ -785,7 +772,9 @@ xtrememodlist = """
 -13- Quieter Wood Boxes Breaking - cringeybabey
 -G.A.M.M.A. No harmonica
 -G.A.M.M.A. Minimalist HUD
--XTREME Disabled_separator
+-XTREME Disabled_separator""",
+
+"optionals": """
 +G.A.M.M.A. MCM values
 +Advanced Stamina System (ASS) 1.10 - TheMrDemonized
 +Toxic Rain 0.74
@@ -797,7 +786,9 @@ xtrememodlist = """
 -[AlphaLion] Reworked Status Icons 1.5 - Alt Color
 -[AlphaLion] Reworked Status Icons 1.5 - Alt
 +[AlphaLion] Reworked Status Icons 1.5 - Default
--XTREME OPTIONAL_separator
+-XTREME OPTIONAL_separator""",
+
+"gameplay": """
 +[ZoraZ] Sprint Cancel Aim and Lean Toggle
 +[ITsPorky] Toggle Auto Run V1.0.2
 +Wrist Watch Key
@@ -810,11 +801,15 @@ xtrememodlist = """
 +BHS Realistic Overhaul 0.87 BETA
 +[relax_68] Improved Main Menu 1.0.0 ALPHA
 +UI Rework G.A.M.M.A. Style - Sota
--XTREME Gameplay & HUD_separator
+-XTREME Gameplay & HUD_separator""",
+
+"graphics": """
 +ReShade 6.3.3 DX11
 +XTREME Graphics Pack Optionals
 +XTREME Graphics Pack
--XTREME Graphics_separator
+-XTREME Graphics_separator""",
+
+"audio": """
 +Re.Tune Anomaly Footsteps V4
 +Re.Tune Exoskeletons and Nosorogs
 +Re.Tune Bullet Cracks and Impacts
@@ -829,6 +824,8 @@ xtrememodlist = """
 +Stalker Anomaly Radio Revamp - РАДИО ОБНОВЛЕНИЕ
 -XTREME Audio_separator
 """
+
+}
 
 if page == "Home":
     
@@ -1036,7 +1033,34 @@ else:
 
                 strio = StringIO(userfile.getvalue().decode("utf-8"))
                 userfile = strio.read()
+                userout = userfile
 
-                userout = xtrememodlist + userfile
+                st.subheader("What parts of STALKER XTREME do you want to use?")
+
+                audio = st.checkbox("XTREME Audio")
+                graphics = st.checkbox("XTREME Graphics")
+                gameplay = st.checkbox("XTREME Gameplay")
+                optionals = st.checkbox("XTREME Optionals")
+                disabled = st.checkbox("Recommended Disabled GAMMA Mods")
+                
+
+                if audio:
+                    userout = xtrememodlist["audio"] + userout
+
+                if graphics:
+                    userout = xtrememodlist["graphics"] + userout
+
+                if gameplay:
+                    userout = xtrememodlist["gameplay"] + userout
+
+                if optionals:
+                    userout = xtrememodlist["optionals"] + userout
+
+                if disabled:
+                    userout = xtrememodlist["disabled"] + userout
+
+                if gameplay:
+                    userout = xtrememodlist["hud"] + userout
+
 
                 download = st.download_button("Download Converted File", data=userout, file_name="modlist.txt")
