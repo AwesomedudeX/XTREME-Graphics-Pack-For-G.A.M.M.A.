@@ -34,7 +34,7 @@ ssfx_hud_hemi 0
 
 shader_param_1 (0.99, 1, 0.97, -0.1)
 shader_param_2 (0, 0, 0, 0.1)
-shader_param_3 (0.838, 0.847, 0.852, 0.1)
+shader_param_3 (0.838, 0.847, 0.852, 0)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """
 disabledmods = {
@@ -525,7 +525,7 @@ sds_speed_enable on
 sds_zoom_enable on
 shader_param_1 (0.990000, 1.000000, 0.970000, -0.100000)
 shader_param_2 (0.000000, 0.000000, 0.000000, 0.100000)
-shader_param_3 (0.838000, 0.847000, 0.852000, 0.100000)
+shader_param_3 (0.838000, 0.847000, 0.852000, 0.00000)
 shader_param_4 (1.120000, 1.120000, 1.130000, -0.400000)
 shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
 shader_param_6 (0.000000, 1.000000, 0.000000, 0.000000)
@@ -601,9 +601,11 @@ Download these modded exes: https://github.com/themrdemonized/xray-monolith/rele
 
 Then, download and install these files **in the order shown** using the links below; install them like any other mod in MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**XTREME GRAPHICS PACK: https://drive.google.com/uc?export=download&id=1aupGl8Ze-DDeCB05RG4EodRaYy3KdEjr**
+**STALKER XTREME BETA 0.5: https://drive.google.com/uc?export=download&id=1yoPv5f8IESSiLe1u9TMbPFD28zcRUXXz**
 
-**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1uMTWwi6ea_9QWnRIW8gAZcPswmZHbPEG**
+**XTREME GRAPHICS PACK: https://drive.google.com/uc?export=download&id=1DwzwPiSmS22ylzvI6UdubwMh0LVcWP1h**
+
+**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=17LBuPvmTKmVjoZ12TnMC-OBE1Fu4b6c3**
 
 **RESHADE: https://drive.google.com/uc?export=download&id=1k_nM1rgbatpw-FLxl3c4g90mx7I_6IOn**
 
