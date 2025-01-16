@@ -732,13 +732,15 @@ optionalslist = {
 }
 screenshots = [
     "Cinematic Late Fall Cordon Sunrise",
+    "Summer Cordon Sunset"
     "Late Fall Cordon Sunrise 1",
     "Late Fall Cordon Sunrise 2",
-    "Summer Cordon Sunset 1",
-    "Summer Cordon Sunset 2",
+    "Late Fall Cordon Sunrise 3",
+    "Late Fall Army Warehouses Sunrise 1",
+    "Late Fall Army Warehouses Sunrise 2",
+    "Late Fall Army Warehouses Sunrise 3",
     "Winter Wonderland",
-    "Late Fall Cordon Red Sunset",
-    "Rookie Village Campfire"
+    "Rookie Village Campfire",
     ""
 ]
 
