@@ -597,11 +597,15 @@ fov 100.
 hud_fov 0.7
 hud_fov_aim_factor 0."""
 installation = """
+https://cdn.discordapp.com/attachments/1297762722380779541/1329319892142522428/Preview_Screenshot.png?ex=6789e91f&is=6788979f&hm=ce65c8c54cdb3c70041163231189a5e88b5942316838ade5d791018ade61f4b0&
+
+**INSTALLATION:**
+
 Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2024.12.9/STALKER-Anomaly-modded-exes_2024.12.9.zip. Then, open the downloaded file in 7Zip, and just drag and drop everything in the file into your Anomaly folder; replace the existing files when prompted.
 
 Then, download and install these files **in the order shown** using the links below; install them like any other mod in MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**STALKER XTREME BETA 0.5: https://drive.google.com/uc?export=download&id=1yoPv5f8IESSiLe1u9TMbPFD28zcRUXXz**
+**STALKER XTREME BETA 0.3: https://drive.google.com/uc?export=download&id=1GaqwrQxknLMtceNqG4xtdjWTrdGT81y3**
 
 **XTREME GRAPHICS PACK: https://drive.google.com/uc?export=download&id=1DwzwPiSmS22ylzvI6UdubwMh0LVcWP1h**
 
@@ -613,8 +617,7 @@ From there, follow the instructions on the **Load Atmospheric Preset**, **Modlis
 
 You will need to use the **Awesomedude's Graphics Settings** and **STALKER XTREME Modlist Compatibility** pages as well if you are using **STALKER XTREME**.
 
-Finally, I’d really appreciate if you could send a message in the forum regardless of whether you have issues or not, just so that you show up as a member of the forum. This way, I can keep track of how many people are using the pack.
-"""
+Finally, I’d really appreciate if you could send a message in the forum regardless of whether you have issues or not, just so that you show up as a member of the forum. This way, I can keep track of how many people are using the pack."""
 mainlist = {
 
     "base shaders": """
