@@ -732,7 +732,7 @@ optionalslist = {
 }
 screenshots = [
     "Cinematic Late Fall Cordon Sunrise",
-    "Summer Cordon Sunset"
+    "Summer Cordon Sunset",
     "Late Fall Cordon Sunrise 1",
     "Late Fall Cordon Sunrise 2",
     "Late Fall Cordon Sunrise 3",
@@ -740,8 +740,7 @@ screenshots = [
     "Late Fall Army Warehouses Sunrise 2",
     "Late Fall Army Warehouses Sunrise 3",
     "Winter Wonderland",
-    "Rookie Village Campfire",
-    ""
+    "Rookie Village Campfire"
 ]
 
 xtrememodlist = {
