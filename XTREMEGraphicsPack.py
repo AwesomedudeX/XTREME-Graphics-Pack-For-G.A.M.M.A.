@@ -597,8 +597,6 @@ fov 100.
 hud_fov 0.7
 hud_fov_aim_factor 0."""
 installation = """
-https://cdn.discordapp.com/attachments/1297762722380779541/1329319892142522428/Preview_Screenshot.png?ex=6789e91f&is=6788979f&hm=ce65c8c54cdb3c70041163231189a5e88b5942316838ade5d791018ade61f4b0&
-
 **INSTALLATION:**
 
 Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2024.12.9/STALKER-Anomaly-modded-exes_2024.12.9.zip. Then, open the downloaded file in 7Zip, and just drag and drop everything in the file into your Anomaly folder; replace the existing files when prompted.
