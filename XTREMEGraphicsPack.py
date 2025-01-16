@@ -611,6 +611,8 @@ Then, download and install these files **in the order shown** using the links be
 
 From there, follow the instructions on the **Load Atmospheric Preset**, **Modlist Compatibility** and **MCM Settings For SSS** pages to modify your settings and mod list files to work with this pack.
 
+You will need to use the **Awesomedude's Graphics Settings** and **STALKER XTREME Modlist Compatibility** pages as well if you are using **STALKER XTREME**.
+
 Finally, I’d really appreciate if you could send a message in the forum regardless of whether you have issues or not, just so that you show up as a member of the forum. This way, I can keep track of how many people are using the pack.
 """
 mainlist = {
@@ -635,7 +637,11 @@ mainlist = {
     """,
 
     "main textures": """
-**Rotten Life Texture Pack**: A texture pack that adds old-themed 4K and 8K textures, which give structures in the Zone a cozy, yet run-down and scrappy look.
+**Global Texture Rework BETA:** A full texture overhaul that adds 2K and 4K textures to the game, which give the Zone a lifeless and worn-out look.
+
+**Rotten Life Texture Pack:** A texture pack that adds old-themed 4K and 8K textures, which give structures in the Zone a cozy, yet run-down and scrappy look.
+
+**Anomaly Texture Overhaul 4:** A complete texture overhaul that adds detailed 4K and 8K textures, which add to the depressing realism and immersion of the game.
 
 **Re.Pack Doors V1.0:** Adds 4K textures to doors.
 
