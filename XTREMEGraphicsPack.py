@@ -744,17 +744,6 @@ screenshots = [
 
 xtrememodlist = {
 
-"other1": """
-+Universal Animations V2.7
-+SortingPlus
-+Women of The Zone
-+Banger's Silencers Icons Fix
--Optimized Time Events Script - Demonized (CAN CAUSE CRASHES FROM TIME TO TIME)
-+MeatChunk's Prefetcher for GAMMA
-+Turn this on if you stutter (GAMMA)
--XTREME Low-Priority_separator
-""",
-
 "audio": """
 +Re.Tune Anomaly Footsteps V4
 +Re.Tune Exoskeletons and Nosorogs
@@ -835,6 +824,7 @@ xtrememodlist = {
 """,
 
 "optionals": """
++ReShade 6.3.3 DX11
 +G.A.M.M.A. MCM values
 +Advanced Stamina System (ASS) 1.10 - TheMrDemonized
 +Toxic Rain 0.74
@@ -847,23 +837,6 @@ xtrememodlist = {
 -[AlphaLion] Reworked Status Icons 1.5 - Alt
 +[AlphaLion] Reworked Status Icons 1.5 - Default
 -XTREME OPTIONAL_separator""",
-
-"other2": """
-+ReShade 6.3.3 DX11
-+G.A.M.M.A. MCM values
-+Awesomedude's Tactical Repositions
-+Sights & Optics Retextures v2.6 - Meowie
-+3DSS M4 Tactical Reanimations Patch 2.3
-+428- Authentic Reticle for 3DSS - Napolemon
-+434- 3DSS M4A1 Siber Reanimation - Andtheherois
-+429- The Covenant Weapon Pack 3DSS - Andtheherois & TCWP Team
-+427- IWP SV98 3DSS - Andtheherois & IWP Team
-+431- 3DSS ISG AK Makeover - Andtheherois & BAS Team
-+430- M98B 3DSS Update - Andtheherois & frostychun
-+410- 3DSS for GAMMA - Redotix99 & Andtheherois & party50
-+409- Mark Switch - party50 & meowie
--XTREME High-Priority_separator
-""",
 
 "disabled": """
 -95- Doom-like weapon inspection - Grokitach
@@ -1126,7 +1099,6 @@ else:
                 hud = st.checkbox("XTREME HUD", selectall)
                 gameplay = st.checkbox("XTREME Gameplay", selectall)
                 optionals = st.checkbox("XTREME Optionals", selectall)
-                othermods = st.checkbox("Other XTREME Mods", selectall)
                 disabled = st.checkbox("Recommended Disabled GAMMA Mods", selectall)
 
                 heatvision = st.checkbox("Heat Vision Optics", selectall)
