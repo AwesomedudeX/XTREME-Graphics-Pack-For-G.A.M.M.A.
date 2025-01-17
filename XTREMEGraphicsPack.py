@@ -1109,9 +1109,6 @@ else:
                 else:
                     mags = False
 
-                if othermods:
-                    userout = xtrememodlist["other1"] + userout
-
                 if audio:
                     userout = xtrememodlist["audio"] + userout
 
@@ -1144,9 +1141,6 @@ else:
 
                 if optionals:
                     userout = xtrememodlist["optionals"] + userout
-
-                if othermods:
-                    userout = xtrememodlist["other2"] + userout
 
                 if disabled:
                     userout = xtrememodlist["disabled"] + userout
