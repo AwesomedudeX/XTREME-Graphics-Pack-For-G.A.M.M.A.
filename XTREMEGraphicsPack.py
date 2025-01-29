@@ -3,7 +3,7 @@ from io import StringIO
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
-page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "**STALKER XTREME** Modlist Compatibility"])
+page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings"])
 atmospreset = """
 r__color_grading (0, 0, 0)
 
@@ -17,8 +17,9 @@ scope_factor 1
 r2_sun_lumscale 3.
 r2_gloss_factor 0.001
 r2_gloss_min 0.56
-r2_sun_lumscale 1.5
-r2_sun_lumscale_hemi 1.41
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 1.49685
+r2_sun_lumscale_hemi 0.97063
 r2_tonemap on
 r2_tonemap_adaptation 3.0
 r2_tonemap_amount 1
@@ -34,7 +35,7 @@ ssfx_hud_hemi 0
 
 shader_param_1 (0.99, 1, 0.97, -0.1)
 shader_param_2 (0, 0, 0, 0.1)
-shader_param_3 (0.838, 0.847, 0.852, 0)
+shader_param_3 (0.838, 0.847, 0.852, 0.05)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """
 disabledmods = {
@@ -318,7 +319,7 @@ r2_aa_break (0.800000, 0.100000, 0.000000)
 r2_aa_kernel 0.5
 r2_aa_weight (0.250000, 0.250000, 0.000000)
 r2_allow_r1_lights off
-r2_detail_bump on
+r2_detail_bump off
 r2_dof -1.000000,0.000000,800.000000
 r2_dof_enable on
 r2_dof_radius 0.25
@@ -345,7 +346,7 @@ r2_ls_psm_kernel 0.7
 r2_ls_squality 3.
 r2_ls_ssm_kernel 0.7
 r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
-r2_mblur 0.02816
+r2_mblur 0.02764
 r2_mblur_enabled on
 r2_parallax_h 0.
 r2_qsync 0
@@ -365,7 +366,7 @@ r2_ssao_hbao off
 r2_ssao_hdao off
 r2_ssao_mode disabled
 r2_ssao_opt_data on
-r2_steep_parallax on
+r2_steep_parallax off
 r2_sun on
 r2_sun_depth_far_bias -0.00002
 r2_sun_depth_far_scale 0.99988
@@ -374,8 +375,8 @@ r2_sun_depth_near_scale 0.9998
 r2_sun_details on
 r2_sun_far 100.
 r2_sun_focus on
-r2_sun_lumscale 1.5
-r2_sun_lumscale_amb 1.35
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 1.448
 r2_sun_lumscale_hemi 0.95
 r2_sun_near 15.
 r2_sun_near_border 0.75
@@ -401,7 +402,7 @@ r2_tnmp_w 1.12
 r2_tonemap on
 r2_tonemap_adaptation 3.
 r2_tonemap_amount 0.3
-r2_tonemap_lowlum 0.25
+r2_tonemap_lowlum 0.5
 r2_tonemap_middlegray 1.4
 r2_volumetric_lights on
 r2_wait_sleep 0
@@ -418,13 +419,13 @@ r3_msaa st_opt_off
 r3_msaa_alphatest st_opt_atest_msaa_dx10_1
 r3_use_dx10_1 on
 r3_volumetric_smoke on
-r4_enable_tessellation on
+r4_enable_tessellation off
 r4_hdr10_bloom_blur_passes 20
 r4_hdr10_bloom_blur_scale 1.
 r4_hdr10_bloom_intensity 0.06
 r4_hdr10_bloom_on 0
 r4_hdr10_brightness 0.
-r4_hdr10_colorspace 2
+r4_hdr10_colorspace 0
 r4_hdr10_contrast 0.
 r4_hdr10_contrast_middle_gray 0.5
 r4_hdr10_exposure 2.
@@ -456,7 +457,7 @@ r4_hdr10_sun_on 0
 r4_hdr10_sun_outer_radius 0.4
 r4_hdr10_tonemap_mode 1
 r4_hdr10_tonemapper 0
-r4_hdr10_ui_nits 400.
+r4_hdr10_ui_nits 140.
 r4_hdr10_ui_saturation 0.5
 r4_hdr10_whitepoint_nits 400.
 r4_wireframe off
@@ -466,9 +467,9 @@ r__bloom_thresh (0.700000, 0.800000, 0.900000, 0.000000)
 r__bloom_weight (0.330000, 0.330000, 0.330000, 0.000000)
 r__clear_models_on_unload off
 r__color_grading (0.000000, 0.000000, 0.000000)
-r__detail_density 0.68
-r__detail_height 0.7
-r__detail_radius 150
+r__detail_density 0.34
+r__detail_height 1.
+r__detail_radius 110
 r__dtex_range 50.
 r__enable_grass_shadow off
 r__exposure 1.
@@ -481,10 +482,10 @@ r__lens_flares on
 r__nightvision 0
 r__no_ram_textures on
 r__no_scale_on_fade off
-r__optimize_dynamic_geom 1
+r__optimize_dynamic_geom 2
 r__optimize_shadow_geom off
-r__optimize_static_geom 2
-r__saturation 1.
+r__optimize_static_geom 3
+r__saturation 1.15
 r__supersample 1
 r__tf_aniso 16
 r__tf_mipbias -0.5
@@ -502,10 +503,10 @@ rs_screenmode borderless
 rs_skeleton_update 32
 rs_stats off
 rs_v_sync off
-rs_vis_distance 1.
+rs_vis_distance 0.8
 s3ds_param_1 (4.000000, 4.000000, 0.300000, 0.000000)
-s3ds_param_2 (0.000000, 0.000000, 0.000000, 1.500000)
-s3ds_param_3 (0.000000, 0.000000, 0.000000, 0.020000)
+s3ds_param_2 (0.550000, 0.000000, 0.000000, 1.500000)
+s3ds_param_3 (0.000000, 0.000000, 0.200000, 0.030000)
 s3ds_param_4 (1.000000, 1.000000, 1.000000, 1.000000)
 scope_2dtexactive 0
 scope_blur_inner 0.1
@@ -525,22 +526,34 @@ sds_speed_enable on
 sds_zoom_enable on
 shader_param_1 (0.990000, 1.000000, 0.970000, -0.100000)
 shader_param_2 (0.000000, 0.000000, 0.000000, 0.100000)
-shader_param_3 (0.838000, 0.847000, 0.852000, 0.00000)
+shader_param_3 (0.838000, 0.847000, 0.852000, 0.050000)
 shader_param_4 (1.120000, 1.120000, 1.130000, -0.400000)
-shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
+shader_param_5 (1.000000, 0.000000, 0.000000, 0.000000)
 shader_param_6 (0.000000, 1.000000, 0.000000, 0.000000)
 shader_param_7 (1.000000, 0.550000, 0.000000, 0.000000)
 shader_param_8 (0.000000, 10.300000, 100.000000, 10.000000)
+sil_glow_color (1.000000, 0.000000, 0.000000)
+sil_glow_cool_temp_rate 0.01
+sil_glow_max_temp 0.15
+sil_glow_shot_temp 0.004
+smooth_ads_transition 0
+snd_acceleration on
+snd_cache_size 256
+snd_device OpenAL Soft
+snd_doppler_power 1.8
+snd_doppler_smoothing 15
+snd_efx on
+snd_targets 256
 ssfx_ao (2.000000, 10.000000, 0.100000, 1.000000)
 ssfx_ao_quality 8
 ssfx_ao_setup1 (300.000000, 1.000000, 0.400000, 0.060000)
 ssfx_blood_decals (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_bloom_1 (10.000000, 1.000000, 0.000000, 0.600000)
-ssfx_bloom_2 (1.000000, 1.350000, 1.500000, 0.800000)
+ssfx_bloom_1 (10.000000, 1.000000, 0.000000, 0.300000)
+ssfx_bloom_2 (1.000000, 1.000000, 1.500000, 0.800000)
 ssfx_bloom_use_presets 0
 ssfx_florafixes_1 (0.150000, 0.180000, 0.140000, 0.150000)
 ssfx_florafixes_2 (4.600000, 0.380000, 0.000000, 0.000000)
-ssfx_gloss_factor 0.89822
+ssfx_gloss_factor 0.672
 ssfx_gloss_method 1
 ssfx_gloss_minmax (0.700000, 0.950000, 0.000000)
 ssfx_grass_interactive (1.000000, 8.000000, 2000.000000, 1.000000)
@@ -550,16 +563,16 @@ ssfx_hud_drops_2 (0.225000, 1.500000, 0.400000, 2.000000)
 ssfx_hud_hemi 0.
 ssfx_il (6.666667, 4.000000, 0.600000, 0.500000)
 ssfx_il_quality 16
-ssfx_il_setup1 (150.000000, 1.000000, 1.000000, 0.000000)
+ssfx_il_setup1 (300.000000, 1.000000, 1.000000, 0.000000)
 ssfx_int_grass_params_1 (1.400000, 2.000000, 2.000000, 30.000000)
 ssfx_int_grass_params_2 (1.000000, 5.000000, 0.300000, 2.000000)
 ssfx_is_underground 0
 ssfx_lightsetup_1 (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_lut (1.000000, 9.000000, 0.000000, 0.000000)
+ssfx_lut (1.000000, 13.000000, 0.000000, 0.000000)
 ssfx_pom (16.000000, 40.000000, 0.035000, 0.600000)
 ssfx_pom_refine 0
-ssfx_rain_1 (1.100000, 0.030000, 0.700000, 2.000000)
-ssfx_rain_2 (1.000000, 0.000000, 2.500000, 1.000000)
+ssfx_rain_1 (1.500000, 0.070000, 1.000000, 2.000000)
+ssfx_rain_2 (0.800000, 0.050000, 2.500000, 1.000000)
 ssfx_rain_3 (0.200000, 3.000000, 0.000000, 0.000000)
 ssfx_rain_drops_setup (2500.000000, 15.000000, 0.000000, 0.000000)
 ssfx_shadow_bias (0.400000, 0.030000, 0.000000)
@@ -571,11 +584,11 @@ ssfx_ssr_quality 0
 ssfx_sss (1.000000, 1.000000, 0.000000, 0.000000)
 ssfx_sss_quality (24.000000, 8.000000, 1.000000, 1.000000)
 ssfx_terrain_grass_align 1
-ssfx_terrain_grass_slope 0.84444
-ssfx_terrain_offset (-0.100000, -0.050000, -0.100000, 0.000000)
-ssfx_terrain_pom (36.000000, 40.000000, 0.040000, 1.000000)
-ssfx_terrain_pom_refine 1
-ssfx_terrain_quality (20.000000, 0.000000, 0.000000, 0.000000)
+ssfx_terrain_grass_slope 1.
+ssfx_terrain_offset (-0.120000, -0.050000, -0.150000, 0.000000)
+ssfx_terrain_pom (12.000000, 20.000000, 0.040000, 1.000000)
+ssfx_terrain_pom_refine 0
+ssfx_terrain_quality (8.000000, 0.000000, 0.000000, 0.000000)
 ssfx_volumetric (1.000000, 0.500000, 3.000000, 1.000000)
 ssfx_water (1.000000, 0.800000, 1.000000, 0.000000)
 ssfx_water_quality (1.000000, 2.000000, 0.000000)
@@ -586,7 +599,7 @@ ssfx_wetsurfaces_1 (0.500000, 1.400000, 0.700000, 1.250000)
 ssfx_wetsurfaces_2 (0.800000, 1.500000, 0.200000, 0.350000)
 ssfx_wind_grass (9.700000, 1.500000, 1.600000, 0.500000)
 ssfx_wind_trees (11.100000, 0.170000, 0.900000, 0.100000)
-ssfx_wpn_dof_1 (0.150000, 0.400000, 0.000000, 1.100000)
+ssfx_wpn_dof_1 (0.000000, 0.000000, 0.000000, 1.100000)
 ssfx_wpn_dof_2 0.15
 """
 caminert = """
@@ -597,23 +610,23 @@ fov 100.
 hud_fov 0.7
 hud_fov_aim_factor 0."""
 installation = """
-Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2024.12.9/STALKER-Anomaly-modded-exes_2024.12.9.zip. Then, open the downloaded file in 7Zip, and just drag and drop everything in the file into your Anomaly folder; replace the existing files when prompted.
+Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2025.1.22/STALKER-Anomaly-modded-exes_2025.1.22.zip, open the file in 7Zip, and extract ALL the files into your Anomaly folder.
 
 Then, download and install these files **in the order shown** using the links below; install them like any other mod in MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**STALKER XTREME BETA 0.3: CURRENTLY UNAVAILABLE**
+**XTREME GRAPHICS PACK: https://drive.google.com/uc?export=download&id=1no84NxGHhlJI0NmUvQB82vYpR3-QakmU**
 
-**XTREME GRAPHICS PACK: https://drive.google.com/uc?export=download&id=1DwzwPiSmS22ylzvI6UdubwMh0LVcWP1h**
-
-**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=17LBuPvmTKmVjoZ12TnMC-OBE1Fu4b6c3**
+**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1tW_CaBEfQdQU9_mL7qpZp75jB9X1aP5b**
 
 **RESHADE: https://drive.google.com/uc?export=download&id=1k_nM1rgbatpw-FLxl3c4g90mx7I_6IOn**
 
-From there, follow the instructions on the **Load Atmospheric Preset**, **Modlist Compatibility** and **MCM Settings For SSS** pages to modify your settings and mod list files to work with this pack.
+You can also get **STALKER XTREME**, which is a modpack full of mods to greatly enhance the realism and immersiveness of the zone. Certain mods that are disabled may be re-enabled, but they might cause issues. I'll offer as much support for them as I can.
 
-You will need to use the **Awesomedude's Graphics Settings** and **STALKER XTREME Modlist Compatibility** pages as well if you are using **STALKER XTREME**.
+**STALKER XTREME BETA (REQUIRES A NEW GAME, INSTALL INSTRUCTIONS ARE INSIDE): https://www.mediafire.com/file/u7di0td1nrcsvkn/STALKER+XTREME+BETA.7z/file**
 
-Finally, I’d really appreciate if you could send a message in the forum regardless of whether you have issues or not, just so that you show up as a member of the forum. This way, I can keep track of how many people are using the pack."""
+From there, follow the instructions on the **Modlist Compatibility** and **MCM Settings For SSS** pages on this site to modify your settings and mod list files to work with this pack.
+
+Finally, you can either use the **Load Atmospheric Preset** page or just open the game and type `cfg_load xtreme` to load the atmospheric settings. If you are using **STALKER XTREME**, I recommend getting ALL of my graphics settings to ensure everything works properly."""
 mainlist = {
 
     "base shaders": """
@@ -713,11 +726,13 @@ optionalslist = {
     """,
 
     "weather": """
-**Apocalyptic Blowout Overhaul 4.0.1:** Revamps blowouts to look incredibly beautiful.
-
 **Weather Expansion for Atmospherics 1.66b:** Adds a wide variety of weathers to the game, all of which look realistic, yet cinematic.
 
-**Awesomedude's Weather Edits For Weather Expansion:** My own edits to the sunshafts during sunsets and sunrise to make them more cinematic - REQUIRES WEATHER EXPANSION.    
+**Apocalyptic Blowout Overhaul 4.0.1:** Revamps blowouts to look incredibly beautiful.
+
+**A.D.E.G.A. Upscaled Sky Textures: Adds upscaled sky textures from the A.D.E.G.A. texture multipack.**
+
+**Awesomedude's Weather Edits For Weather Expansion:** My own edits to the sunshafts during sunsets and sunrise to make them more cinematic.    
     """,
 
     "luts": """
@@ -741,142 +756,6 @@ screenshots = [
     "Winter Wonderland",
     "Rookie Village Campfire"
 ]
-
-xtrememodlist = {
-
-"audio": """
-+Re.Tune Anomaly Footsteps V4
-+Re.Tune Exoskeletons and Nosorogs
-+Re.Tune Bullet Cracks and Impacts
-+Re.Tune Grenade SFX V2
-+Re.Tune Ambience Sounds V3.1
-+Dynamic Zoom Click Sound V1.3
-+Voiced Actor Expanded 2.1 RU - PICK ONE
--Voiced Actor Expanded 2.1 EN - PICK ONE
-+[ ISFX ] Improved Special Sound Effects
-+[Haruka] Mags Redux Sounds
-+Anomaly Radios Extended
-+Stalker Anomaly Radio Revamp - РАДИО ОБНОВЛЕНИЕ
--XTREME Audio_separator
-""",
-
-"mags": """
-+Mags_Redux_Models_Update_
-+MrBs_Extra_Mags_for_MagsRedux
-+[Shinesparkler] GAMMA Mags Redux Fixes 1.2.4
--XTREME Weapons_separator
-""",
-
-"heatvision": """
-+HeatVision V1.3 [DLTX]
-""",
-
-"graphics": """
-+ReShade 6.3.3 DX11
-+XTREME Graphics Pack Optionals
-+XTREME Graphics Pack
--XTREME Graphics_separator""",
-
-"gameplay0": """
--XTREME Gameplay & HUD_separator
-""",
-
-"ammocheck1": """
-+261- Ammo Check - Ishmaeel
-""",
-
-"hud1": """
-+[relax_68] Improved Main Menu 1.0.0 ALPHA
-+UI Rework G.A.M.M.A. Style - Sota
-""",
-
-"gameplay1": """
-+Wrist Watch Key
-+ReadWatch v1.0
--[HarukaSai] Quick Action Wheel (BUGGY)
-+DynaHUD 1.19
-+BHSRO G.A.M.M.A. 0.9.3 Patch
-+BHSRO Old Surgical Kit Animation
-+[Maka] THAP Rework 2.3 FIXED EXO ANIMS
-+BHS Realistic Overhaul 0.87 BETA
-+[relax_68] Improved Main Menu 1.0.0 ALPHA
-+UI Rework G.A.M.M.A. Style - Sota
-""",
-
-"ammocheck2": """
-+OneKey Weapon Controls
-""",
-
-"gameplay2": """
-+Draggable Hud Editor
-+Awesomedude's Consumables Uses Adjustments (OPTIONAL - VERY USEFUL)
-+Disassembly Animation Freedom - Krebou
-+NPC Close Combat Enhanced - RavenAscendant
-+Proper Jam Chance - Literally Faust
-+Quick Melee Reworked V1.6A
-+[Utjan] Immersive Skinning
-+[Utjan] PDA Hacking v1.2
-+NPC Wounds And Treatment
-+Mugging Squads 1.4 - TheMrDemonized
-+[Haruka] Laser and Torch MCM Keybinding
-+[ZoraZ] Sprint Cancel Aim and Lean Toggle
-+[ITsPorky] Toggle Auto Run V1.0.2
-""",
-
-"optionals": """
-+ReShade 6.3.3 DX11
-+G.A.M.M.A. MCM values
-+Advanced Stamina System (ASS) 1.10 - TheMrDemonized
-+Toxic Rain 0.74
-+[livvan] Stressful Zone 1.06.03
-+Awesomedude's Cold System Adjustments (REQUIRES COLD SYSTEM)
-+Cold System 0.6
--310- Tactical Fonts for Anomaly 4k - CryoManne
--309- Tactical Fonts for Anomaly 2k - CryoManne
--[AlphaLion] Reworked Status Icons 1.5 - Alt Color
--[AlphaLion] Reworked Status Icons 1.5 - Alt
-+[AlphaLion] Reworked Status Icons 1.5 - Default
--XTREME OPTIONAL_separator""",
-
-"disabled": """
--95- Doom-like weapon inspection - Grokitach
--94- Tacticool scopes - jaymorrow
--G.A.M.M.A. Disable WPO Overheat
--G.A.M.M.A. Wepl Hit Effects Rework
--G.A.M.M.A. Vices are free
--G.A.M.M.A. Soundtrack
--G.A.M.M.A. Short Psi Storms
--G.A.M.M.A. Reliable Animation Settings
--G.A.M.M.A. No Copyrighted Music
--G.A.M.M.A. MCM values - Rename to keep your personal changes
--394- Return Menu Music - Mirrowel
--311- NPC Stop Looting Dead Bodies - DTTheGunslinger
--365- Boomsticks and Sharpsticks 2022 Guns - Mitch & Team
--314- Retrogue's Additional Weapons - Retrogue
--245- Hideout Furniture 1.2.0 - Aoldri
--76- Boomsticks and Sharpsticks New (keep disabled) - Mich
--302- Minimalist companion UI moddb - Kageeskl
--271- G.A.M.M.A. Large Files - GAMMA Team
--203- YACS Better Campfire Saves (forces campfire saves but they are better) - Ishmaeel
--108- Remove dropping weapons from damage - Great_Day
--50- Disable Burnt Fuzz - _STYX_
--20- EFT footsteps and tinnitus 1.1 - Souvlakii
--2- Main Menu Theme - Deathcard Cabin - Grokitach
--18- Ambient Music Pack - Wojach
--17- Inventory open close sound - HollidayW
--16- Hit Effects - Wepl
--15- Voiced Actor - DesmanMetzger
--13- Quieter Wood Boxes Breaking - cringeybabey
--G.A.M.M.A. No harmonica
--G.A.M.M.A. Minimalist HUD
--XTREME Disabled_separator""",
-
-"hud2": """
--282- GAMMA Loading Screens - CS Eden
--25- High Res Loading Screens - Bazingarrey
-"""
-
-}
 
 if page == "Home":
     
@@ -1064,88 +943,3 @@ else:
                 strio = StringIO(userfile.getvalue().decode("utf-8"))
                 userout = strio.read() + write
                 download = st.download_button("Download Converted File", data=userout, file_name="user.ltx")
-
-    elif page == "**STALKER XTREME** Modlist Compatibility":
-        
-        st.write("This will edit your MO2 modlist file to disable the mods that should be disabled, while keeping the rest of your modlist intact.")
-        st.write("Before you start, open MO2, click on your profile at the top (by default, it's **`G.A.M.M.A.`**) and click **`<Manage...>`**. Then, select your profile, and click **`Copy`**. After that, just enter a name (maybe **`XTREME`**) and hit **`OK`**.")
-        st.write("Once that's done, upload your **`modlist.txt`** file - **located in your current profile's folder (`GAMMA/profiles/yourprofile/`)**.")
-        st.write("Finally, download the converted file, drag it into your **`GAMMA/profiles/yourprofile/`** folder and replace the existing file when prompted.")
-        st.write("If you have **XTREME Graphics Pack** installed, and you haven't renamed it to anything other than the default, it will be automatically placed under the **XTREME Graphics** separator. If any part of XGP is disabled and at the bottom of the modlist, you will have to move it back into position and re-enable it for it to work.")
-
-        userfile = st.file_uploader("")
-        
-        if userfile != None:
-
-            if userfile.name != "modlist.txt":
-                st.subheader("This is not a valid modlist file. Please use a valid file.")
-
-            else:
-
-                strio = StringIO(userfile.getvalue().decode("utf-8"))
-                userfile = strio.read()
-                userout = userfile
-
-                st.subheader("What parts of STALKER XTREME do you want to use?")
-
-                if st.checkbox("Select All", True):
-                    selectall = True
-
-                else:
-                    selectall = False
-
-                audio = st.checkbox("XTREME Audio", selectall)
-                graphics = st.checkbox("XTREME Graphics", selectall)
-                hud = st.checkbox("XTREME HUD", selectall)
-                gameplay = st.checkbox("XTREME Gameplay", selectall)
-                optionals = st.checkbox("XTREME Optionals", selectall)
-                disabled = st.checkbox("Recommended Disabled GAMMA Mods", selectall)
-
-                heatvision = st.checkbox("Heat Vision Optics", selectall)
-                ammocheck = st.checkbox("Ammo Check", selectall)
-
-                if ammocheck:
-                    mags = st.checkbox("Mags Redux", selectall)
-                else:
-                    mags = False
-
-                if audio:
-                    userout = xtrememodlist["audio"] + userout
-
-                if mags:
-                    userout = xtrememodlist["mags"] + userout
-                
-                if heatvision:
-                    userout = xtrememodlist["heatvision"] + userout
-
-                if graphics:
-                    userout = xtrememodlist["graphics"] + userout
-
-                if gameplay or hud or ammocheck:
-                    userout = xtrememodlist["gameplay0"] + userout
-
-                if ammocheck:
-                    userout = xtrememodlist["ammocheck1"] + userout
-
-                if hud:
-                    userout = xtrememodlist["hud1"] + userout
-
-                if gameplay:
-                    userout = xtrememodlist["gameplay1"] + userout
-
-                if ammocheck:
-                    userout = xtrememodlist["ammocheck2"] + userout
-
-                if gameplay:
-                    userout = xtrememodlist["gameplay2"] + userout
-
-                if optionals:
-                    userout = xtrememodlist["optionals"] + userout
-
-                if disabled:
-                    userout = xtrememodlist["disabled"] + userout
-
-                if hud:
-                    userout = xtrememodlist["hud2"] + userout
-
-                download = st.download_button("Download Converted File", data=userout, file_name="modlist.txt")
