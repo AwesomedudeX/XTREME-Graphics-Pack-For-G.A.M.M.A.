@@ -730,7 +730,7 @@ optionalslist = {
 
 **Apocalyptic Blowout Overhaul 4.0.1:** Revamps blowouts to look incredibly beautiful.
 
-**A.D.E.G.A. Upscaled Sky Textures: Adds upscaled sky textures from the A.D.E.G.A. texture multipack.**
+**A.D.E.G.A. Upscaled Sky Textures:** Adds upscaled sky textures from the A.D.E.G.A. texture multipack.
 
 **Awesomedude's Weather Edits For Weather Expansion:** My own edits to the sunshafts during sunsets and sunrise to make them more cinematic.    
     """,
