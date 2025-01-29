@@ -974,5 +974,39 @@ else:
                 st.write(f"**Preset Folder Path: `{gammapath}{separator}mods{separator}{name}{separator}bin{separator}`**")
 
     elif page == "Arrival Anomalies":
-        st.write("I will add an automated way to do this when I can. For now, disable **Dynamic Anomalies Overhaul** and install **Arrival Anomalies**. Then, just move it to the top of **XTREME Visuals and Actor Animations**, and enable it. After that, you should be good to go!")
-        st.write("You can download **Arrival Anomalies** here: **https://www.moddb.com/mods/stalker-anomaly/addons/arrival-anomalies**")
+        
+        st.write("Download **Arrival Anomalies** and install it using the instructions on here: **https://www.moddb.com/mods/stalker-anomaly/addons/arrival-anomalies**")
+        st.write("Then, go to your `GAMMA/profiles/XTREME/` folder and upload your `modlist.txt` file below (ONLY IF YOU ARE USING **STALKER XTREME**). After that, enter the name of the mod when you installed it below. Finally, download the converted file, and replace your `modlist.txt` file with it (close and reopen MO2 if it was open).")
+
+        userfile = st.file_uploader("")
+        
+        if userfile != None:
+
+            if userfile.name != "modlist.txt":
+                st.subheader("This is not a valid modlist file. Please use a valid file.")
+
+            else:
+
+                strio = StringIO(userfile.getvalue().decode("utf-8"))
+                userfile = strio.read()
+
+                mods = userfile.split("\n")
+                userout = []
+
+                name = st.text_input("What did you name the mod while installing it?")
+
+                for mod in mods:
+
+                    if userout == []:
+                        userout = [mod]
+
+                    else:
+
+                        if "XTREME Visuals and Actor Animations" in mod:
+                            userout.append(f"+{name}")
+                            print(userout)                        
+
+                        userout.append(mod)
+                    
+                userout = "\n".join(userout)
+                download = st.download_button("Download Converted File", data=userout, file_name="modlist.txt")
