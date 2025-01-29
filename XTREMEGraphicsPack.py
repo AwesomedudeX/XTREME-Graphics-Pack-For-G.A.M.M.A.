@@ -3,7 +3,7 @@ from io import StringIO
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
-page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings"])
+page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Arrival Anomalies"])
 atmospreset = """
 r__color_grading (0, 0, 0)
 
@@ -122,7 +122,7 @@ sssmcm = """
         ssfx_module/florafixes/trees_specular_wet_mcm = 0.15
         ssfx_module/general/shaderscope_patch_mcm = false
         ssfx_module/il/blur_mcm          = 0.1
-        ssfx_module/il/distance_mcm      = 150
+        ssfx_module/il/distance_mcm      = 300
         ssfx_module/il/flora_int_mcm     = 1
         ssfx_module/il/global_int_mcm    = 4
         ssfx_module/il/hud_int_mcm       = 1
@@ -145,7 +145,7 @@ sssmcm = """
         ssfx_module/inter_grass/vertical_str_mcm = 2
         ssfx_module/parallax/ao_mcm      = 0.6
         ssfx_module/parallax/height_mcm  = 0.035
-        ssfx_module/parallax/quality_mcm = 36
+        ssfx_module/parallax/quality_mcm = 16
         ssfx_module/parallax/range_mcm   = 40
         ssfx_module/parallax/refine_mcm  = false
         ssfx_module/shadows/lod_max_mcm  = 0
@@ -164,10 +164,10 @@ sssmcm = """
         ssfx_module/ssfx_pp/ssfx_bloom/dirt_mcm = 0.8
         ssfx_module/ssfx_pp/ssfx_bloom/exposure_mcm = 1
         ssfx_module/ssfx_pp/ssfx_bloom/lens_mcm = 1.5
-        ssfx_module/ssfx_pp/ssfx_bloom/sky_mcm = 0.6
+        ssfx_module/ssfx_pp/ssfx_bloom/sky_mcm = 0.3
         ssfx_module/ssfx_pp/ssfx_bloom/threshold_mcm = 10
         ssfx_module/ssfx_pp/ssfx_bloom/use_weather_mcm = false
-        ssfx_module/ssfx_pp/ssfx_bloom/vibrance_mcm = 1.35
+        ssfx_module/ssfx_pp/ssfx_bloom/vibrance_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/jump_vol_mcm = 0.7
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/land_vol_mcm = 0.7
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/main_vol_mcm = 0.4
@@ -184,18 +184,18 @@ sssmcm = """
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/reflection_str_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/refraction_str_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/size_mcm = 0.5
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/alpha_mcm = 1
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/brightness_mcm = 0
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/len_mcm = 1.1
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/alpha_mcm = 0.8
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/brightness_mcm = 0.05
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/len_mcm = 1.5
         ssfx_module/ssfx_rain_module/ssfx_rain_main/max_drops_mcm = 2500
         ssfx_module/ssfx_rain_module/ssfx_rain_main/quality_mcm = 2
         ssfx_module/ssfx_rain_module/ssfx_rain_main/radius_mcm = 15
         ssfx_module/ssfx_rain_module/ssfx_rain_main/reflection_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_main/refraction_mcm = 2.5
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/speed_mcm = 0.7
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/speed_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_main/splash_alpha_mcm = 0.2
         ssfx_module/ssfx_rain_module/ssfx_rain_main/splash_refraction_mcm = 3
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/width_mcm = 0.03
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/width_mcm = 0.07
         ssfx_module/ssfx_wetness/ssfx_gloss/auto_gloss_max_mcm = 0.96
         ssfx_module/ssfx_wetness/ssfx_gloss/auto_gloss_mcm = true
         ssfx_module/ssfx_wetness/ssfx_gloss/max_gloss_mcm = 0.95
@@ -626,7 +626,9 @@ You can also get **STALKER XTREME**, which is a modpack full of mods to greatly 
 
 From there, follow the instructions on the **Modlist Compatibility** and **MCM Settings For SSS** pages on this site to modify your settings and mod list files to work with this pack.
 
-Finally, you can either use the **Load Atmospheric Preset** page or just open the game and type `cfg_load xtreme` to load the atmospheric settings. If you are using **STALKER XTREME**, I recommend getting ALL of my graphics settings to ensure everything works properly."""
+Finally, you can either use the **Load Atmospheric Preset** page or just open the game and type `cfg_load xtreme` to load the atmospheric settings. If you are using **STALKER XTREME**, I recommend getting ALL of my graphics settings to ensure everything works properly.
+"""
+important = "If the ReShade preset doesn't load, go to the **ReShade File Finder** page to locate it. Also, if you want to use **Arrival Anomalies** with **STALKER XTREME**, go to the **Arrival Anomalies** page."
 mainlist = {
 
     "base shaders": """
@@ -775,6 +777,10 @@ if page == "Home":
 
     st.header("Installation:")
     st.write(installation)
+
+    st.subheader("IMPORTANT:")
+    st.write(important)
+
     st.write("---")
 
     st.header("Mods Included With The Pack:")
@@ -943,3 +949,30 @@ else:
                 strio = StringIO(userfile.getvalue().decode("utf-8"))
                 userout = strio.read() + write
                 download = st.download_button("Download Converted File", data=userout, file_name="user.ltx")
+
+    elif page == "ReShade File Finder":
+        
+        st.write("This page will give you the path to your ReShade file. Just enter the information below (highlight a folder in File Explorer and use `Ctrl+Shift+C` to copy its path), and hit **Locate**. Then, the path of the ReShade presets folder will show below. Copy it and paste it in the ReShade menu, and select the ReShade preset that you want (I recommend XTREME RTGI).")
+
+        gammapath = st.text_input("Enter the file path of your **GAMMA** folder:")
+        rename = st.checkbox("Did you rename the **XTREME Graphics Pack** mod?")
+        name = "XTREME Graphics Pack"
+        separator = "/"
+
+        if gammapath != "":
+
+            if rename:
+                name = st.text_input("What did you rename it to?")
+
+            if gammapath[2] == "\\":
+                separator = "\\"
+            
+            if gammapath[-1] == separator:
+                gammapath = gammapath[:-1]
+
+            if st.button("Locate"):
+                st.write(f"**Preset Folder Path: `{gammapath}{separator}mods{separator}{name}{separator}bin{separator}`**")
+
+    elif page == "Arrival Anomalies":
+        st.write("I will add an automated way to do this when I can. For now, disable **Dynamic Anomalies Overhaul** and install **Arrival Anomalies**. Then, just move it to the top of **XTREME Visuals and Actor Animations**, and enable it. After that, you should be good to go!")
+        st.write("You can download **Arrival Anomalies** here: **https://www.moddb.com/mods/stalker-anomaly/addons/arrival-anomalies**")
