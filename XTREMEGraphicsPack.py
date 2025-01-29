@@ -614,15 +614,15 @@ Download these modded exes: https://github.com/themrdemonized/xray-monolith/rele
 
 Then, download and install these files **in the order shown** using the links below; install them like any other mod in MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**XTREME GRAPHICS PACK: https://drive.google.com/uc?export=download&id=1no84NxGHhlJI0NmUvQB82vYpR3-QakmU**
+**XTREME GRAPHICS PACK: https://drive.google.com/file/d/1AiP4VTaIAVVULrRVvOVraKFdE44-pC26/view?usp=drive_link**
 
-**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1tW_CaBEfQdQU9_mL7qpZp75jB9X1aP5b**
+**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1jduxnAY7e0rVd_at6inbtqZWDDu_DUR7**
 
 **RESHADE: https://drive.google.com/uc?export=download&id=1k_nM1rgbatpw-FLxl3c4g90mx7I_6IOn**
 
 You can also get **STALKER XTREME**, which is a modpack full of mods to greatly enhance the realism and immersiveness of the zone. Certain mods that are disabled may be re-enabled, but they might cause issues. I'll offer as much support for them as I can.
 
-**STALKER XTREME BETA (REQUIRES A NEW GAME, INSTALL INSTRUCTIONS ARE INSIDE): https://www.mediafire.com/file/u7di0td1nrcsvkn/STALKER+XTREME+BETA.7z/file**
+**STALKER XTREME BETA (REQUIRES A NEW GAME, INSTALL INSTRUCTIONS ARE INSIDE): https://www.mediafire.com/file/1q0pdiyapey25zs/STALKER+XTREME+BETA.7z/file**
 
 From there, follow the instructions on the **Modlist Compatibility** and **MCM Settings For SSS** pages on this site to modify your settings and mod list files to work with this pack.
 
