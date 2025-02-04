@@ -18,7 +18,7 @@ r2_sun_lumscale 3.
 r2_gloss_factor 0.001
 r2_gloss_min 0.56
 r2_sun_lumscale 3.
-r2_sun_lumscale_amb 1.49685
+r2_sun_lumscale_amb 2.5
 r2_sun_lumscale_hemi 0.97063
 r2_tonemap on
 r2_tonemap_adaptation 3.0
@@ -30,12 +30,12 @@ rs_c_contrast 1
 rs_c_gamma 1.
 r2_sun_depth_near_scale 0.9998
 r2_sun_depth_far_scale 0.99988
-r2_sun_tsm_bias 0.5
+r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
-shader_param_1 (0.99, 1, 0.97, -0.1)
-shader_param_2 (0, 0, 0, 0.1)
-shader_param_3 (0.838, 0.847, 0.852, 0.05)
+shader_param_1 (0.99, 1, 0.97, -0.2)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.838, 0.847, 0.852, -0.2)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """
 disabledmods = {
@@ -105,15 +105,15 @@ disabledmods = {
 }
 sssmcm = """
 ![mcm]
-        ssfx_module/ao/blur_mcm          = 0.1
-        ssfx_module/ao/distance_mcm      = 300
-        ssfx_module/ao/flora_int_mcm     = 0.4
-        ssfx_module/ao/global_int_mcm    = 2
+        ssfx_module/ao/blur_mcm          = 1
+        ssfx_module/ao/distance_mcm      = 150
+        ssfx_module/ao/flora_int_mcm     = 1
+        ssfx_module/ao/global_int_mcm    = 1
         ssfx_module/ao/hud_int_mcm       = 1
-        ssfx_module/ao/max_occ_mcm       = 0.06
-        ssfx_module/ao/quality_mcm       = 8
-        ssfx_module/ao/radius_mcm        = 1
-        ssfx_module/ao/res_mcm           = 0.5
+        ssfx_module/ao/max_occ_mcm       = 0.115
+        ssfx_module/ao/quality_mcm       = 4
+        ssfx_module/ao/radius_mcm        = 2
+        ssfx_module/ao/res_mcm           = 1
         ssfx_module/florafixes/grass_specular_mcm = 0.15
         ssfx_module/florafixes/grass_specular_wet_mcm = 0.18
         ssfx_module/florafixes/sss_color_mcm = 0.38
@@ -346,7 +346,7 @@ r2_ls_psm_kernel 0.7
 r2_ls_squality 3.
 r2_ls_ssm_kernel 0.7
 r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
-r2_mblur 0.02764
+r2_mblur 0.02451
 r2_mblur_enabled on
 r2_parallax_h 0.
 r2_qsync 0
@@ -376,7 +376,7 @@ r2_sun_details on
 r2_sun_far 100.
 r2_sun_focus on
 r2_sun_lumscale 3.
-r2_sun_lumscale_amb 1.448
+r2_sun_lumscale_amb 1.19482
 r2_sun_lumscale_hemi 0.95
 r2_sun_near 15.
 r2_sun_near_border 0.75
@@ -473,7 +473,7 @@ r__detail_radius 110
 r__dtex_range 50.
 r__enable_grass_shadow off
 r__exposure 1.
-r__fakescope 1
+r__fakescope 0
 r__framelimit 0
 r__gamma 1.
 r__geometry_lod 1.5
@@ -485,7 +485,7 @@ r__no_scale_on_fade off
 r__optimize_dynamic_geom 2
 r__optimize_shadow_geom off
 r__optimize_static_geom 3
-r__saturation 1.15
+r__saturation 0.8
 r__supersample 1
 r__tf_aniso 16
 r__tf_mipbias -0.5
@@ -524,9 +524,9 @@ scope_radius 0.
 sds_enable on
 sds_speed_enable on
 sds_zoom_enable on
-shader_param_1 (0.990000, 1.000000, 0.970000, -0.100000)
-shader_param_2 (0.000000, 0.000000, 0.000000, 0.100000)
-shader_param_3 (0.838000, 0.847000, 0.852000, 0.050000)
+shader_param_1 (0.990000, 1.000000, 0.970000, -0.300000)
+shader_param_2 (0.000000, 0.000000, 0.000000, 0.000000)
+shader_param_3 (0.900000, 0.870000, 0.820000, -0.300000)
 shader_param_4 (1.120000, 1.120000, 1.130000, -0.400000)
 shader_param_5 (1.000000, 0.000000, 0.000000, 0.000000)
 shader_param_6 (0.000000, 1.000000, 0.000000, 0.000000)
@@ -536,17 +536,14 @@ sil_glow_color (1.000000, 0.000000, 0.000000)
 sil_glow_cool_temp_rate 0.01
 sil_glow_max_temp 0.15
 sil_glow_shot_temp 0.004
-smooth_ads_transition 0
 snd_acceleration on
 snd_cache_size 256
-snd_device OpenAL Soft
 snd_doppler_power 1.8
 snd_doppler_smoothing 15
-snd_efx on
 snd_targets 256
-ssfx_ao (2.000000, 10.000000, 0.100000, 1.000000)
-ssfx_ao_quality 8
-ssfx_ao_setup1 (300.000000, 1.000000, 0.400000, 0.060000)
+ssfx_ao (1.000000, 5.000000, 1.000000, 2.000000)
+ssfx_ao_quality 4
+ssfx_ao_setup1 (150.000000, 1.000000, 1.000000, 0.115000)
 ssfx_blood_decals (0.600000, 0.600000, 0.000000, 0.000000)
 ssfx_bloom_1 (10.000000, 1.000000, 0.000000, 0.300000)
 ssfx_bloom_2 (1.000000, 1.000000, 1.500000, 0.800000)
@@ -558,7 +555,7 @@ ssfx_gloss_method 1
 ssfx_gloss_minmax (0.700000, 0.950000, 0.000000)
 ssfx_grass_interactive (1.000000, 8.000000, 2000.000000, 1.000000)
 ssfx_grass_shadows (1.000000, 1.000000, 50.000000, 0.000000)
-ssfx_hud_drops_1 (0.000000, 0.000000, 30.000000, 0.050000)
+ssfx_hud_drops_1 (470.012909, 1.000000, 30.000000, 0.050000)
 ssfx_hud_drops_2 (0.225000, 1.500000, 0.400000, 2.000000)
 ssfx_hud_hemi 0.
 ssfx_il (6.666667, 4.000000, 0.600000, 0.500000)
@@ -599,7 +596,7 @@ ssfx_wetsurfaces_1 (0.500000, 1.400000, 0.700000, 1.250000)
 ssfx_wetsurfaces_2 (0.800000, 1.500000, 0.200000, 0.350000)
 ssfx_wind_grass (9.700000, 1.500000, 1.600000, 0.500000)
 ssfx_wind_trees (11.100000, 0.170000, 0.900000, 0.100000)
-ssfx_wpn_dof_1 (0.000000, 0.000000, 0.000000, 1.100000)
+ssfx_wpn_dof_1 (0.150000, 0.400000, 0.000000, 1.100000)
 ssfx_wpn_dof_2 0.15
 """
 caminert = """
@@ -655,7 +652,7 @@ mainlist = {
 
 **Rotten Life Texture Pack:** A texture pack that adds old-themed 4K and 8K textures, which give structures in the Zone a cozy, yet run-down and scrappy look.
 
-**Anomaly Texture Overhaul 4:** A complete texture overhaul that adds detailed 4K and 8K textures, which add to the depressing realism and immersion of the game.
+**Anomaly Texture Overhaul 4 - PAUL_8558:** A complete texture overhaul that adds detailed 4K and 8K textures, which add to the depressing realism and immersion of the game.
 
 **Re.Pack Doors V1.0:** Adds 4K textures to doors.
 
