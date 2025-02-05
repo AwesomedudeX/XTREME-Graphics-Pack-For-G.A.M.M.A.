@@ -978,10 +978,27 @@ else:
         preset = ""
         settings = {}
 
-        with st.sidebar.expander("Settings"):
+        with st.sidebar.expander("**Settings**"):
+
+            startfrom = st.radio("**How do you want to start creating your preset?**", ["Start From Scratch", "Start From The XTREME Preset", "Start From an Existing Preset"])
     
-            if st.checkbox("Start From XTREME Preset"):
+            if startfrom == "Start From The XTREME Preset":
                 preset = atmospreset+"\n\n"
+
+            elif startfrom == "Start From an Existing Preset":
+            
+                existingpreset = st.file_uploader("**Upload your preset here:**")
+
+                if existingpreset != None:
+
+                    if existingpreset.name[-4:] == ".ltx":
+                        strio = StringIO(existingpreset.getvalue().decode("utf-8"))
+                        preset = strio.read()+"\n\n\n"
+
+                    else:
+                        st.write("This is not a valid preset. Make sure to upload one that has a \"`.ltx`\" file extension - they can be found in the `appdata` folder in a mod, or the base `Anomaly` folder.")
+
+            st.header("Preset Settings")
 
             selectall = st.checkbox("Select All", True)
 
@@ -1097,9 +1114,6 @@ else:
         for param, val in zip(settings, settings.values()):
             
             if type(val) == list:
-
-                if "shader_param" in param and "shader" not in preset or "r2" in param and "r2" not in preset:
-                    preset += "\n"
                 
                 preset += f"{param} ("
 
@@ -1109,6 +1123,9 @@ else:
                 preset = preset[:-2]+")\n"
 
             else:
+
+                st.write(param)
+
                 preset += f"{param} {round(val, 2)}\n"
 
         if preset != "" and preset != None and preset != atmospreset:
