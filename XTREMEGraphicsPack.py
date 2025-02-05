@@ -977,10 +977,12 @@ else:
         
         preset = ""
         settings = {}
-        
 
         with st.sidebar.expander("Settings"):
-            
+    
+            if st.checkbox("Start From XTREME Preset"):
+                preset = atmospreset+"\n\n"
+
             selectall = st.checkbox("Select All", True)
 
             st.subheader("Main Shader Settings")
@@ -1118,7 +1120,7 @@ else:
             if presetname[-4:] != ".ltx":
                 presetname = presetname + ".ltx"
 
-            with st.expander("**Preset Preview**"):
+            with st.expander("**Preset Preview**", expanded=True):
 
                 st.header(presetname)
                 st.write(f"```{preset}\n```")
