@@ -3,7 +3,7 @@ from io import StringIO
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
-page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Arrival Anomalies"])
+page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Atmospheric Preset Creator", "Arrival Anomalies"])
 atmospreset = """
 r__color_grading (0, 0, 0)
 
@@ -611,9 +611,9 @@ Download these modded exes: https://github.com/themrdemonized/xray-monolith/rele
 
 Then, download and install these files **in the order shown** using the links below; install them like any other mod in MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**XTREME GRAPHICS PACK MAIN FILE: https://drive.google.com/uc?export=download&id=1h0nS_IBgu8UVvR9MUtLur--97Nv5XUWe**
+**XTREME GRAPHICS PACK MAIN FILES: https://drive.google.com/uc?export=download&id=18Fv7MagP3_pNK6u0TM7h47nd3vWKsuxg**
 
-**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1JwDFXzc4x8Kk7NJcd95IJ-7HxUzB-szH**
+**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1zOdpTK4IgQm5hcUiqJSqJihsWSpaMng7**
 
 **RESHADE: https://drive.google.com/uc?export=download&id=1k_nM1rgbatpw-FLxl3c4g90mx7I_6IOn**
 
@@ -969,6 +969,161 @@ else:
 
             if st.button("Locate"):
                 st.write(f"**Preset Folder Path: `{gammapath}{separator}mods{separator}{name}{separator}bin{separator}`**")
+
+    elif page == "Atmospheric Preset Creator":
+        
+        st.write("This page will allow you to create your **own** atmospheric preset.")
+        st.write("On the sidebar to the left, select the settings that you want to add to your preset. Then, fill out the fields that appear below.")
+        
+        preset = ""
+        settings = {}
+        
+
+        with st.sidebar.expander("Settings"):
+            
+            selectall = st.checkbox("Select All")
+
+            st.subheader("Main Shader Settings")
+            
+            selectallss = st.checkbox("Select All Shader Settings", selectall)            
+            shader1 = st.checkbox("Bright Colors", selectallss)
+            shader2 = st.checkbox("Dark Colors", selectallss)
+            shader3 = st.checkbox("Shader Gamma (mid-range colors)", selectallss)
+            shader4 = st.checkbox("Contrast", selectallss)
+
+            st.subheader("Post-Processing")
+
+            selectallpp = st.checkbox("Select All Post-Process Settings", selectall)            
+            exposure = st.checkbox("Camera Exposure", selectallpp)
+            gamma = st.checkbox("Display Gamma", selectallpp)
+            saturation = st.checkbox("Color Saturation/Strength", selectallpp)
+            cgrading = st.checkbox("Color Grading", selectallpp)
+            
+            st.subheader("Advanced Options")
+
+            selectallao = st.checkbox("Select All Advanced Options", selectall)            
+            sunlum = st.checkbox("Sun Brightness", selectallao)
+            sunlumamb = st.checkbox("Ambient Sunlight Brightness", selectallao)
+
+            st.subheader("Screen Space FX Settings")
+
+            selectallssfx = st.checkbox("Select All SSFX Settings", selectall)            
+            hudhemi = st.checkbox("Additional HUD Brightness", selectallssfx)
+
+        if exposure or gamma or saturation or cgrading:
+
+            st.write("---")
+            st.header("Post-Processing")
+
+            cols = st.columns(3)
+
+            colindex = 0
+
+            if exposure:
+                settings['r__exposure'] = cols[colindex].number_input("**Camera Exposure (`r__exposure`)**", min_value=0.5, max_value=4.0, value=1.0, step=0.01)
+                colindex += 1
+
+            if gamma:
+                settings['r__gamma'] = cols[colindex].number_input("**Display Gamma (`r__gamma`)**", min_value=0.5, max_value=2.2, value=1.0, step=0.01)
+                colindex += 1
+
+            if saturation:
+                settings['r__saturation'] = cols[colindex].number_input("**Color Saturation (`r__saturation`)**", min_value=0.0, max_value=2.0, value=1.0, step=0.01)
+
+            st.header("")
+            st.subheader("**Color Grading**")
+            st.write("**(`r__color_grading`)**")
+
+            cols = st.columns(3)
+
+            if cgrading:
+                settings["r__color_grading"] = [cols[0].number_input("**Red**", min_value=0.0, max_value=1.0, value=0.0, step=0.01), cols[1].number_input("**Green**", min_value=0.0, max_value=1.0, value=0.0, step=0.01), cols[2].number_input("**Blue**", min_value=0.0, max_value=1.0, value=0.0, step=0.01)]
+
+        if sunlum or sunlumamb:
+            
+            st.write("---")
+            st.header("Advanced Options")
+
+            if sunlum:
+                settings['r2_sun_lumscale'] = st.number_input("**Sun Brightness (`r2_sun_lumscale`)**", min_value=-1.0, max_value=3.0, value=3.0, step=0.01)
+            
+            if sunlumamb:
+                settings['r2_sun_lumscale_amb'] = st.number_input("**Ambient Sunlight Brightness (`r2_sun_lumscale_amb`)**", min_value=0.0, max_value=3.0, value=2.0, step=0.01)
+
+        if hudhemi:
+
+            st.write("---")
+            st.header("Screen Space FX Settings")
+
+            settings['ssfx_hud_hemi'] = st.number_input("**Additional HUD Brightness (`ssfx_hud_hemi`)**", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
+
+        if shader1 or shader2 or shader3 or shader4:
+
+            st.write("---")
+            st.header("Main Shader Settings")
+
+            cols = st.columns(5)
+
+            cols[0].write("**Setting (Parameter)**")
+            cols[1].write("**Red Intensity**")
+            cols[2].write("**Green Intensity**")
+            cols[3].write("**Blue Intensity**")
+            cols[4].write("**Overall Intensity**")
+
+            cols[0].write("")
+
+            if shader1:
+                cols[0].write("**Bright Colors (0 to 1)**")
+                cols[0].write("**`shader_param_1`**")
+                settings['shader_param_1'] = [cols[1].number_input("Red1", min_value=0.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[2].number_input("Green1", min_value=0.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[3].number_input("Blue1", min_value=0.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[4].number_input("**Overall Intensity Offset 1**", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden")]
+            
+            if shader2:
+                cols[0].write("**Dark Colors (0 to 1)**")
+                cols[0].write("**`shader_param_2`**")
+                settings['shader_param_2'] = [cols[1].number_input("Red2", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden"), cols[2].number_input("Green2", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden"), cols[3].number_input("Blue2", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden"), cols[4].number_input("**Overall Intensity Offset 2**", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden")]
+
+            if shader3:
+                cols[0].write("**Shader Gamma (-1 to 1)**")
+                cols[0].write("**`shader_param_3`**")
+                settings['shader_param_3'] = [cols[1].number_input("Red3", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[2].number_input("Green3", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[3].number_input("Blue3", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[4].number_input("**Overall Intensity Offset 3**", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden")]
+
+            if shader4:
+                cols[0].write("**Contrast (-1 to 1)**")
+                cols[0].write("**`shader_param_4`**")
+                settings['shader_param_4'] = [cols[1].number_input("Red4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[2].number_input("Green4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[3].number_input("Blue4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[4].number_input("**Overall Intensity Offset 4**", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden")]
+
+        for param, val in zip(settings, settings.values()):
+            
+            if type(val) == list:
+
+                if "shader_param" in param and "shader" not in preset or "r2" in param and "r2" not in preset:
+                    preset += "\n"
+                
+                preset += f"{param} ("
+
+                for v in val:
+                    preset += f"{round(v, 2)}, "
+
+                preset = preset[:-2]+")\n"
+
+            else:
+                preset += f"{param} {round(val, 2)}\n"
+
+        if preset != "" and preset != None and preset != atmospreset:
+
+            st.header("Final Steps")
+        
+            presetname = st.text_input("What do you want to name your preset?", "MyPreset.ltx").strip()
+                            
+            if presetname[-4:] != ".ltx":
+                presetname = presetname + ".ltx"
+
+            with st.expander("**Preset Preview**"):
+
+                st.header(presetname)
+                st.write(f"```{preset}\n```")
+
+            st.download_button(f"**Download Your Preset (:blue[{presetname}])**", data=preset, file_name=presetname)
 
     elif page == "Arrival Anomalies":
         
