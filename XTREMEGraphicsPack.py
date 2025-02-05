@@ -3,7 +3,7 @@ from io import StringIO
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
-page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Atmospheric Preset Creator", "Arrival Anomalies"])
+page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Atmospheric Preset Editor", "Arrival Anomalies"])
 atmospreset = """
 r__color_grading (0, 0, 0)
 
@@ -970,7 +970,7 @@ else:
             if st.button("Locate"):
                 st.write(f"**Preset Folder Path: `{gammapath}{separator}mods{separator}{name}{separator}bin{separator}`**")
 
-    elif page == "Atmospheric Preset Creator":
+    elif page == "Atmospheric Preset Editor":
         
         st.write("This page will allow you to create your **own** atmospheric preset.")
         st.write("On the sidebar to the left, select the settings that you want to add to your preset. Then, fill out the fields that appear below.")
