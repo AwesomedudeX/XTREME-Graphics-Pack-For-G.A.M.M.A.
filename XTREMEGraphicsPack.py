@@ -981,7 +981,7 @@ else:
 
         with st.sidebar.expander("Settings"):
             
-            selectall = st.checkbox("Select All")
+            selectall = st.checkbox("Select All", True)
 
             st.subheader("Main Shader Settings")
             
