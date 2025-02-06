@@ -4,7 +4,9 @@ from io import StringIO
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Atmospheric Preset Editor", "Arrival Anomalies"])
-atmospreset = """
+atmospresets = {
+
+"XTREME": """
 r__color_grading (0, 0, 0)
 
 r__enable_grass_shadow off
@@ -37,7 +39,324 @@ shader_param_1 (0.99, 1, 0.97, -0.2)
 shader_param_2 (0, 0, 0, 0)
 shader_param_3 (0.838, 0.847, 0.852, -0.2)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
-"""
+""",
+
+"XTREMEDull": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 0.8
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.99, 1, 0.97, -0.3)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.9, 0.9, 0.9, -0.3)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+"XTREMEGloomy": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 0.8
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.99, 1, 0.97, -0.3)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.9, 0.87, 0.82, -0.3)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+"XTREMERealistic": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 1
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.9, 1, 0.97, 0.1)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.838, 0.92, 0.95, 0)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+"XTREMENature": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 1.15
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.99, 1, 0.97, -0.2)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.85, 0.835, 0.82, -0.15)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+"XTREMENight": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 0.8
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.9, 1, 0.97, 0.5)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.838, 0.9, 0.9, -0.1)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+"XTREMEVivid": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 1.1
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.95, 1, 0.97, 0.5)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.838, 0.847, 0.852, 0)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+"XTREMEVibrant": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 1.3
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.99, 1, 0.97, -0.2)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.838, 0.847, 0.86, -0.25)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+"XTREMEMysterious": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 1.15
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 1.49685
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.99, 1, 0.97, -0.3)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.88, 0.85, 0.81, -0.3)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+"XTREMEApocalypse": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 1.15
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 1.49685
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (0.99, 1, 0.97, -0.3)
+shader_param_2 (0, 0, 0, 0)
+shader_param_3 (0.88, 0.85, 0.9, -0.3)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+""",
+
+}
 disabledmods = {
 
 ":green[**G.A.M.M.A.**]": {
@@ -880,12 +1199,13 @@ else:
 
     elif page == "Load Atmospheric Preset":
 
-        st.write("This will load the settings from the **`XTREME`** atmospheric preset file into a copy of your game settings file, which you can download and use to replace your **`user.ltx`** (game settings) file.")
-        st.write("Upload your **`user.ltx`** file (**located in the `Anomaly/appdata/` folder**) below.")
+        st.write("This will load the settings from the selected atmospheric preset (default is **`XTREME`**) into a copy of your game settings file, which you can download and use to replace your **`user.ltx`** (game settings) file.")
+        
+        atmospreset = atmospresets[st.radio("**Select a preset below:**", atmospresets)]
+        userfile = st.file_uploader("**After that, upload your **`user.ltx`** file (**located in the `Anomaly/appdata/` folder**) here:**")
+
         st.write("Then, download the converted file, drag it into your **`Anomaly/appdata/`** folder and replace the existing file when prompted.")
 
-        userfile = st.file_uploader("")
-        
         if userfile != None:
 
             if userfile.name != "user.ltx":
@@ -980,10 +1300,10 @@ else:
 
         with st.sidebar.expander("**Settings**"):
 
-            startfrom = st.radio("**How do you want to start creating your preset?**", ["Start From Scratch", "Start From The XTREME Preset", "Start From an Existing Preset"])
+            startfrom = st.radio("**How do you want to start creating your preset?**", ["Start From Scratch", "Start From an XTREME Preset", "Start From an Existing Preset"])
     
-            if startfrom == "Start From The XTREME Preset":
-                pass
+            if startfrom == "Start From an XTREME Preset":   
+                atmospreset = atmospresets[st.radio("**Select an XTREME Preset to Start From:**", atmospresets)]
 
             elif startfrom == "Start From an Existing Preset":
             
@@ -1189,7 +1509,7 @@ else:
                     preset += f"{param} {val}\n"
 
 
-        if preset != "" and preset != None and preset != atmospreset:
+        if preset != None:
 
             st.header("Final Steps")
 
@@ -1225,7 +1545,7 @@ else:
 
             preset = "\n".join(preset)
         
-            if startfrom == "Start From The XTREME Preset":
+            if startfrom == "Start From an XTREME Preset":
                 preset = atmospreset+"\n\n"+preset
 
             presetname = st.text_input("What do you want to name your preset?", "MyPreset.ltx").strip()
