@@ -1124,8 +1124,6 @@ else:
 
             else:
 
-                st.write(param)
-
                 preset += f"{param} {round(val, 2)}\n"
 
         if preset != "" and preset != None and preset != atmospreset:
