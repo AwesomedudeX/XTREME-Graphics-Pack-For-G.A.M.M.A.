@@ -983,7 +983,7 @@ else:
             startfrom = st.radio("**How do you want to start creating your preset?**", ["Start From Scratch", "Start From The XTREME Preset", "Start From an Existing Preset"])
     
             if startfrom == "Start From The XTREME Preset":
-                preset = atmospreset+"\n\n"
+                pass
 
             elif startfrom == "Start From an Existing Preset":
             
@@ -1017,12 +1017,22 @@ else:
             gamma = st.checkbox("Display Gamma", selectallpp)
             saturation = st.checkbox("Color Saturation/Strength", selectallpp)
             cgrading = st.checkbox("Color Grading", selectallpp)
+
+            st.subheader("Grass Settings")
+
+            selectallgs = st.checkbox("Select All Grass Settings", selectall)            
+            grassheight = st.checkbox("Grass Size", selectallgs)
+            grassdensity = st.checkbox("Grass Density", selectallgs)
+            grassrender = st.checkbox("Grass Render Distance", selectallgs)
             
             st.subheader("Advanced Options")
 
             selectallao = st.checkbox("Select All Advanced Options", selectall)            
+            mblur = st.checkbox("Motion Blur Intensity", selectallao)
             sunlum = st.checkbox("Sun Brightness", selectallao)
             sunlumamb = st.checkbox("Ambient Sunlight Brightness", selectallao)
+            tonemapamt = st.checkbox("Tonemapping Amount", selectallao)
+            tonemapadapt = st.checkbox("Tonemapping Adaptation", selectallao)
 
             st.subheader("Screen Space FX Settings")
 
@@ -1039,15 +1049,15 @@ else:
             colindex = 0
 
             if exposure:
-                settings['r__exposure'] = cols[colindex].number_input("**Camera Exposure (`r__exposure`)**", min_value=0.5, max_value=4.0, value=1.0, step=0.01)
+                settings['r__exposure'] = cols[colindex].slider("**Camera Exposure (`r__exposure`)**", min_value=0.5, max_value=4.0, value=1.0, step=0.01)
                 colindex += 1
 
             if gamma:
-                settings['r__gamma'] = cols[colindex].number_input("**Display Gamma (`r__gamma`)**", min_value=0.5, max_value=2.2, value=1.0, step=0.01)
+                settings['r__gamma'] = cols[colindex].slider("**Display Gamma (`r__gamma`)**", min_value=0.5, max_value=2.2, value=1.0, step=0.01)
                 colindex += 1
 
             if saturation:
-                settings['r__saturation'] = cols[colindex].number_input("**Color Saturation (`r__saturation`)**", min_value=0.0, max_value=2.0, value=1.0, step=0.01)
+                settings['r__saturation'] = cols[colindex].slider("**Color Saturation (`r__saturation`)**", min_value=0.0, max_value=2.0, value=1.0, step=0.01)
 
             st.header("")
             st.subheader("**Color Grading**")
@@ -1058,16 +1068,62 @@ else:
             if cgrading:
                 settings["r__color_grading"] = [cols[0].number_input("**Red**", min_value=0.0, max_value=1.0, value=0.0, step=0.01), cols[1].number_input("**Green**", min_value=0.0, max_value=1.0, value=0.0, step=0.01), cols[2].number_input("**Blue**", min_value=0.0, max_value=1.0, value=0.0, step=0.01)]
 
-        if sunlum or sunlumamb:
+        if grassheight or grassdensity or grassrender:
+
+            st.write("---")
+            st.header("Grass Settings (SAVE RELOAD REQUIRED)")
+
+            cols = st.columns(3)
+
+            colindex = 0
+
+            if grassheight:
+                settings['r__detail_height'] = cols[colindex].slider("**Grass Size (`r__detail_height`)**", min_value=0.5, max_value=2.0, value=0.8, step=0.01)
+                colindex += 1
+
+            if grassdensity:
+                settings['r__detail_density'] = 1 - ( cols[colindex].slider("**Grass Density (`r__detail_density`)**", min_value=0.0, max_value=1.0, value=0.5, step=0.01) * (0.96) )
+                colindex += 1
+
+            if grassrender:
+                settings['r__detail_radius'] = cols[colindex].slider("**Grass Render Distance (`r__detail_radius`)**", min_value=0, max_value=250, value=150, step=5)
+
+
+        if sunlum or sunlumamb or tonemapamt or tonemapadapt:
             
             st.write("---")
             st.header("Advanced Options")
 
+            if mblur:
+                mblurintensity = st.slider("**Motion Blur Intensity (set to 0 to turn off) (`r2_mblur_enabled` & `r2_mblur`)**", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
+                
+                if mblurintensity == 0:
+                    settings["r2_mblur_enabled"] = "off"
+                else:
+                    settings["r2_mblur_enabled"] = "on"
+
+                settings['r2_mblur'] = mblurintensity
+            
             if sunlum:
-                settings['r2_sun_lumscale'] = st.number_input("**Sun Brightness (`r2_sun_lumscale`)**", min_value=-1.0, max_value=3.0, value=3.0, step=0.01)
+                settings['r2_sun_lumscale'] = st.slider("**Sun Brightness (`r2_sun_lumscale`)**", min_value=-1.0, max_value=3.0, value=3.0, step=0.01)
             
             if sunlumamb:
-                settings['r2_sun_lumscale_amb'] = st.number_input("**Ambient Sunlight Brightness (`r2_sun_lumscale_amb`)**", min_value=0.0, max_value=3.0, value=2.0, step=0.01)
+                settings['r2_sun_lumscale_amb'] = st.slider("**Ambient Sunlight Brightness (`r2_sun_lumscale_amb`)**", min_value=0.0, max_value=3.0, value=2.0, step=0.01)
+
+            if tonemapamt:
+
+                tonemapamtinput = st.slider("**Tonemapping Amount - Set to 0 to turn off tonemapping (`r2_tonemap` & `r2_tonemap_amount`)**", min_value=0.0, max_value=1.0, value=0.5, step=0.01)
+
+                if tonemapamtinput == 0:
+                    settings['r2_tonemap'] = "off"
+
+                else:
+                    settings['r2_tonemap'] = "on"
+
+                settings['r2_tonemap_amount'] = tonemapamtinput
+
+            if tonemapadapt:
+                settings['r2_tonemap_adaptation'] = st.slider("**Tonemapping Adaptation (`r2_sun_lumscale_amb`)**", min_value=0.01, max_value=10.0, value=3.0, step=0.01)
 
         if hudhemi:
 
@@ -1109,7 +1165,7 @@ else:
             if shader4:
                 cols[0].write("**Contrast (-1 to 1)**")
                 cols[0].write("**`shader_param_4`**")
-                settings['shader_param_4'] = [cols[1].number_input("Red4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[2].number_input("Green4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[3].number_input("Blue4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[4].number_input("**Overall Intensity Offset 4**", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden")]
+                settings['shader_param_4'] = [cols[1].number_input("Red4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[2].number_input("Green4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[3].number_input("Blue4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[4].number_input("**Overall Intensity Offset 4**", min_value=-1.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden")]
 
         for param, val in zip(settings, settings.values()):
             
@@ -1118,18 +1174,60 @@ else:
                 preset += f"{param} ("
 
                 for v in val:
-                    preset += f"{round(v, 2)}, "
+                    if type(v) != str:
+                        preset += f"{round(v, 2)}, "
+                    else:
+                        preset += f"{v}, "
 
                 preset = preset[:-2]+")\n"
 
             else:
 
-                preset += f"{param} {round(val, 2)}\n"
+                if type(val) != str:
+                    preset += f"{param} {round(val, 2)}\n"
+                else:
+                    preset += f"{param} {val}\n"
+
 
         if preset != "" and preset != None and preset != atmospreset:
 
             st.header("Final Steps")
+
+            preset = preset.split("\n")
+            
+            rnewline = True
+            rcgnewline = True
+            r2newline = True
+            ssfxnewline = True
+            shadernewline = True
+
+            for line in range(len(preset)):
+
+                if "r__" in preset[line] and rnewline:
+                    preset[line] = "\n"+str(preset[line])
+                    rnewline = False
+                
+                if "r__color_grading" in preset[line] and rcgnewline:
+                    preset[line] = "\n"+str(preset[line])
+                    rcgnewline = False
+
+                if "r2_" in preset[line] and r2newline:
+                    preset[line] = "\n"+str(preset[line])
+                    r2newline = False
+
+                if "ssfx" in preset[line] and ssfxnewline:
+                    preset[line] = "\n"+str(preset[line])
+                    ssfxnewline = False
+
+                if "shader_param" in preset[line] and shadernewline:
+                    preset[line] = "\n"+str(preset[line])
+                    shadernewline = False
+
+            preset = "\n".join(preset)
         
+            if startfrom == "Start From The XTREME Preset":
+                preset = atmospreset+"\n\n"+preset
+
             presetname = st.text_input("What do you want to name your preset?", "MyPreset.ltx").strip()
                             
             if presetname[-4:] != ".ltx":
