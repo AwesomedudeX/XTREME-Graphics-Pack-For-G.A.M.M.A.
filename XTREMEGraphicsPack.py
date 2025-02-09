@@ -365,11 +365,6 @@ disabledmods = {
 -129- Mask Reflections - shader fix - Grokitach
 """,
 
-    "base shaders": """-190- Screen Space Shaders 20 - Ascii1457
--189- Beef's NVG - theRealBeef
--188- Enhanced Shaders - KennShade
-""",
-
     "shaders": """-G.A.M.M.A. Weathers
 -304- Dark Signal Weather and Ambiance Audio - Shrike
 -290- Atmospherics Shaders Weathers and Reshade Latest - Hippobot
@@ -928,9 +923,9 @@ hud_fov_aim_factor 0."""
 installation = """
 Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2025.1.22/STALKER-Anomaly-modded-exes_2025.1.22.zip, open the file in 7Zip, and extract ALL the files into your Anomaly folder.
 
-Then, download and install these files **in the order shown** using the links below; install them like any other mod in MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
+Then, download and install these files **in the order shown** using the links below; install them through MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**XTREME GRAPHICS PACK MAIN FILE: https://drive.google.com/uc?export=download&id=1h0nS_IBgu8UVvR9MUtLur--97Nv5XUWe**
+**XTREME GRAPHICS PACK MAIN FILE: TO BE UPDATED**
 
 **XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1JwDFXzc4x8Kk7NJcd95IJ-7HxUzB-szH**
 
@@ -947,14 +942,6 @@ Finally, you can either use the **Load Atmospheric Preset** page or just open th
 important = "If the ReShade preset doesn't load, go to the **ReShade File Finder** page to locate it. Also, if you want to use **Arrival Anomalies** with **STALKER XTREME**, go to the **Arrival Anomalies** page."
 mainlist = {
 
-    "base shaders": """
-**Enhanced Shaders & Colour Grading 1.10:** Improved shaders and color grading methods.
-
-**Beef's NVGs Improved 1.5:** Improved night vision goggle overlays by TheRealBeef.
-
-**Screen Space Shaders 22:** Screen space shaders with volumetric lighting and some post-processing effects.
-    """,
-
     "shaders": """
 **Atmospherics GAMMA 2.67:** Completely revamps shaders and weather, as well as color grading and LUTs to give the game a realistic and immersive look.
 
@@ -967,11 +954,11 @@ mainlist = {
     """,
 
     "main textures": """
-**Global Texture Rework BETA:** A full texture overhaul that adds 2K and 4K textures to the game, which give the Zone a lifeless and worn-out look.
-
 **Rotten Life Texture Pack:** A texture pack that adds old-themed 4K and 8K textures, which give structures in the Zone a cozy, yet run-down and scrappy look.
 
 **Anomaly Texture Overhaul 4 - PAUL_8558:** A complete texture overhaul that adds detailed 4K and 8K textures, which add to the depressing realism and immersion of the game.
+
+**A.D.E.G.A. 1.5.3 Concrete Textures: Adds high-quality concrete textures from the A.D.E.G.A. texture repack.**
 
 **Re.Pack Doors V1.0:** Adds 4K textures to doors.
 
@@ -984,14 +971,16 @@ mainlist = {
 **Re.Pack Pseudogiant 1.7:** Adds a new high-definition texture for pseudogiants.
 
 **Re.Pack Crow 1.0:** Adds a new high-definition texture for crows.
-
-**Vehicle Textures Redux V1.3.1:** Adds redone 4K textures for vehicles,
     """,
 
     "mask textures": """
 **Grok's Masks and Reflections 2.1.0:** Redone mask lighting effects with reflections and refractions, using blurred versions of Nav's 4K Mask Textures.
 
 **Drunk's 4K Mask Textures:** Adds realistic 4K mask textures, complete with droplets and a somewhat blurred overlay.
+    """,
+
+    "maps": """
+    **Re.Pack PDA Package V1.3**: Adds 16K PDA maps that add even more detail and zooming capability to your PDA.
     """
 
 }
@@ -1050,7 +1039,7 @@ optionalslist = {
 
 **A.D.E.G.A. Upscaled Sky Textures:** Adds upscaled sky textures from the A.D.E.G.A. texture multipack.
 
-**Awesomedude's Weather Edits For Weather Expansion:** My own edits to the sunshafts during sunsets and sunrise to make them more cinematic.    
+**Awesomedude's Weather Edits For Weather Expansion:** My own edits to the sunshafts during sunsets and sunrise to make them more cinematic.
     """,
 
     "luts": """
@@ -1061,6 +1050,26 @@ optionalslist = {
 **Misery-Based Terrain 2.8:** Adds muddy terrain textures.
     """
 
+}
+sssinstallation = {
+
+    "intro": """
+This page will give you the SSS installation settings that you'll need for this pack.
+
+To get started, select the seasonal look that you want to go for below.
+""",
+
+    "instructions": """
+Then, open MO2 and search for `190- Screen Space Shaders 20 - Ascii1457` in MO2. From there, right-click on it, and click `Reinstall Mod`. After that, make sure your settings look like this, and hit `Ok`:
+""",
+
+    "sss screenshot regular": "sssregular.png",
+
+    "sss screenshot winter": "ssswinter.png",
+
+    "finish": """
+    Now that SSS is set up properly, continue on to the remaining steps to finish the installation.
+"""
 }
 screenshots = [
     "Cinematic Late Fall Cordon Sunrise",
@@ -1076,7 +1085,7 @@ screenshots = [
 ]
 
 if page == "Home":
-    
+
     st.title("XTREME Graphics Pack For G.A.M.M.A.")
     st.write("This graphics pack is a nice and easy way to make your game look so much better. It features a series of mods to improve shaders, VFX, textures and overall visual fidelity.")
 
@@ -1101,23 +1110,23 @@ if page == "Home":
 
     st.header("Mods Included With The Pack:")
     st.write(":grey[Textures are shown in the order in which they are loaded]")
-    
+
     c1, c2 = st.columns(2)
     ex1, ex2 = c1.expander("**Main Pack**"), c2.expander("**Optionals Pack**")
 
     with ex1:
-
-        st.header("Base Shaders:")
-        st.write(mainlist["base shaders"])
 
         st.header("Main Textures:")
         st.write(mainlist["main textures"])
 
         st.header("Shaders & VFX:")
         st.write(mainlist["shaders"])
-        
+
         st.header("Mask Textures:")
         st.write(mainlist["mask textures"])
+
+        st.header("16K PDA Maps:")
+        st.write(mainlist["maps"])
 
     with ex2:
         st.header("Seasonal Mods:")
@@ -1131,7 +1140,7 @@ if page == "Home":
 
         st.subheader("Early Winter:")
         st.write(optionalslist["early winter"])
-        
+
         st.subheader("Winter:")
         st.write(optionalslist["winter"])
 
@@ -1151,12 +1160,13 @@ else:
     if page == "Modlist Compatibility":
 
         st.write("This will edit your MO2 modlist file to disable the mods that should be disabled, while keeping the rest of your modlist intact.")
+        st.write("**Keep in mind that this will disable mods that GAMMA has enabled by default, so you will need to revert back to a previous GAMMA modlist or the default GAMMA modlist if you want to uninstall this pack. Make sure to keep a backup of your modlist if you plan on doing so.**")
         st.write("Upload your **`modlist.txt`** file - **located in your current profile's folder (`GAMMA/profiles/yourprofile/` - default GAMMA profile is the `GAMMA/profiles/G.A.M.M.A./` folder)**. Then, select whichever options you selected when installing the pack.")
         st.write("After that, download the converted file, drag it into your **`GAMMA/profiles/yourprofile/`** folder and replace the existing file when prompted.")
 
         version = st.radio("**What S.T.A.L.K.E.R. modpack do you use?**", [":green[**G.A.M.M.A.**]", ":orange[**E.F.P.**]"])
         userfile = st.file_uploader("")
-        
+
         if userfile != None:
 
             if userfile.name != "modlist.txt":
@@ -1170,10 +1180,10 @@ else:
                 if version == ":green[**G.A.M.M.A.**]":
 
                     st.subheader("What options did you select when installing the pack?")
-                    
+
                     baseshaders = st.checkbox("Base Shaders (REGULAR OR WINTER)", value=True)
                     shaders = st.checkbox("Shaders and VFX")
-                    textures = st.checkbox("Main Textures")                    
+                    textures = st.checkbox("Main Textures")
                     masks = st.checkbox("Mask Textures and VFX")
                     maps = st.checkbox("Re\:Pack 16K PDA Maps")
                     seasonal = st.checkbox("Any Seasonal Pack (Summer, Autumn, Winter or Late Fall)")
@@ -1188,7 +1198,7 @@ else:
 
                     if textures or seasonal:
                         userout = disabledmods[version]["textures"] + userout
-                        
+
                     if masks:
                         userout = disabledmods[version]["mask textures"] + userout
 
@@ -1200,7 +1210,7 @@ else:
     elif page == "Load Atmospheric Preset":
 
         st.write("This will load the settings from the selected atmospheric preset (default is **`XTREME`**) into a copy of your game settings file, which you can download and use to replace your **`user.ltx`** (game settings) file.")
-        
+
         atmospreset = atmospresets[st.radio("**Select a preset below:**", atmospresets)]
         userfile = st.file_uploader("**After that, upload your **`user.ltx`** file (**located in the `Anomaly/appdata/` folder**) here:**")
 
@@ -1218,14 +1228,14 @@ else:
                 download = st.download_button("Download Converted File", data=userout, file_name="user.ltx")
 
     elif page == "MCM Settings For SSS":
-        
+
         st.write("This will edit your MCM settings file to change its settings to what they should be for this pack.")
         st.write("Upload your **`axr_options.ltx`** file from your G.A.M.M.A. MCM values mod in MO2 - to get it, open MO2, search for `G.A.M.M.A. MCM values`, right-click on the mod and hit `Reveal in Explorer`.**")
         st.write("After that, in the file explorer window that pops up, open the `gamedata` folder, open the `configs` folder inside of that, and drag and drop the `axr_options.ltx` file onto the website.")
         st.write("Then, download the converted file, drag it into the `configs` folder and replace the existing file when prompted.")
 
         userfile = st.file_uploader("")
-        
+
         if userfile != None:
 
             if userfile.name != "axr_options.ltx":
@@ -1244,7 +1254,7 @@ else:
         st.write("Then, download the converted file, drag it into your **`Anomaly/appdata/`** folder and replace the existing file when prompted.")
 
         userfile = st.file_uploader("")
-        
+
         if userfile != None:
 
             if userfile.name != "user.ltx":
@@ -1268,7 +1278,7 @@ else:
                 download = st.download_button("Download Converted File", data=userout, file_name="user.ltx")
 
     elif page == "ReShade File Finder":
-        
+
         st.write("This page will give you the path to your ReShade file. Just enter the information below (highlight a folder in File Explorer and use `Ctrl+Shift+C` to copy its path), and hit **Locate**. Then, the path of the ReShade presets folder will show below. Copy it and paste it in the ReShade menu, and select the ReShade preset that you want (I recommend XTREME RTGI).")
 
         gammapath = st.text_input("Enter the file path of your **GAMMA** folder:")
@@ -1283,7 +1293,7 @@ else:
 
             if gammapath[2] == "\\":
                 separator = "\\"
-            
+
             if gammapath[-1] == separator:
                 gammapath = gammapath[:-1]
 
@@ -1291,22 +1301,22 @@ else:
                 st.write(f"**Preset Folder Path: `{gammapath}{separator}mods{separator}{name}{separator}bin{separator}`**")
 
     elif page == "Atmospheric Preset Editor":
-        
+
         st.write("This page will allow you to create your **own** atmospheric preset.")
         st.write("On the sidebar to the left, select the settings that you want to add to your preset. Then, fill out the fields that appear below.")
-        
+
         preset = ""
         settings = {}
 
         with st.sidebar.expander("**Settings**"):
 
             startfrom = st.radio("**How do you want to start creating your preset?**", ["Start From Scratch", "Start From an XTREME Preset", "Start From an Existing Preset"])
-    
-            if startfrom == "Start From an XTREME Preset":   
+
+            if startfrom == "Start From an XTREME Preset":
                 atmospreset = atmospresets[st.radio("**Select an XTREME Preset to Start From:**", atmospresets)]
 
             elif startfrom == "Start From an Existing Preset":
-            
+
                 existingpreset = st.file_uploader("**Upload your preset here:**")
 
                 if existingpreset != None:
@@ -1323,8 +1333,8 @@ else:
             selectall = st.checkbox("Select All", True)
 
             st.subheader("Main Shader Settings")
-            
-            selectallss = st.checkbox("Select All Shader Settings", selectall)            
+
+            selectallss = st.checkbox("Select All Shader Settings", selectall)
             shader1 = st.checkbox("Bright Colors", selectallss)
             shader2 = st.checkbox("Dark Colors", selectallss)
             shader3 = st.checkbox("Shader Gamma (mid-range colors)", selectallss)
@@ -1332,7 +1342,7 @@ else:
 
             st.subheader("Post-Processing")
 
-            selectallpp = st.checkbox("Select All Post-Process Settings", selectall)            
+            selectallpp = st.checkbox("Select All Post-Process Settings", selectall)
             exposure = st.checkbox("Camera Exposure", selectallpp)
             gamma = st.checkbox("Display Gamma", selectallpp)
             saturation = st.checkbox("Color Saturation/Strength", selectallpp)
@@ -1340,14 +1350,14 @@ else:
 
             st.subheader("Grass Settings")
 
-            selectallgs = st.checkbox("Select All Grass Settings", selectall)            
+            selectallgs = st.checkbox("Select All Grass Settings", selectall)
             grassheight = st.checkbox("Grass Size", selectallgs)
             grassdensity = st.checkbox("Grass Density", selectallgs)
             grassrender = st.checkbox("Grass Render Distance", selectallgs)
-            
+
             st.subheader("Advanced Options")
 
-            selectallao = st.checkbox("Select All Advanced Options", selectall)            
+            selectallao = st.checkbox("Select All Advanced Options", selectall)
             mblur = st.checkbox("Motion Blur Intensity", selectallao)
             sunlum = st.checkbox("Sun Brightness", selectallao)
             sunlumamb = st.checkbox("Ambient Sunlight Brightness", selectallao)
@@ -1356,7 +1366,7 @@ else:
 
             st.subheader("Screen Space FX Settings")
 
-            selectallssfx = st.checkbox("Select All SSFX Settings", selectall)            
+            selectallssfx = st.checkbox("Select All SSFX Settings", selectall)
             hudhemi = st.checkbox("Additional HUD Brightness", selectallssfx)
 
         if exposure or gamma or saturation or cgrading:
@@ -1410,23 +1420,23 @@ else:
 
 
         if sunlum or sunlumamb or tonemapamt or tonemapadapt:
-            
+
             st.write("---")
             st.header("Advanced Options")
 
             if mblur:
                 mblurintensity = st.slider("**Motion Blur Intensity (set to 0 to turn off) (`r2_mblur_enabled` & `r2_mblur`)**", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
-                
+
                 if mblurintensity == 0:
                     settings["r2_mblur_enabled"] = "off"
                 else:
                     settings["r2_mblur_enabled"] = "on"
 
                 settings['r2_mblur'] = mblurintensity
-            
+
             if sunlum:
                 settings['r2_sun_lumscale'] = st.slider("**Sun Brightness (`r2_sun_lumscale`)**", min_value=-1.0, max_value=3.0, value=3.0, step=0.01)
-            
+
             if sunlumamb:
                 settings['r2_sun_lumscale_amb'] = st.slider("**Ambient Sunlight Brightness (`r2_sun_lumscale_amb`)**", min_value=0.0, max_value=3.0, value=2.0, step=0.01)
 
@@ -1471,7 +1481,7 @@ else:
                 cols[0].write("**Bright Colors (0 to 1)**")
                 cols[0].write("**`shader_param_1`**")
                 settings['shader_param_1'] = [cols[1].number_input("Red1", min_value=0.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[2].number_input("Green1", min_value=0.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[3].number_input("Blue1", min_value=0.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[4].number_input("**Overall Intensity Offset 1**", min_value=0.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden")]
-            
+
             if shader2:
                 cols[0].write("**Dark Colors (0 to 1)**")
                 cols[0].write("**`shader_param_2`**")
@@ -1488,9 +1498,9 @@ else:
                 settings['shader_param_4'] = [cols[1].number_input("Red4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[2].number_input("Green4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[3].number_input("Blue4", min_value=-1.0, max_value=1.0, value=1.0, step=0.01, label_visibility="hidden"), cols[4].number_input("**Overall Intensity Offset 4**", min_value=-1.0, max_value=1.0, value=0.0, step=0.01, label_visibility="hidden")]
 
         for param, val in zip(settings, settings.values()):
-            
+
             if type(val) == list:
-                
+
                 preset += f"{param} ("
 
                 for v in val:
@@ -1514,7 +1524,7 @@ else:
             st.header("Final Steps")
 
             preset = preset.split("\n")
-            
+
             rnewline = True
             rcgnewline = True
             r2newline = True
@@ -1526,7 +1536,7 @@ else:
                 if "r__" in preset[line] and rnewline:
                     preset[line] = "\n"+str(preset[line])
                     rnewline = False
-                
+
                 if "r__color_grading" in preset[line] and rcgnewline:
                     preset[line] = "\n"+str(preset[line])
                     rcgnewline = False
@@ -1544,12 +1554,12 @@ else:
                     shadernewline = False
 
             preset = "\n".join(preset)
-        
+
             if startfrom == "Start From an XTREME Preset":
                 preset = atmospreset+"\n\n"+preset
 
             presetname = st.text_input("What do you want to name your preset?", "MyPreset.ltx").strip()
-                            
+
             if presetname[-4:] != ".ltx":
                 presetname = presetname + ".ltx"
 
@@ -1561,12 +1571,12 @@ else:
             st.download_button(f"**Download Your Preset (:blue[{presetname}])**", data=preset, file_name=presetname)
 
     elif page == "Arrival Anomalies":
-        
+
         st.write("Download **Arrival Anomalies** and install it using the instructions on here: **https://www.moddb.com/mods/stalker-anomaly/addons/arrival-anomalies**")
         st.write("Then, go to your `GAMMA/profiles/XTREME/` folder and upload your `modlist.txt` file below (ONLY IF YOU ARE USING **STALKER XTREME**). After that, enter the name of the mod when you installed it below. Finally, download the converted file, and replace your `modlist.txt` file with it (close and reopen MO2 if it was open).")
 
         userfile = st.file_uploader("")
-        
+
         if userfile != None:
 
             if userfile.name != "modlist.txt":
@@ -1591,9 +1601,9 @@ else:
 
                         if "XTREME Visuals and Actor Animations" in mod:
                             userout.append(f"+{name}")
-                            print(userout)                        
+                            print(userout)
 
                         userout.append(mod)
-                    
+
                 userout = "\n".join(userout)
                 download = st.download_button("Download Converted File", data=userout, file_name="modlist.txt")
