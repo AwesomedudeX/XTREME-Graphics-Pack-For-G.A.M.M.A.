@@ -631,8 +631,8 @@ r1_lmodel_lerp 0.1
 r1_pps_u 0.
 r1_pps_v 0.
 r1_software_skinning 0
-r1_ssa_lod_a 64.
-r1_ssa_lod_b 48.
+r1_ssa_lod_a 16.
+r1_ssa_lod_b 16.
 r2_aa off
 r2_aa_break (0.800000, 0.100000, 0.000000)
 r2_aa_kernel 0.5
@@ -664,8 +664,8 @@ r2_ls_dsm_kernel 0.7
 r2_ls_psm_kernel 0.7
 r2_ls_squality 3.
 r2_ls_ssm_kernel 0.7
-r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
-r2_mblur 0.02451
+r2_mask_control (1.000000, 1.000000, 1.000000, 1.000000)
+r2_mblur 0.04054
 r2_mblur_enabled on
 r2_parallax_h 0.
 r2_qsync 0
@@ -676,7 +676,7 @@ r2_soft_particles on
 r2_soft_water on
 r2_ss_sunshafts_length 1.
 r2_ss_sunshafts_radius 1.
-r2_ssa_lod_a 32.
+r2_ssa_lod_a 16.
 r2_ssa_lod_b 32.
 r2_ssao st_opt_off
 r2_ssao_blur off
@@ -695,13 +695,13 @@ r2_sun_details on
 r2_sun_far 100.
 r2_sun_focus on
 r2_sun_lumscale 3.
-r2_sun_lumscale_amb 1.19482
-r2_sun_lumscale_hemi 0.95
+r2_sun_lumscale_amb 1.34663
+r2_sun_lumscale_hemi 0.9706
 r2_sun_near 15.
 r2_sun_near_border 0.75
 r2_sun_quality st_opt_medium
 r2_sun_tsm on
-r2_sun_tsm_bias 0.5
+r2_sun_tsm_bias 0.
 r2_sun_tsm_proj 0.3
 r2_sunshafts_min 0.01
 r2_sunshafts_mode volumetric
@@ -720,8 +720,8 @@ r2_tnmp_onoff 0.
 r2_tnmp_w 1.12
 r2_tonemap on
 r2_tonemap_adaptation 3.
-r2_tonemap_amount 0.3
-r2_tonemap_lowlum 0.5
+r2_tonemap_amount 0.50599
+r2_tonemap_lowlum 0.45599
 r2_tonemap_middlegray 1.4
 r2_volumetric_lights on
 r2_wait_sleep 0
@@ -744,7 +744,7 @@ r4_hdr10_bloom_blur_scale 1.
 r4_hdr10_bloom_intensity 0.06
 r4_hdr10_bloom_on 0
 r4_hdr10_brightness 0.
-r4_hdr10_colorspace 0
+r4_hdr10_colorspace 2
 r4_hdr10_contrast 0.
 r4_hdr10_contrast_middle_gray 0.5
 r4_hdr10_exposure 2.
@@ -776,7 +776,7 @@ r4_hdr10_sun_on 0
 r4_hdr10_sun_outer_radius 0.4
 r4_hdr10_tonemap_mode 1
 r4_hdr10_tonemapper 0
-r4_hdr10_ui_nits 140.
+r4_hdr10_ui_nits 400.
 r4_hdr10_ui_saturation 0.5
 r4_hdr10_whitepoint_nits 400.
 r4_wireframe off
@@ -786,13 +786,13 @@ r__bloom_thresh (0.700000, 0.800000, 0.900000, 0.000000)
 r__bloom_weight (0.330000, 0.330000, 0.330000, 0.000000)
 r__clear_models_on_unload off
 r__color_grading (0.000000, 0.000000, 0.000000)
-r__detail_density 0.34
-r__detail_height 1.
+r__detail_density 0.5
+r__detail_height 0.8
 r__detail_radius 110
 r__dtex_range 50.
 r__enable_grass_shadow off
 r__exposure 1.
-r__fakescope 0
+r__fakescope 1
 r__framelimit 0
 r__gamma 1.
 r__geometry_lod 1.5
@@ -804,7 +804,7 @@ r__no_scale_on_fade off
 r__optimize_dynamic_geom 2
 r__optimize_shadow_geom off
 r__optimize_static_geom 3
-r__saturation 0.8
+r__saturation 1.
 r__supersample 1
 r__tf_aniso 16
 r__tf_mipbias -0.5
@@ -843,9 +843,9 @@ scope_radius 0.
 sds_enable on
 sds_speed_enable on
 sds_zoom_enable on
-shader_param_1 (0.990000, 1.000000, 0.970000, -0.300000)
+shader_param_1 (0.900000, 1.000000, 0.970000, 0.100000)
 shader_param_2 (0.000000, 0.000000, 0.000000, 0.000000)
-shader_param_3 (0.900000, 0.870000, 0.820000, -0.300000)
+shader_param_3 (0.838000, 0.920000, 0.950000, 0.000000)
 shader_param_4 (1.120000, 1.120000, 1.130000, -0.400000)
 shader_param_5 (1.000000, 0.000000, 0.000000, 0.000000)
 shader_param_6 (0.000000, 1.000000, 0.000000, 0.000000)
@@ -855,6 +855,7 @@ sil_glow_color (1.000000, 0.000000, 0.000000)
 sil_glow_cool_temp_rate 0.01
 sil_glow_max_temp 0.15
 sil_glow_shot_temp 0.004
+smooth_ads_transition 0
 snd_acceleration on
 snd_cache_size 256
 snd_doppler_power 1.8
@@ -874,7 +875,7 @@ ssfx_gloss_method 1
 ssfx_gloss_minmax (0.700000, 0.950000, 0.000000)
 ssfx_grass_interactive (1.000000, 8.000000, 2000.000000, 1.000000)
 ssfx_grass_shadows (1.000000, 1.000000, 50.000000, 0.000000)
-ssfx_hud_drops_1 (470.012909, 1.000000, 30.000000, 0.050000)
+ssfx_hud_drops_1 (0.000000, 0.000000, 30.000000, 0.050000)
 ssfx_hud_drops_2 (0.225000, 1.500000, 0.400000, 2.000000)
 ssfx_hud_hemi 0.
 ssfx_il (6.666667, 4.000000, 0.600000, 0.500000)
@@ -884,7 +885,7 @@ ssfx_int_grass_params_1 (1.400000, 2.000000, 2.000000, 30.000000)
 ssfx_int_grass_params_2 (1.000000, 5.000000, 0.300000, 2.000000)
 ssfx_is_underground 0
 ssfx_lightsetup_1 (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_lut (1.000000, 13.000000, 0.000000, 0.000000)
+ssfx_lut (1.000000, 2.000000, 0.000000, 0.000000)
 ssfx_pom (16.000000, 40.000000, 0.035000, 0.600000)
 ssfx_pom_refine 0
 ssfx_rain_1 (1.500000, 0.070000, 1.000000, 2.000000)
@@ -900,11 +901,11 @@ ssfx_ssr_quality 0
 ssfx_sss (1.000000, 1.000000, 0.000000, 0.000000)
 ssfx_sss_quality (24.000000, 8.000000, 1.000000, 1.000000)
 ssfx_terrain_grass_align 1
-ssfx_terrain_grass_slope 1.
-ssfx_terrain_offset (-0.120000, -0.050000, -0.150000, 0.000000)
-ssfx_terrain_pom (12.000000, 20.000000, 0.040000, 1.000000)
-ssfx_terrain_pom_refine 0
-ssfx_terrain_quality (8.000000, 0.000000, 0.000000, 0.000000)
+ssfx_terrain_grass_slope 0.84444
+ssfx_terrain_offset (-0.090000, -0.050000, -0.080000, 0.000000)
+ssfx_terrain_pom (36.000000, 40.000000, 0.040000, 1.000000)
+ssfx_terrain_pom_refine 1
+ssfx_terrain_quality (20.000000, 0.000000, 0.000000, 0.000000)
 ssfx_volumetric (1.000000, 0.500000, 3.000000, 1.000000)
 ssfx_water (1.000000, 0.800000, 1.000000, 0.000000)
 ssfx_water_quality (1.000000, 2.000000, 0.000000)
@@ -930,9 +931,9 @@ Download these modded exes: https://github.com/themrdemonized/xray-monolith/rele
 
 Then, download and install these files **in the order shown** using the links below; install them through MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**XTREME GRAPHICS PACK MAIN FILE: TO BE UPDATED**
+**XTREME GRAPHICS PACK MAIN FILE: https://drive.google.com/uc?export=download&id=1dYE3qikKEkpF7z53s_jDiaZfWr_D1WbC**
 
-**XTREME GRAPHICS OPTIONALS: TO BE UPDATED**
+**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1bnTfvSdmJhjlCxcun_K8ja_BUjXoab5I**
 
 **RESHADE: https://drive.google.com/uc?export=download&id=1k_nM1rgbatpw-FLxl3c4g90mx7I_6IOn**
 
