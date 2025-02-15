@@ -1057,26 +1057,6 @@ optionalslist = {
     """
 
 }
-sssinstallation = {
-
-    "intro": """
-This page will give you the SSS installation settings that you'll need for this pack.
-
-To get started, select the seasonal look that you want to go for below.
-""",
-
-    "instructions": """
-Then, open MO2 and search for `190- Screen Space Shaders 20 - Ascii1457` in MO2. From there, right-click on it, and click `Reinstall Mod`. After that, make sure your settings look like this, and hit `Ok`:
-""",
-
-    "sss screenshot regular": "sssregular.png",
-
-    "sss screenshot winter": "ssswinter.png",
-
-    "finish": """
-    Now that SSS is set up properly, continue on to the remaining steps to finish the installation.
-"""
-}
 screenshots = [
     "Cinematic Late Fall Cordon Sunrise",
     "Summer Cordon Sunset",
