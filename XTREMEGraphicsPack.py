@@ -3,7 +3,7 @@ from io import StringIO
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
-page = st.sidebar.radio("**Navigation:**", ["Home", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Atmospheric Preset Editor", "Arrival Anomalies"])
+page = st.sidebar.radio("**Navigation:**", ["Home", "STALKER XTREME", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Atmospheric Preset Editor", "Arrival Anomalies"])
 atmospresets = {
 
 "XTREME": """
@@ -941,12 +941,31 @@ You can also get **STALKER XTREME**, which is a modpack full of mods to greatly 
 
 **STALKER XTREME BETA (REQUIRES A NEW GAME): https://www.mediafire.com/file/uf6tiegzwrkmyv2/STALKER+XTREME+BETA.7z/file**
 
-To install STALKER XTREME, just open the file in 7Zip, and drag and drop EVERYTHING inside the file into your `GAMMA` folder.
+Head to the **STALKER XTREME** page for instructions on how to install it - I highly recommend using it with **XTREME Graphics Pack**.
 
-From there, follow the instructions on the **Modlist Compatibility** and **MCM Settings For SSS** pages on this site to modify your settings and mod list files to work with this pack.
+From there, if you are not going to get **STALKER XTREME**, follow the instructions on the **Modlist Compatibility** and **MCM Settings For SSS** pages on this site to modify your settings and mod list files to work with this pack.
 
 Finally, you can either use the **Load Atmospheric Preset** page or just open the game and type `cfg_load xtreme` to load the atmospheric settings. If you are using **STALKER XTREME**, I recommend getting ALL of my graphics settings to ensure everything works properly.
 """
+stalkerxtreme = {
+    "part1": """
+STALKER XTREME is a modpack designed around making STALKER as realistic as possible, featuring a Cold System, constant psy drain, modified item effects, a realistic body health system, HUD changes, reanimations, and so much more.
+
+To get **STALKER XTREME**, first, make sure MO2 is CLOSED. Then, just download the file and open it in 7Zip. Next, drag and drop EVERYTHING inside the file into your `GAMMA` folder.
+
+You can download it here if you haven't already: https://www.mediafire.com/file/uf6tiegzwrkmyv2/STALKER+XTREME+BETA.7z/file
+
+After that, you will need **Arrival Anomalies**. The author of this mod says that this is still a WIP, so it cannot be included in the pack. However, it can still be used; you'll just need to download and install it yourself.
+
+To do that, head to https://www.moddb.com/mods/stalker-anomaly/addons/arrival-anomalies and download it. Next, open MO2, and install it with your preferred settings in MO2 DIRECTLY under **XTREME Visuals & Actor Animations**. You won't need to do anything else, since **STALKER XTREME** comes with all the necessary settings and disabled mods. It should look like this in the MO2 load order:
+    """,
+    "part2": """
+    You may also need to move the **XTREME Graphics Pack** and **XTREME Graphics Pack Optionals** mods to be placed under the **XTREME Graphics** separator if you renamed any of them. The same applies with the ReShade 6.3.3 DX11 mod, but that should be placed in **XTREME High-Priority** instead. Make sure that they look like this in the load order:
+    """,
+    "part3": """
+    Once that's done, you should be good to go! If you have any issues, feel free to reach out to me, and I'll help you the best I can. Enjoy!
+    """
+}
 important = "If the ReShade preset doesn't load, go to the **ReShade File Finder** page to locate it. Also, if you want to use **Arrival Anomalies** with **STALKER XTREME**, go to the **Arrival Anomalies** page."
 mainlist = {
 
@@ -1145,7 +1164,21 @@ else:
 
     st.title(page)
 
-    if page == "Modlist Compatibility":
+    if page == "STALKER XTREME":
+
+        st.write(stalkerxtreme['part1'])
+        st.image("ArrivalLoadOrder.png")
+        st.write(stalkerxtreme['part2'])
+
+        c1, c2 = st.columns(2)
+        c1.subheader("XGP Load Order")
+        c1.image("XGPLoadOrder.png")
+        c2.subheader("ReShade Load Order")
+        c2.image("ReShadeLoadOrder.png")
+        
+        st.write(stalkerxtreme['part3'])
+
+    elif page == "Modlist Compatibility":
 
         st.write("This will edit your MO2 modlist file to disable the mods that should be disabled, while keeping the rest of your modlist intact.")
         st.write("**Keep in mind that this will disable mods that GAMMA has enabled by default, so you will need to revert back to a previous GAMMA modlist or the default GAMMA modlist if you want to uninstall this pack. Make sure to keep a backup of your modlist if you plan on doing so.**")
