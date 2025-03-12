@@ -940,7 +940,7 @@ Then, download and install these files **in the order shown** using the links be
 
 **XTREME GRAPHICS OPTIONALS: TO BE UPDATED**
 
-**RESHADE: TO BE UPDATED**
+**RESHADE: https://drive.google.com/file/d/1XiLQLt8_BdfBLbGyobAYtzebaDATjvIy/view?usp=drive_link**
 
 You can also get **STALKER XTREME**, which is a modpack full of mods to greatly enhance the realism and immersiveness of the zone. Certain mods that are disabled may be re-enabled, but they might cause issues. I'll offer as much support for them as I can.
 
