@@ -3,6 +3,11 @@ from io import StringIO
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
+@st.cache_data()
+def showScreenshots(screenshots, ext):
+    for img in screenshots:
+        st.image(img+ext, img)
+
 page = st.sidebar.radio("**Navigation:**", ["Home", "STALKER XTREME", "Modlist Compatibility", "Load Atmospheric Preset", "MCM Settings For SSS", "Awesomedude's Graphics Settings", "ReShade File Finder", "Atmospheric Preset Editor", "Arrival Anomalies"])
 atmospresets = {
 
@@ -12,7 +17,7 @@ r__color_grading (0, 0, 0)
 r__enable_grass_shadow off
 
 r__saturation 1.15
-r__gamma 1
+r__gamma 1.2
 r__exposure 1
 scope_factor 1
 
@@ -37,7 +42,7 @@ ssfx_hud_hemi 0
 
 shader_param_1 (0.99, 1, 0.97, -0.2)
 shader_param_2 (0, 0, 0, 0)
-shader_param_3 (0.838, 0.847, 0.852, -0.2)
+shader_param_3 (0.838, 0.847, 0.852, -0.15)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
 
@@ -439,16 +444,16 @@ sssmcm = """
         ssfx_module/florafixes/sss_int_mcm = 4.6
         ssfx_module/florafixes/trees_specular_mcm = 0.14
         ssfx_module/florafixes/trees_specular_wet_mcm = 0.15
-        ssfx_module/general/shaderscope_patch_mcm = false
+        ssfx_module/general/shaderscope_patch_mcm = true
         ssfx_module/il/blur_mcm          = 0.1
-        ssfx_module/il/distance_mcm      = 300
+        ssfx_module/il/distance_mcm      = 200
         ssfx_module/il/flora_int_mcm     = 1
         ssfx_module/il/global_int_mcm    = 4
         ssfx_module/il/hud_int_mcm       = 1
         ssfx_module/il/quality_mcm       = 16
         ssfx_module/il/res_mcm           = 0.15
         ssfx_module/il/vibrance_mcm      = 0.6
-        ssfx_module/inter_grass/anomalies_distance_mcm = 30
+        ssfx_module/inter_grass/anomalies_distance_mcm = 25
         ssfx_module/inter_grass/enable_anomalies_mcm = true
         ssfx_module/inter_grass/enable_mcm = true
         ssfx_module/inter_grass/enable_mutants_mcm = true
@@ -456,35 +461,35 @@ sssmcm = """
         ssfx_module/inter_grass/explosions_speed_mcm = 5
         ssfx_module/inter_grass/explosions_str_mcm = 1
         ssfx_module/inter_grass/horizontal_str_mcm = 2
-        ssfx_module/inter_grass/max_distance_mcm = 2000
+        ssfx_module/inter_grass/max_distance_mcm = 1500
         ssfx_module/inter_grass/max_entities_mcm = 8
         ssfx_module/inter_grass/radius_mcm = 1.4
         ssfx_module/inter_grass/shooting_range_mcm = 2
         ssfx_module/inter_grass/shooting_str_mcm = 0.3
         ssfx_module/inter_grass/vertical_str_mcm = 2
-        ssfx_module/parallax/ao_mcm      = 0.6
+        ssfx_module/parallax/ao_mcm      = 0.5
         ssfx_module/parallax/height_mcm  = 0.035
         ssfx_module/parallax/quality_mcm = 16
-        ssfx_module/parallax/range_mcm   = 40
+        ssfx_module/parallax/range_mcm   = 16.5
         ssfx_module/parallax/refine_mcm  = false
         ssfx_module/shadows/lod_max_mcm  = 0
-        ssfx_module/shadows/lod_min_mcm  = 1
+        ssfx_module/shadows/lod_min_mcm  = 3
         ssfx_module/shadows/lod_quality_mcm = 3
         ssfx_module/shadows/volumetric_force_mcm = true
         ssfx_module/shadows/volumetric_int_mcm = 0.5
         ssfx_module/shadows/volumetric_quality_mcm = 3
-        ssfx_module/shw_cascades/grass_shw_distance_mcm = 100
+        ssfx_module/shw_cascades/grass_shw_distance_mcm = 50
         ssfx_module/shw_cascades/grass_shw_nondir_maxdistance_mcm = 50
-        ssfx_module/shw_cascades/grass_shw_quality_mcm = 1
+        ssfx_module/shw_cascades/grass_shw_quality_mcm = 0
         ssfx_module/shw_cascades/size_1_mcm = 14
         ssfx_module/shw_cascades/size_2_mcm = 40
         ssfx_module/shw_cascades/size_3_mcm = 126
         ssfx_module/ssfx_pp/ssfx_bloom/blur_mcm = 1
-        ssfx_module/ssfx_pp/ssfx_bloom/dirt_mcm = 0.8
+        ssfx_module/ssfx_pp/ssfx_bloom/dirt_mcm = 0.5
         ssfx_module/ssfx_pp/ssfx_bloom/exposure_mcm = 1
-        ssfx_module/ssfx_pp/ssfx_bloom/lens_mcm = 1.5
+        ssfx_module/ssfx_pp/ssfx_bloom/lens_mcm = 5
         ssfx_module/ssfx_pp/ssfx_bloom/sky_mcm = 0.3
-        ssfx_module/ssfx_pp/ssfx_bloom/threshold_mcm = 10
+        ssfx_module/ssfx_pp/ssfx_bloom/threshold_mcm = 5
         ssfx_module/ssfx_pp/ssfx_bloom/use_weather_mcm = false
         ssfx_module/ssfx_pp/ssfx_bloom/vibrance_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/jump_vol_mcm = 0.7
@@ -507,7 +512,7 @@ sssmcm = """
         ssfx_module/ssfx_rain_module/ssfx_rain_main/brightness_mcm = 0.05
         ssfx_module/ssfx_rain_module/ssfx_rain_main/len_mcm = 1.5
         ssfx_module/ssfx_rain_module/ssfx_rain_main/max_drops_mcm = 2500
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/quality_mcm = 2
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/quality_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_main/radius_mcm = 15
         ssfx_module/ssfx_rain_module/ssfx_rain_main/reflection_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_main/refraction_mcm = 2.5
@@ -545,14 +550,14 @@ sssmcm = """
         ssfx_module/sss/enable_point_mcm = true
         ssfx_module/sss/len_dir_mcm      = 1
         ssfx_module/sss/len_point_mcm    = 1
-        ssfx_module/sss/quality_dir_mcm  = 24
-        ssfx_module/sss/quality_point_mcm = 8
+        ssfx_module/sss/quality_dir_mcm  = 12
+        ssfx_module/sss/quality_point_mcm = 4
         ssfx_module/terrain/distance_mcm = 20
         ssfx_module/terrain/grass_align_mcm = true
         ssfx_module/terrain/grass_slope_mcm = 76
         ssfx_module/terrain/pom_height_mcm = 0.04
-        ssfx_module/terrain/pom_quality_mcm = 36
-        ssfx_module/terrain/pom_range_mcm = 40
+        ssfx_module/terrain/pom_quality_mcm = 24
+        ssfx_module/terrain/pom_range_mcm = 31.5
         ssfx_module/terrain/pom_refine_mcm = true
         ssfx_module/terrain/pom_water_level_mcm = 1
         ssfx_module/water/blur_mcm       = 0.45
@@ -574,32 +579,32 @@ sssmcm = """
         ssfx_module/wind/grass_wave_mcm  = 0.5
         ssfx_module/wind/min_speed_mcm   = 0.1
         ssfx_module/wind/trees_bend_mcm  = 0.9
-        ssfx_module/wind/trees_speed_mcm = 11.1
+        ssfx_module/wind/trees_speed_mcm = 9.1
         ssfx_module/wind/trees_trunk_mcm = 0.17
-        ssfx_module/wpn_dof/aim_blur_mcm = 1.6
-        ssfx_module/wpn_dof/aim_edgeblur_mcm = 1
-        ssfx_module/wpn_dof/aim_fadelen_mcm = 0.25
-        ssfx_module/wpn_dof/aim_fadestart_mcm = 0.1
+        ssfx_module/wpn_dof/aim_blur_mcm = 0
+        ssfx_module/wpn_dof/aim_edgeblur_mcm = 0
+        ssfx_module/wpn_dof/aim_fadelen_mcm = 0
+        ssfx_module/wpn_dof/aim_fadestart_mcm = 0
         ssfx_module/wpn_dof/blur_mcm     = 1.1
         ssfx_module/wpn_dof/edgeblur_mcm = 0.3
         ssfx_module/wpn_dof/fadelen_mcm  = 0.25
         ssfx_module/wpn_dof/fadestart_mcm = 0.15
         ssfx_module/wpn_dof/fdda_mcm     = false
-        ssfx_module/wpn_dof/inventory_mcm = true
-        ssfx_module/wpn_dof/looting_mutant_mcm = true
-        ssfx_module/wpn_dof/pda_mcm      = true
+        ssfx_module/wpn_dof/inventory_mcm = false
+        ssfx_module/wpn_dof/looting_mutant_mcm = false
+        ssfx_module/wpn_dof/pda_mcm      = false
         ssfx_module/wpn_dof/reloading_mcm = false
 
         dynamic_tonemap_extended/adaptation = 3
         dynamic_tonemap_extended/enable_dynamic_tonemap = true
-        dynamic_tonemap_extended/k_amount = 0.1
+        dynamic_tonemap_extended/k_amount = 0.05
         dynamic_tonemap_extended/k_lowlum = 0.1
         dynamic_tonemap_extended/k_lumscale_amb = 0.05
         dynamic_tonemap_extended/k_lumscale_amb_addition = 0.07
         dynamic_tonemap_extended/k_lumscale_hemi = 0.01
         dynamic_tonemap_extended/k_lumscale_hemi_addition = 0.05
         dynamic_tonemap_extended/k_middle = 0.05
-        dynamic_tonemap_extended/max_amount = 1
+        dynamic_tonemap_extended/max_amount = 0.6
         dynamic_tonemap_extended/max_lowlum = 0.55
         dynamic_tonemap_extended/max_lumscale_amb = 1.5
         dynamic_tonemap_extended/max_lumscale_hemi = 1.4
@@ -927,15 +932,15 @@ fov 100.
 hud_fov 0.7
 hud_fov_aim_factor 0."""
 installation = """
-Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2025.1.22/STALKER-Anomaly-modded-exes_2025.1.22.zip, open the file in 7Zip, and extract ALL the files into your Anomaly folder.
+Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2025.3.9/STALKER-Anomaly-modded-exes_2025.3.9.zip, open the file in 7Zip, and extract ALL the files into your Anomaly folder.
 
 Then, download and install these files **in the order shown** using the links below; install them through MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**XTREME GRAPHICS PACK MAIN FILE: https://drive.google.com/uc?export=download&id=1dYE3qikKEkpF7z53s_jDiaZfWr_D1WbC**
+**XTREME GRAPHICS PACK MAIN FILE: TO BE UPDATED**
 
-**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1bnTfvSdmJhjlCxcun_K8ja_BUjXoab5I**
+**XTREME GRAPHICS OPTIONALS: TO BE UPDATED**
 
-**RESHADE: https://drive.google.com/uc?export=download&id=1k_nM1rgbatpw-FLxl3c4g90mx7I_6IOn**
+**RESHADE: TO BE UPDATED**
 
 You can also get **STALKER XTREME**, which is a modpack full of mods to greatly enhance the realism and immersiveness of the zone. Certain mods that are disabled may be re-enabled, but they might cause issues. I'll offer as much support for them as I can.
 
@@ -981,23 +986,9 @@ mainlist = {
     """,
 
     "main textures": """
-**Rotten Life Texture Pack:** A texture pack that adds old-themed 4K and 8K textures, which give structures in the Zone a cozy, yet run-down and scrappy look.
+**Anomaly Texture Overhaul 5 - PAUL_8558:** A complete texture overhaul that adds detailed 4K and 8K textures, which add to the depressing realism and immersion of the game.
 
-**Anomaly Texture Overhaul 4 - PAUL_8558:** A complete texture overhaul that adds detailed 4K and 8K textures, which add to the depressing realism and immersion of the game.
-
-**A.D.E.G.A. 1.5.3 Concrete Textures: Adds high-quality concrete textures from the A.D.E.G.A. texture repack.**
-
-**Re.Pack Doors V1.0:** Adds 4K textures to doors.
-
-**Re.Pack Glass & Windows V1.5:** Adds 4K textures to glass and windows, complete with scratches, dust, dirt and cracks for added immersion.
-
-**Re.Pack Barbed Wire V1.1:** Adds 4K textures to barbed wire.
-
-**Re.Pack Signs V1.0:** Adds 4K textures for signs, with added details like bullet holes, moss or cracks.
-
-**Re.Pack Pseudogiant 1.7:** Adds a new high-definition texture for pseudogiants.
-
-**Re.Pack Crow 1.0:** Adds a new high-definition texture for crows.
+**Re.Pack Texture Pack Series - Hades@DK:** Adds high-res textures - ranging from 4K to 16K - to many different surfaces around the Zone. It includes high-res textures for glass, barbed wire, pseudodogs, lurkers, doors, and so much more.
     """,
 
     "mask textures": """
@@ -1033,6 +1024,8 @@ optionalslist = {
 **C-Consciousness Grass Overhaul v0.55**
 
 **Rotten Life Ground Textures**
+
+**ATO 5 Foliage Textures (Trees & Bushes - not grass)**
     """,
 
     "late fall": """
@@ -1079,21 +1072,21 @@ optionalslist = {
 
 }
 screenshots = [
-    "Cinematic Late Fall Cordon Sunrise",
-    "Summer Cordon Sunset",
-    "Late Fall Cordon Sunrise 1",
-    "Late Fall Cordon Sunrise 2",
-    "Late Fall Cordon Sunrise 3",
-    "Late Fall Army Warehouses Sunrise 1",
-    "Late Fall Army Warehouses Sunrise 2",
-    "Late Fall Army Warehouses Sunrise 3",
-    "Winter Wonderland",
-    "Rookie Village Campfire"
+    "Army Warehouses Sunrise 1",
+    "Army Warehouses Sunrise 2",
+    "Army Warehouses Sunrise 3",
+    "Cordon Sunrise 1",
+    "Cordon Sunrise 2",
+    "Cordon Sunrise Closeup 1",
+    "Cordon Sunrise Closeup 2",
+    "Cordon Sunset",
+    "Rookie Village Campfire",
+    "Winter Wonderland"
 ]
 
 if page == "Home":
 
-    st.title("XTREME Graphics Pack For G.A.M.M.A.")
+    st.title("XTREME Graphics Pack")
     st.write("This graphics pack is a nice and easy way to make your game look so much better. It features a series of mods to improve shaders, VFX, textures and overall visual fidelity.")
 
     st.write("---")
@@ -1102,8 +1095,7 @@ if page == "Home":
 
         st.header("Preview Screenshots:")
 
-        for img in screenshots:
-            st.image(img+".png", img)
+        showScreenshots(screenshots, ".png")
 
     st.write("---")
 
