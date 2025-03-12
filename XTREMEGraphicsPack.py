@@ -936,9 +936,9 @@ Download these modded exes: https://github.com/themrdemonized/xray-monolith/rele
 
 Then, download and install these files **in the order shown** using the links below; install them through MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
-**XTREME GRAPHICS PACK MAIN FILE: TO BE UPDATED**
+**XTREME GRAPHICS PACK MAIN FILE: https://drive.google.com/uc?export=download&id=1BfzX8lDHcVq3SWconCI3MdcfQDjlftVK**
 
-**XTREME GRAPHICS OPTIONALS: TO BE UPDATED**
+**XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1OVRrutTfFfJ2of3_iASgHLhKhkwO3uKx**
 
 **RESHADE: https://drive.google.com/file/d/1XiLQLt8_BdfBLbGyobAYtzebaDATjvIy/view?usp=drive_link**
 
