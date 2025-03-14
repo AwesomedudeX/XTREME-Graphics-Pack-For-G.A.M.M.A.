@@ -366,9 +366,9 @@ disabledmods = {
 
 ":green[**G.A.M.M.A.**]": {
 
-    "base shaders": """190- Screen Space Shaders 20 - Ascii1457
-188- Enhanced Shaders - KennShade
-189- Beef's NVG - theRealBeef
+    "base shaders": """-190- Screen Space Shaders 20 - Ascii1457
+-188- Enhanced Shaders - KennShade
+-189- Beef's NVG - theRealBeef
 """,
 
     "mask textures": """-G.A.M.M.A. No Masks Textures
