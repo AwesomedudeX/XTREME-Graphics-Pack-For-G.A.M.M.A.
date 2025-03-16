@@ -944,7 +944,7 @@ Then, download and install these files **in the order shown** using the links be
 
 You can also get **STALKER XTREME**, which is a modpack full of mods to greatly enhance the realism and immersiveness of the zone. Certain mods that are disabled may be re-enabled, but they might cause issues. I'll offer as much support for them as I can.
 
-**STALKER XTREME BETA (REQUIRES A NEW GAME): TO BE UPDATED**
+**STALKER XTREME (REQUIRES A NEW GAME): TO BE UPDATED**
 
 Head to the **STALKER XTREME** page for instructions on how to install it - I highly recommend using it with **XTREME Graphics Pack**.
 
