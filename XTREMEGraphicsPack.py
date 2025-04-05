@@ -923,7 +923,7 @@ STALKER XTREME is a modpack designed around making STALKER as realistic as possi
 
 To get **STALKER XTREME**, first, make sure MO2 is CLOSED. Then, just download the file and open it in 7Zip. Next, drag and drop EVERYTHING inside the file into your `GAMMA` folder.
 
-You can download it here if you haven't already: https://www.mediafire.com/file/uf6tiegzwrkmyv2/STALKER+XTREME+BETA.7z/file
+You can download it here if you haven't already: https://www.mediafire.com/file/bp58izh52wsoce5/STALKER+XTREME.7z/file
 
 After that, you will need **Arrival Anomalies**. The author of this mod says that this is still a WIP, so it cannot be included in the pack. However, it can still be used; you'll just need to download and install it yourself.
 
