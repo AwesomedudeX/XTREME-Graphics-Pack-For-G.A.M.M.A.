@@ -16,8 +16,8 @@ r__color_grading (0, 0, 0)
 
 r__enable_grass_shadow off
 
-r__saturation 1.15
-r__gamma 1.2
+r__saturation 1.1
+r__gamma 1
 r__exposure 1
 scope_factor 1
 
@@ -40,9 +40,9 @@ r2_sun_depth_far_scale 0.99988
 r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
-shader_param_1 (0.99, 1, 0.97, -0.2)
-shader_param_2 (0, 0, 0, 0)
-shader_param_3 (0.838, 0.847, 0.852, -0.15)
+shader_param_1 (1, 1, 1, -0.2)
+shader_param_2 (0, 0, 0, 0.03)
+shader_param_3 (0.0, 0.0, 0.0, 0.67)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
 
@@ -76,7 +76,7 @@ r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
 shader_param_1 (0.99, 1, 0.97, -0.3)
-shader_param_2 (0, 0, 0, 0)
+shader_param_2 (0, 0, 0, 0.02)
 shader_param_3 (0.9, 0.9, 0.9, -0.3)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
@@ -86,7 +86,7 @@ r__color_grading (0, 0, 0)
 
 r__enable_grass_shadow off
 
-r__saturation 0.8
+r__saturation 0.85
 r__gamma 1
 r__exposure 1
 scope_factor 1
@@ -111,8 +111,8 @@ r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
 shader_param_1 (0.99, 1, 0.97, -0.3)
-shader_param_2 (0, 0, 0, 0)
-shader_param_3 (0.9, 0.87, 0.82, -0.3)
+shader_param_2 (0, 0, 0, 0.01)
+shader_param_3 (0.9, 0.86, 0.8, -0.35)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
 
@@ -145,9 +145,9 @@ r2_sun_depth_far_scale 0.99988
 r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
-shader_param_1 (0.9, 1, 0.97, 0.1)
-shader_param_2 (0, 0, 0, 0)
-shader_param_3 (0.838, 0.92, 0.95, 0)
+shader_param_1 (1, 1, 1, -0.2)
+shader_param_2 (0, 0, 0, 0.02)
+shader_param_3 (0, 0, 0.02, 0.67)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
 
@@ -181,8 +181,8 @@ r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
 shader_param_1 (0.99, 1, 0.97, -0.2)
-shader_param_2 (0, 0, 0, 0)
-shader_param_3 (0.85, 0.835, 0.82, -0.15)
+shader_param_2 (0, 0, 0, 0.1)
+shader_param_3 (0.9, 0.88, 0.82, -0.15)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
 
@@ -191,7 +191,7 @@ r__color_grading (0, 0, 0)
 
 r__enable_grass_shadow off
 
-r__saturation 0.8
+r__saturation 0.9
 r__gamma 1
 r__exposure 1
 scope_factor 1
@@ -215,44 +215,9 @@ r2_sun_depth_far_scale 0.99988
 r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
-shader_param_1 (0.9, 1, 0.97, 0.5)
-shader_param_2 (0, 0, 0, 0)
-shader_param_3 (0.838, 0.9, 0.9, -0.1)
-shader_param_4 (1.12, 1.12, 1.13, -0.4)
-""",
-
-"XTREMEVivid": """
-r__color_grading (0, 0, 0)
-
-r__enable_grass_shadow off
-
-r__saturation 1.1
-r__gamma 1
-r__exposure 1
-scope_factor 1
-
-r2_sun_lumscale 3.
-r2_gloss_factor 0.001
-r2_gloss_min 0.56
-r2_sun_lumscale 3.
-r2_sun_lumscale_amb 2.5
-r2_sun_lumscale_hemi 0.97063
-r2_tonemap on
-r2_tonemap_adaptation 3.0
-r2_tonemap_amount 1
-r2_tonemap_lowlum 0.55
-r2_tonemap_middlegray 1.4
-rs_c_brightness 1
-rs_c_contrast 1
-rs_c_gamma 1.
-r2_sun_depth_near_scale 0.9998
-r2_sun_depth_far_scale 0.99988
-r2_sun_tsm_bias 0
-ssfx_hud_hemi 0
-
-shader_param_1 (0.95, 1, 0.97, 0.5)
-shader_param_2 (0, 0, 0, 0)
-shader_param_3 (0.838, 0.847, 0.852, 0)
+shader_param_1 (1, 1, 1, -0.1)
+shader_param_2 (0, 0, 0, 0.15)
+shader_param_3 (0.05, 0.05, 0, 0.67)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
 
@@ -285,8 +250,8 @@ r2_sun_depth_far_scale 0.99988
 r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
-shader_param_1 (0.99, 1, 0.97, -0.2)
-shader_param_2 (0, 0, 0, 0)
+shader_param_1 (0.99, 1, 0.97, -0.3)
+shader_param_2 (0, 0, 0, 0.03)
 shader_param_3 (0.838, 0.847, 0.86, -0.25)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
@@ -296,7 +261,7 @@ r__color_grading (0, 0, 0)
 
 r__enable_grass_shadow off
 
-r__saturation 1.15
+r__saturation 1
 r__gamma 1
 r__exposure 1
 scope_factor 1
@@ -321,7 +286,7 @@ r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
 shader_param_1 (0.99, 1, 0.97, -0.3)
-shader_param_2 (0, 0, 0, 0)
+shader_param_2 (0, 0, 0, 0.03)
 shader_param_3 (0.88, 0.85, 0.81, -0.3)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
@@ -356,8 +321,8 @@ r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
 shader_param_1 (0.99, 1, 0.97, -0.3)
-shader_param_2 (0, 0, 0, 0)
-shader_param_3 (0.88, 0.85, 0.9, -0.3)
+shader_param_2 (0, 0, 0, 0.02)
+shader_param_3 (0.88, 0.88, 0.92, -0.3)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
 
@@ -932,7 +897,7 @@ fov 100.
 hud_fov 0.7
 hud_fov_aim_factor 0."""
 installation = """
-Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2025.3.9/STALKER-Anomaly-modded-exes_2025.3.9.zip, open the file in 7Zip, and extract ALL the files into your Anomaly folder.
+Download these modded exes: https://github.com/themrdemonized/xray-monolith/releases/download/2025.4.5/STALKER-Anomaly-modded-exes_2025.4.5.zip, open the file in 7Zip, and extract ALL the files into your Anomaly folder.
 
 Then, download and install these files **in the order shown** using the links below; install them through MO2, placing them at the bottom of your modlist. Because of the size of the mod, MO2 may freeze during the installation; just wait for a bit for the mod to be installed and MO2 will be functional again.
 
