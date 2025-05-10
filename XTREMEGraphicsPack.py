@@ -191,7 +191,7 @@ r__color_grading (0, 0, 0)
 
 r__enable_grass_shadow off
 
-r__saturation 0.9
+r__saturation 0.8
 r__gamma 1
 r__exposure 1
 scope_factor 1
@@ -215,8 +215,8 @@ r2_sun_depth_far_scale 0.99988
 r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
-shader_param_1 (1, 1, 1, -0.1)
-shader_param_2 (0, 0, 0, 0.15)
+shader_param_1 (1, 1, 1, 0.1)
+shader_param_2 (0, 0, 0, 0)
 shader_param_3 (0.05, 0.05, 0, 0.67)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
@@ -325,6 +325,89 @@ shader_param_2 (0, 0, 0, 0.02)
 shader_param_3 (0.88, 0.88, 0.92, -0.3)
 shader_param_4 (1.12, 1.12, 1.13, -0.4)
 """,
+
+"XTREMEHDR": """
+r__color_grading (0, 0, 0)
+
+r__enable_grass_shadow off
+
+r__saturation 1.1
+r__gamma 1
+r__exposure 1
+scope_factor 1
+
+r2_sun_lumscale 3.
+r2_gloss_factor 0.001
+r2_gloss_min 0.56
+r2_sun_lumscale 3.
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.97063
+r2_tonemap on
+r2_tonemap_adaptation 3.0
+r2_tonemap_amount 1
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
+rs_c_brightness 1
+rs_c_contrast 1
+rs_c_gamma 1.
+r2_sun_depth_near_scale 0.9998
+r2_sun_depth_far_scale 0.99988
+r2_sun_tsm_bias 0
+ssfx_hud_hemi 0
+
+shader_param_1 (1, 1, 1, -0.2)
+shader_param_2 (0, 0, 0, 0.03)
+shader_param_3 (0.0, 0.0, 0.0, 0.67)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+
+r4_hdr10_bloom_blur_passes 20
+r4_hdr10_bloom_blur_scale 1.
+r4_hdr10_bloom_intensity 0.06
+r4_hdr10_bloom_on 0
+r4_hdr10_brightness 0.
+r4_hdr10_colorspace 0
+r4_hdr10_contrast 0.31
+r4_hdr10_contrast_middle_gray 0.67
+r4_hdr10_exposure 5
+r4_hdr10_flare_blur_passes 12
+r4_hdr10_flare_blur_scale 1.
+r4_hdr10_flare_center_falloff 1.1
+r4_hdr10_flare_ghost_ca 3.
+r4_hdr10_flare_ghost_dispersal 0.6
+r4_hdr10_flare_ghost_intensity 0.04
+r4_hdr10_flare_ghosts 1
+r4_hdr10_flare_halo_ca 10.
+r4_hdr10_flare_halo_intensity 0.04
+r4_hdr10_flare_halo_scale 0.47
+r4_hdr10_flare_lens_color (1.000000, 0.700000, 1.000000)
+r4_hdr10_flare_on 0
+r4_hdr10_flare_power 0.04
+r4_hdr10_flare_threshold 0.
+r4_hdr10_gamma 1.5
+r4_hdr10_on 1
+r4_hdr10_pda_intensity 1.01
+r4_hdr10_saturation 0.1
+r4_hdr10_sun_dawn_begin 4.5
+r4_hdr10_sun_dawn_end 6.
+r4_hdr10_sun_dusk_begin 18.5
+r4_hdr10_sun_dusk_end 21.
+r4_hdr10_sun_inner_radius 0.2
+r4_hdr10_sun_intensity 80.
+r4_hdr10_sun_on 0
+r4_hdr10_sun_outer_radius 0.4
+r4_hdr10_tonemap_mode 1
+r4_hdr10_tonemapper 6
+r4_hdr10_ui_nits 100.
+r4_hdr10_ui_saturation 0.5
+r4_hdr10_whitepoint_nits 100.
+
+ssfx_hud_hemi 0
+
+shader_param_1 (1, 1, 1, -0.2)
+shader_param_2 (0, 0, 0, 0.03)
+shader_param_3 (0.0, 0.0, 0.0, 0.67)
+shader_param_4 (1.12, 1.12, 1.13, -0.4)
+"""
 
 }
 disabledmods = {
@@ -905,11 +988,11 @@ Then, download and install these files **in the order shown** using the links be
 
 **XTREME GRAPHICS OPTIONALS: https://drive.google.com/uc?export=download&id=1OVRrutTfFfJ2of3_iASgHLhKhkwO3uKx**
 
-**RESHADE: https://drive.google.com/uc?export=download&id=1XiLQLt8_BdfBLbGyobAYtzebaDATjvIy**
+**RESHADE 6.3.3 DX11: https://drive.google.com/uc?export=download&id=1XiLQLt8_BdfBLbGyobAYtzebaDATjvIy**
 
 You can also get **STALKER XTREME**, which is a modpack full of mods to greatly enhance the realism and immersiveness of the zone. Certain mods that are disabled may be re-enabled, but they might cause issues. I'll offer as much support for them as I can.
 
-**STALKER XTREME (REQUIRES A NEW GAME): https://www.mediafire.com/file/bp58izh52wsoce5/STALKER+XTREME.7z/file**
+**STALKER XTREME (REQUIRES A NEW GAME): https://www.mediafire.com/file/gm862b2xneitbei/STALKER+XTREME.7z/file**
 
 Head to the **STALKER XTREME** page for instructions on how to install it - I highly recommend using it with **XTREME Graphics Pack**.
 
@@ -923,7 +1006,7 @@ STALKER XTREME is a modpack designed around making STALKER as realistic as possi
 
 To get **STALKER XTREME**, first, make sure MO2 is CLOSED. Then, just download the file and open it in 7Zip. Next, drag and drop EVERYTHING inside the file into your `GAMMA` folder.
 
-You can download it here if you haven't already: https://www.mediafire.com/file/bp58izh52wsoce5/STALKER+XTREME.7z/file
+You can download it here if you haven't already: https://www.mediafire.com/file/gm862b2xneitbei/STALKER+XTREME.7z/file
 
 After that, you will need **Arrival Anomalies**. The author of this mod says that this is still a WIP, so it cannot be included in the pack. However, it can still be used; you'll just need to download and install it yourself.
 
