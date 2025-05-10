@@ -494,11 +494,11 @@ sssmcm = """
         ssfx_module/florafixes/trees_specular_wet_mcm = 0.15
         ssfx_module/general/shaderscope_patch_mcm = true
         ssfx_module/il/blur_mcm          = 0.1
-        ssfx_module/il/distance_mcm      = 200
+        ssfx_module/il/distance_mcm      = 150
         ssfx_module/il/flora_int_mcm     = 1
         ssfx_module/il/global_int_mcm    = 4
         ssfx_module/il/hud_int_mcm       = 1
-        ssfx_module/il/quality_mcm       = 16
+        ssfx_module/il/quality_mcm       = 24
         ssfx_module/il/res_mcm           = 0.15
         ssfx_module/il/vibrance_mcm      = 0.6
         ssfx_module/inter_grass/anomalies_distance_mcm = 25
@@ -518,26 +518,26 @@ sssmcm = """
         ssfx_module/parallax/ao_mcm      = 0.5
         ssfx_module/parallax/height_mcm  = 0.035
         ssfx_module/parallax/quality_mcm = 16
-        ssfx_module/parallax/range_mcm   = 16.5
+        ssfx_module/parallax/range_mcm   = 8
         ssfx_module/parallax/refine_mcm  = false
         ssfx_module/shadows/lod_max_mcm  = 0
         ssfx_module/shadows/lod_min_mcm  = 3
-        ssfx_module/shadows/lod_quality_mcm = 3
+        ssfx_module/shadows/lod_quality_mcm = 0.5
         ssfx_module/shadows/volumetric_force_mcm = true
-        ssfx_module/shadows/volumetric_int_mcm = 0.5
+        ssfx_module/shadows/volumetric_int_mcm = 0.8
         ssfx_module/shadows/volumetric_quality_mcm = 3
-        ssfx_module/shw_cascades/grass_shw_distance_mcm = 50
+        ssfx_module/shw_cascades/grass_shw_distance_mcm = 100
         ssfx_module/shw_cascades/grass_shw_nondir_maxdistance_mcm = 50
         ssfx_module/shw_cascades/grass_shw_quality_mcm = 0
         ssfx_module/shw_cascades/size_1_mcm = 14
         ssfx_module/shw_cascades/size_2_mcm = 40
         ssfx_module/shw_cascades/size_3_mcm = 126
         ssfx_module/ssfx_pp/ssfx_bloom/blur_mcm = 1
-        ssfx_module/ssfx_pp/ssfx_bloom/dirt_mcm = 0.5
-        ssfx_module/ssfx_pp/ssfx_bloom/exposure_mcm = 1
-        ssfx_module/ssfx_pp/ssfx_bloom/lens_mcm = 5
-        ssfx_module/ssfx_pp/ssfx_bloom/sky_mcm = 0.3
-        ssfx_module/ssfx_pp/ssfx_bloom/threshold_mcm = 5
+        ssfx_module/ssfx_pp/ssfx_bloom/dirt_mcm = 1
+        ssfx_module/ssfx_pp/ssfx_bloom/exposure_mcm = 2
+        ssfx_module/ssfx_pp/ssfx_bloom/lens_mcm = 1
+        ssfx_module/ssfx_pp/ssfx_bloom/sky_mcm = 0.8
+        ssfx_module/ssfx_pp/ssfx_bloom/threshold_mcm = 9
         ssfx_module/ssfx_pp/ssfx_bloom/use_weather_mcm = false
         ssfx_module/ssfx_pp/ssfx_bloom/vibrance_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/jump_vol_mcm = 0.7
@@ -549,29 +549,29 @@ sssmcm = """
         ssfx_module/ssfx_rain_module/ssfx_rain_footsteps/vol_rnd_mcm = 0.15
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/animation_speed_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/buildup_mcm = 2
-        ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/density_mcm = 2
+        ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/density_mcm = 2.5
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/drying_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/extra_gloss_mcm = 0.4
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/gloss_mcm = 2
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/reflection_str_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/refraction_str_mcm = 1
-        ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/size_mcm = 0.5
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/alpha_mcm = 0.8
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/brightness_mcm = 0.05
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/len_mcm = 1.5
+        ssfx_module/ssfx_rain_module/ssfx_rain_hud_raindrops/size_mcm = 0.7
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/alpha_mcm = 1
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/brightness_mcm = 0
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/len_mcm = 1.3
         ssfx_module/ssfx_rain_module/ssfx_rain_main/max_drops_mcm = 2500
         ssfx_module/ssfx_rain_module/ssfx_rain_main/quality_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_main/radius_mcm = 15
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/reflection_mcm = 1
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/refraction_mcm = 2.5
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/reflection_mcm = 0.6
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/refraction_mcm = 1.2
         ssfx_module/ssfx_rain_module/ssfx_rain_main/speed_mcm = 1
         ssfx_module/ssfx_rain_module/ssfx_rain_main/splash_alpha_mcm = 0.2
         ssfx_module/ssfx_rain_module/ssfx_rain_main/splash_refraction_mcm = 3
-        ssfx_module/ssfx_rain_module/ssfx_rain_main/width_mcm = 0.07
-        ssfx_module/ssfx_wetness/ssfx_gloss/auto_gloss_max_mcm = 0.96
+        ssfx_module/ssfx_rain_module/ssfx_rain_main/width_mcm = 0.1
+        ssfx_module/ssfx_wetness/ssfx_gloss/auto_gloss_max_mcm = 0.85
         ssfx_module/ssfx_wetness/ssfx_gloss/auto_gloss_mcm = true
-        ssfx_module/ssfx_wetness/ssfx_gloss/max_gloss_mcm = 0.95
-        ssfx_module/ssfx_wetness/ssfx_gloss/min_gloss_mcm = 0.7
+        ssfx_module/ssfx_wetness/ssfx_gloss/max_gloss_mcm = 0.9
+        ssfx_module/ssfx_wetness/ssfx_gloss/min_gloss_mcm = 0.5
         ssfx_module/ssfx_wetness/ssfx_gloss/specular_color_mcm = 0.6
         ssfx_module/ssfx_wetness/ssfx_gloss/specular_int_mcm = 0.6
         ssfx_module/ssfx_wetness/ssfx_wet_surf/buildup_speed_mcm = 1.4
@@ -588,8 +588,8 @@ sssmcm = """
         ssfx_module/ssfx_wetness/ssfx_wet_surf/waterfall_speed_mcm = 1.5
         ssfx_module/ssr/blur_mcm         = 0.25
         ssfx_module/ssr/general_int_mcm  = 1.15
-        ssfx_module/ssr/quality_mcm      = 0
-        ssfx_module/ssr/render_scale_mcm = 1
+        ssfx_module/ssr/quality_mcm      = 1
+        ssfx_module/ssr/render_scale_mcm = 0.5
         ssfx_module/ssr/sky_int_mcm      = 1.3
         ssfx_module/ssr/use_noise_mcm    = false
         ssfx_module/ssr/weapon_int_max_mcm = 0.05
@@ -600,26 +600,26 @@ sssmcm = """
         ssfx_module/sss/len_point_mcm    = 1
         ssfx_module/sss/quality_dir_mcm  = 12
         ssfx_module/sss/quality_point_mcm = 4
-        ssfx_module/terrain/distance_mcm = 20
+        ssfx_module/terrain/distance_mcm = 8
         ssfx_module/terrain/grass_align_mcm = true
-        ssfx_module/terrain/grass_slope_mcm = 76
+        ssfx_module/terrain/grass_slope_mcm = 90
         ssfx_module/terrain/pom_height_mcm = 0.04
-        ssfx_module/terrain/pom_quality_mcm = 24
-        ssfx_module/terrain/pom_range_mcm = 31.5
-        ssfx_module/terrain/pom_refine_mcm = true
+        ssfx_module/terrain/pom_quality_mcm = 12
+        ssfx_module/terrain/pom_range_mcm = 20
+        ssfx_module/terrain/pom_refine_mcm = false
         ssfx_module/terrain/pom_water_level_mcm = 1
         ssfx_module/water/blur_mcm       = 0.45
         ssfx_module/water/blur_pattern_mcm = 1
         ssfx_module/water/caustics_int_mcm = 0.3
         ssfx_module/water/distortion_mcm = 0.6
         ssfx_module/water/parallax_height_mcm = 0.05
-        ssfx_module/water/parallax_quality_mcm = 2
+        ssfx_module/water/parallax_quality_mcm = 1
         ssfx_module/water/reflection_int_mcm = 0.86
         ssfx_module/water/ripples_int_mcm = 0.5
         ssfx_module/water/softborder_mcm = 0.3
         ssfx_module/water/specular_int_mcm = 1
-        ssfx_module/water/ssr_quality_mcm = 2
-        ssfx_module/water/ssr_res_mcm    = 2
+        ssfx_module/water/ssr_quality_mcm = 1
+        ssfx_module/water/ssr_res_mcm    = 0.5
         ssfx_module/water/turbidity_mcm  = 0.3
         ssfx_module/wind/grass_push_mcm  = 1.6
         ssfx_module/wind/grass_speed_mcm = 9.7
@@ -629,34 +629,34 @@ sssmcm = """
         ssfx_module/wind/trees_bend_mcm  = 0.9
         ssfx_module/wind/trees_speed_mcm = 9.1
         ssfx_module/wind/trees_trunk_mcm = 0.17
-        ssfx_module/wpn_dof/aim_blur_mcm = 0
-        ssfx_module/wpn_dof/aim_edgeblur_mcm = 0
-        ssfx_module/wpn_dof/aim_fadelen_mcm = 0
-        ssfx_module/wpn_dof/aim_fadestart_mcm = 0
+        ssfx_module/wpn_dof/aim_blur_mcm = 1.6
+        ssfx_module/wpn_dof/aim_edgeblur_mcm = 1
+        ssfx_module/wpn_dof/aim_fadelen_mcm = 0.25
+        ssfx_module/wpn_dof/aim_fadestart_mcm = 0.1
         ssfx_module/wpn_dof/blur_mcm     = 1.1
         ssfx_module/wpn_dof/edgeblur_mcm = 0.3
         ssfx_module/wpn_dof/fadelen_mcm  = 0.25
         ssfx_module/wpn_dof/fadestart_mcm = 0.15
         ssfx_module/wpn_dof/fdda_mcm     = false
-        ssfx_module/wpn_dof/inventory_mcm = false
+        ssfx_module/wpn_dof/inventory_mcm = true
         ssfx_module/wpn_dof/looting_mutant_mcm = false
         ssfx_module/wpn_dof/pda_mcm      = false
         ssfx_module/wpn_dof/reloading_mcm = false
 
         dynamic_tonemap_extended/adaptation = 3
-        dynamic_tonemap_extended/enable_dynamic_tonemap = true
-        dynamic_tonemap_extended/k_amount = 0.05
+        dynamic_tonemap_extended/enable_dynamic_tonemap = false
+        dynamic_tonemap_extended/k_amount = 0.1
         dynamic_tonemap_extended/k_lowlum = 0.1
         dynamic_tonemap_extended/k_lumscale_amb = 0.05
         dynamic_tonemap_extended/k_lumscale_amb_addition = 0.07
         dynamic_tonemap_extended/k_lumscale_hemi = 0.01
         dynamic_tonemap_extended/k_lumscale_hemi_addition = 0.05
         dynamic_tonemap_extended/k_middle = 0.05
-        dynamic_tonemap_extended/max_amount = 0.6
-        dynamic_tonemap_extended/max_lowlum = 0.55
-        dynamic_tonemap_extended/max_lumscale_amb = 1.5
-        dynamic_tonemap_extended/max_lumscale_hemi = 1.4
-        dynamic_tonemap_extended/max_middle_gray = 1.4
+        dynamic_tonemap_extended/max_amount = 1
+        dynamic_tonemap_extended/max_lowlum = 0.6
+        dynamic_tonemap_extended/max_lumscale_amb = 1.4
+        dynamic_tonemap_extended/max_lumscale_hemi = 1.15
+        dynamic_tonemap_extended/max_middle_gray = 1.6
         dynamic_tonemap_extended/min_amount = 0.3
         dynamic_tonemap_extended/min_clear_lowlum = 0.5
         dynamic_tonemap_extended/min_lumscale_amb = 0.35
@@ -684,8 +684,8 @@ r1_lmodel_lerp 0.1
 r1_pps_u 0.
 r1_pps_v 0.
 r1_software_skinning 0
-r1_ssa_lod_a 16.
-r1_ssa_lod_b 16.
+r1_ssa_lod_a 64.
+r1_ssa_lod_b 48.
 r2_aa off
 r2_aa_break (0.800000, 0.100000, 0.000000)
 r2_aa_kernel 0.5
@@ -715,21 +715,21 @@ r2_ls_depth_bias -0.00005
 r2_ls_depth_scale 1.00001
 r2_ls_dsm_kernel 0.7
 r2_ls_psm_kernel 0.7
-r2_ls_squality 3.
+r2_ls_squality 0.5
 r2_ls_ssm_kernel 0.7
-r2_mask_control (1.000000, 1.000000, 1.000000, 1.000000)
-r2_mblur 0.04054
+r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
+r2_mblur 0.02467
 r2_mblur_enabled on
 r2_parallax_h 0.
 r2_qsync 0
 r2_shadow_cascede_old off
-r2_slight_fade 1.
+r2_slight_fade 0.5
 r2_smaa off
-r2_soft_particles on
+r2_soft_particles off
 r2_soft_water on
 r2_ss_sunshafts_length 1.
 r2_ss_sunshafts_radius 1.
-r2_ssa_lod_a 16.
+r2_ssa_lod_a 32.
 r2_ssa_lod_b 32.
 r2_ssao st_opt_off
 r2_ssao_blur off
@@ -739,7 +739,7 @@ r2_ssao_hdao off
 r2_ssao_mode disabled
 r2_ssao_opt_data on
 r2_steep_parallax off
-r2_sun on
+r2_sun off
 r2_sun_depth_far_bias -0.00002
 r2_sun_depth_far_scale 0.99988
 r2_sun_depth_near_bias 0.00007
@@ -748,8 +748,8 @@ r2_sun_details on
 r2_sun_far 100.
 r2_sun_focus on
 r2_sun_lumscale 3.
-r2_sun_lumscale_amb 1.34663
-r2_sun_lumscale_hemi 0.9706
+r2_sun_lumscale_amb 1.4
+r2_sun_lumscale_hemi 0.95
 r2_sun_near 15.
 r2_sun_near_border 0.75
 r2_sun_quality st_opt_medium
@@ -758,7 +758,7 @@ r2_sun_tsm_bias 0.
 r2_sun_tsm_proj 0.3
 r2_sunshafts_min 0.01
 r2_sunshafts_mode volumetric
-r2_sunshafts_quality st_opt_low
+r2_sunshafts_quality st_opt_medium
 r2_sunshafts_value 0.5
 r2_terrain_z_prepass off
 r2_tnmp_a 0.15
@@ -768,21 +768,21 @@ r2_tnmp_d 0.2
 r2_tnmp_e 0.2
 r2_tnmp_exposure 0.16033
 r2_tnmp_f 0.3
-r2_tnmp_gamma 0.76667
+r2_tnmp_gamma 1.
 r2_tnmp_onoff 0.
 r2_tnmp_w 1.12
 r2_tonemap on
 r2_tonemap_adaptation 3.
-r2_tonemap_amount 0.50599
-r2_tonemap_lowlum 0.45599
-r2_tonemap_middlegray 1.4
-r2_volumetric_lights on
+r2_tonemap_amount 0.3
+r2_tonemap_lowlum 0.5
+r2_tonemap_middlegray 1.6
+r2_volumetric_lights off
 r2_wait_sleep 0
 r2_water_reflections on
 r2_zfill off
 r2_zfill_depth 0.25
 r2em 0.
-r3_dynamic_wet_surfaces on
+r3_dynamic_wet_surfaces off
 r3_dynamic_wet_surfaces_far 30.
 r3_dynamic_wet_surfaces_near 70.
 r3_dynamic_wet_surfaces_sm_res 128
@@ -790,17 +790,17 @@ r3_minmax_sm off
 r3_msaa st_opt_off
 r3_msaa_alphatest st_opt_atest_msaa_dx10_1
 r3_use_dx10_1 on
-r3_volumetric_smoke on
+r3_volumetric_smoke off
 r4_enable_tessellation off
 r4_hdr10_bloom_blur_passes 20
 r4_hdr10_bloom_blur_scale 1.
 r4_hdr10_bloom_intensity 0.06
 r4_hdr10_bloom_on 0
 r4_hdr10_brightness 0.
-r4_hdr10_colorspace 2
-r4_hdr10_contrast 0.
-r4_hdr10_contrast_middle_gray 0.5
-r4_hdr10_exposure 2.
+r4_hdr10_colorspace 0
+r4_hdr10_contrast 0.31
+r4_hdr10_contrast_middle_gray 0.67
+r4_hdr10_exposure 5.
 r4_hdr10_flare_blur_passes 12
 r4_hdr10_flare_blur_scale 1.
 r4_hdr10_flare_center_falloff 1.1
@@ -815,10 +815,10 @@ r4_hdr10_flare_lens_color (1.000000, 0.700000, 1.000000)
 r4_hdr10_flare_on 0
 r4_hdr10_flare_power 0.04
 r4_hdr10_flare_threshold 0.
-r4_hdr10_gamma 1.1
+r4_hdr10_gamma 1.5
 r4_hdr10_on 0
 r4_hdr10_pda_intensity 1.
-r4_hdr10_saturation 0.
+r4_hdr10_saturation 0.1
 r4_hdr10_sun_dawn_begin 4.5
 r4_hdr10_sun_dawn_end 6.
 r4_hdr10_sun_dusk_begin 18.5
@@ -828,18 +828,18 @@ r4_hdr10_sun_intensity 80.
 r4_hdr10_sun_on 0
 r4_hdr10_sun_outer_radius 0.4
 r4_hdr10_tonemap_mode 1
-r4_hdr10_tonemapper 0
-r4_hdr10_ui_nits 400.
+r4_hdr10_tonemapper 6
+r4_hdr10_ui_nits 100.
 r4_hdr10_ui_saturation 0.5
-r4_hdr10_whitepoint_nits 400.
+r4_hdr10_whitepoint_nits 100.
 r4_wireframe off
 r__3Dfakescope 1
-r__actor_shadow on
+r__actor_shadow off
 r__bloom_thresh (0.700000, 0.800000, 0.900000, 0.000000)
 r__bloom_weight (0.330000, 0.330000, 0.330000, 0.000000)
 r__clear_models_on_unload off
 r__color_grading (0.000000, 0.000000, 0.000000)
-r__detail_density 0.5
+r__detail_density 0.36
 r__detail_height 0.8
 r__detail_radius 110
 r__dtex_range 50.
@@ -856,9 +856,9 @@ r__no_ram_textures on
 r__no_scale_on_fade off
 r__optimize_dynamic_geom 2
 r__optimize_shadow_geom off
-r__optimize_static_geom 3
-r__saturation 1.
-r__supersample 1
+r__optimize_static_geom 2
+r__saturation 1.1
+r__supersample 8
 r__tf_aniso 16
 r__tf_mipbias -0.5
 r__use_precompiled_shaders on
@@ -866,41 +866,27 @@ r__wallmark_ttl 50.
 r_screenshot_mode png
 render_short_tracers 1
 renderer renderer_r4
-rs_c_brightness 1.
-rs_c_contrast 1.
-rs_c_gamma 1.
-rs_cam_pos off
-rs_refresh_60hz off
-rs_screenmode borderless
-rs_skeleton_update 32
-rs_stats off
-rs_v_sync off
-rs_vis_distance 0.8
 s3ds_param_1 (4.000000, 4.000000, 0.300000, 0.000000)
-s3ds_param_2 (0.550000, 0.000000, 0.000000, 1.500000)
+s3ds_param_2 (0.550000, 0.000000, 0.000000, 1.600000)
 s3ds_param_3 (0.000000, 0.000000, 0.200000, 0.030000)
 s3ds_param_4 (1.000000, 1.000000, 1.000000, 1.000000)
 scope_2dtexactive 0
 scope_blur_inner 0.1
 scope_blur_outer 1.
 scope_brightness 1.
-scope_ca 0.003
+scope_ca 0.01
 scope_factor 1.
 scope_fog_interp 0.15
 scope_fog_radius 1.25
 scope_fog_sharp 4.
-scope_fog_swayAim 0.66
-scope_fog_swayMove 0.25
-scope_fog_travel 0.25
-scope_radius 0.
-sds_enable on
-sds_speed_enable on
-sds_zoom_enable on
-shader_param_1 (0.900000, 1.000000, 0.970000, 0.100000)
-shader_param_2 (0.000000, 0.000000, 0.000000, 0.000000)
-shader_param_3 (0.838000, 0.920000, 0.950000, 0.000000)
+scope_fog_swayAim 0.8
+scope_fog_swayMove 1.
+scope_fog_travel 0.4
+shader_param_1 (1.000000, 1.000000, 1.000000, -0.200000)
+shader_param_2 (0.000000, 0.000000, 0.000000, 0.030000)
+shader_param_3 (0.000000, 0.000000, 0.000000, 0.670000)
 shader_param_4 (1.120000, 1.120000, 1.130000, -0.400000)
-shader_param_5 (1.000000, 0.000000, 0.000000, 0.000000)
+shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
 shader_param_6 (0.000000, 1.000000, 0.000000, 0.000000)
 shader_param_7 (1.000000, 0.550000, 0.000000, 0.000000)
 shader_param_8 (0.000000, 10.300000, 100.000000, 10.000000)
@@ -911,56 +897,60 @@ sil_glow_shot_temp 0.004
 smooth_ads_transition 0
 snd_acceleration on
 snd_cache_size 256
+snd_device OpenAL Soft
 snd_doppler_power 1.8
 snd_doppler_smoothing 15
+snd_efx on
 snd_targets 256
+snd_volume_eff 1.
+snd_volume_music 0.
 ssfx_ao (1.000000, 5.000000, 1.000000, 2.000000)
 ssfx_ao_quality 4
 ssfx_ao_setup1 (150.000000, 1.000000, 1.000000, 0.115000)
 ssfx_blood_decals (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_bloom_1 (10.000000, 1.000000, 0.000000, 0.300000)
-ssfx_bloom_2 (1.000000, 1.000000, 1.500000, 0.800000)
+ssfx_bloom_1 (9.000000, 2.000000, 0.000000, 0.800000)
+ssfx_bloom_2 (1.000000, 1.000000, 1.000000, 1.000000)
 ssfx_bloom_use_presets 0
 ssfx_florafixes_1 (0.150000, 0.180000, 0.140000, 0.150000)
 ssfx_florafixes_2 (4.600000, 0.380000, 0.000000, 0.000000)
-ssfx_gloss_factor 0.672
+ssfx_gloss_factor 0.48
 ssfx_gloss_method 1
-ssfx_gloss_minmax (0.700000, 0.950000, 0.000000)
-ssfx_grass_interactive (1.000000, 8.000000, 2000.000000, 1.000000)
-ssfx_grass_shadows (1.000000, 1.000000, 50.000000, 0.000000)
+ssfx_gloss_minmax (0.500000, 0.900000, 0.000000)
+ssfx_grass_interactive (1.000000, 8.000000, 1500.000000, 1.000000)
+ssfx_grass_shadows (0.000000, 1.000000, 50.000000, 0.000000)
 ssfx_hud_drops_1 (0.000000, 0.000000, 30.000000, 0.050000)
-ssfx_hud_drops_2 (0.225000, 1.500000, 0.400000, 2.000000)
+ssfx_hud_drops_2 (0.150000, 1.300000, 0.400000, 2.000000)
 ssfx_hud_hemi 0.
 ssfx_il (6.666667, 4.000000, 0.600000, 0.500000)
-ssfx_il_quality 16
-ssfx_il_setup1 (300.000000, 1.000000, 1.000000, 0.000000)
-ssfx_int_grass_params_1 (1.400000, 2.000000, 2.000000, 30.000000)
+ssfx_il_quality 24
+ssfx_il_setup1 (150.000000, 1.000000, 1.000000, 0.000000)
+ssfx_int_grass_params_1 (1.400000, 2.000000, 2.000000, 25.000000)
 ssfx_int_grass_params_2 (1.000000, 5.000000, 0.300000, 2.000000)
 ssfx_is_underground 0
 ssfx_lightsetup_1 (0.600000, 0.600000, 0.000000, 0.000000)
 ssfx_lut (1.000000, 2.000000, 0.000000, 0.000000)
-ssfx_pom (16.000000, 40.000000, 0.035000, 0.600000)
+ssfx_pom (16.000000, 8.000000, 0.035000, 0.500000)
 ssfx_pom_refine 0
-ssfx_rain_1 (1.500000, 0.070000, 1.000000, 2.000000)
-ssfx_rain_2 (0.800000, 0.050000, 2.500000, 1.000000)
+ssfx_rain_1 (1.300000, 0.100000, 1.000000, 1.000000)
+ssfx_rain_2 (1.000000, 0.000000, 1.200000, 0.600000)
 ssfx_rain_3 (0.200000, 3.000000, 0.000000, 0.000000)
 ssfx_rain_drops_setup (2500.000000, 15.000000, 0.000000, 0.000000)
 ssfx_shadow_bias (0.400000, 0.030000, 0.000000)
 ssfx_shadow_cascades (14.000000, 40.000000, 126.000000)
-ssfx_shadows (256.000000, 1536.000000, 0.000000)
-ssfx_ssr (1.000000, 0.250000, 0.000000, 0.000000)
+ssfx_shadows (768.000000, 1536.000000, 0.000000)
+ssfx_ssr (2.000000, 0.250000, 0.000000, 0.000000)
 ssfx_ssr_2 (1.150000, 1.300000, 0.450000, 0.050000)
-ssfx_ssr_quality 0
+ssfx_ssr_quality 1
 ssfx_sss (1.000000, 1.000000, 0.000000, 0.000000)
-ssfx_sss_quality (24.000000, 8.000000, 1.000000, 1.000000)
+ssfx_sss_quality (12.000000, 4.000000, 1.000000, 1.000000)
 ssfx_terrain_grass_align 1
 ssfx_terrain_grass_slope 0.84444
-ssfx_terrain_offset (-0.090000, -0.050000, -0.080000, 0.000000)
+ssfx_terrain_offset (-0.120000, -0.050000, -0.150000, 0.000000)
 ssfx_terrain_pom (36.000000, 40.000000, 0.040000, 1.000000)
 ssfx_terrain_pom_refine 1
 ssfx_terrain_quality (20.000000, 0.000000, 0.000000, 0.000000)
-ssfx_volumetric (1.000000, 0.500000, 3.000000, 1.000000)
-ssfx_water (1.000000, 0.800000, 1.000000, 0.000000)
+ssfx_volumetric (1.000000, 0.800000, 3.000000, 1.000000)
+ssfx_water (2.000000, 0.450000, 1.000000, 0.000000)
 ssfx_water_quality (1.000000, 2.000000, 0.000000)
 ssfx_water_setup1 (0.600000, 3.000000, 0.300000, 0.050000)
 ssfx_water_setup2 (0.860000, 6.000000, 0.300000, 0.500000)
@@ -968,7 +958,7 @@ ssfx_wetness_multiplier (1.400000, 0.500000, 0.000000)
 ssfx_wetsurfaces_1 (0.500000, 1.400000, 0.700000, 1.250000)
 ssfx_wetsurfaces_2 (0.800000, 1.500000, 0.200000, 0.350000)
 ssfx_wind_grass (9.700000, 1.500000, 1.600000, 0.500000)
-ssfx_wind_trees (11.100000, 0.170000, 0.900000, 0.100000)
+ssfx_wind_trees (9.100000, 0.170000, 0.900000, 0.100000)
 ssfx_wpn_dof_1 (0.150000, 0.400000, 0.000000, 1.100000)
 ssfx_wpn_dof_2 0.15
 """
