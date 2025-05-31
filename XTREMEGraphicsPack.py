@@ -16,9 +16,9 @@ r__color_grading (0, 0, 0)
 
 r__enable_grass_shadow off
 
-r__saturation 1.1
+r__saturation 0.9
 r__gamma 1
-r__exposure 1
+r__exposure 1.
 scope_factor 1
 
 r2_sun_lumscale 3.
@@ -26,7 +26,7 @@ r2_gloss_factor 0.001
 r2_gloss_min 0.56
 r2_sun_lumscale 3.
 r2_sun_lumscale_amb 2.5
-r2_sun_lumscale_hemi 0.97063
+r2_sun_lumscale_hemi 0
 r2_tonemap on
 r2_tonemap_adaptation 3.0
 r2_tonemap_amount 1
@@ -40,10 +40,10 @@ r2_sun_depth_far_scale 0.99988
 r2_sun_tsm_bias 0
 ssfx_hud_hemi 0
 
-shader_param_1 (1, 1, 1, -0.2)
+shader_param_1 (0.000000, 0.000000, 0.000000, 0.800000)
 shader_param_2 (0, 0, 0, 0.03)
-shader_param_3 (0.0, 0.0, 0.0, 0.67)
-shader_param_4 (1.12, 1.12, 1.13, -0.4)
+shader_param_3 (0.000000, 0.000000, 0.000000, 0.670000)
+shader_param_4 (0, 0, 0.01, 1.12)
 """,
 
 "XTREMEDull": """
@@ -718,14 +718,14 @@ r2_ls_psm_kernel 0.7
 r2_ls_squality 0.5
 r2_ls_ssm_kernel 0.7
 r2_mask_control (0.000000, 0.000000, 0.000000, 0.000000)
-r2_mblur 0.02467
+r2_mblur 0.0392
 r2_mblur_enabled on
 r2_parallax_h 0.
 r2_qsync 0
 r2_shadow_cascede_old off
-r2_slight_fade 0.5
+r2_slight_fade 1.
 r2_smaa off
-r2_soft_particles off
+r2_soft_particles on
 r2_soft_water on
 r2_ss_sunshafts_length 1.
 r2_ss_sunshafts_radius 1.
@@ -739,7 +739,7 @@ r2_ssao_hdao off
 r2_ssao_mode disabled
 r2_ssao_opt_data on
 r2_steep_parallax off
-r2_sun off
+r2_sun on
 r2_sun_depth_far_bias -0.00002
 r2_sun_depth_far_scale 0.99988
 r2_sun_depth_near_bias 0.00007
@@ -748,8 +748,8 @@ r2_sun_details on
 r2_sun_far 100.
 r2_sun_focus on
 r2_sun_lumscale 3.
-r2_sun_lumscale_amb 1.4
-r2_sun_lumscale_hemi 0.95
+r2_sun_lumscale_amb 2.5
+r2_sun_lumscale_hemi 0.
 r2_sun_near 15.
 r2_sun_near_border 0.75
 r2_sun_quality st_opt_medium
@@ -758,7 +758,7 @@ r2_sun_tsm_bias 0.
 r2_sun_tsm_proj 0.3
 r2_sunshafts_min 0.01
 r2_sunshafts_mode volumetric
-r2_sunshafts_quality st_opt_medium
+r2_sunshafts_quality st_opt_low
 r2_sunshafts_value 0.5
 r2_terrain_z_prepass off
 r2_tnmp_a 0.15
@@ -768,21 +768,21 @@ r2_tnmp_d 0.2
 r2_tnmp_e 0.2
 r2_tnmp_exposure 0.16033
 r2_tnmp_f 0.3
-r2_tnmp_gamma 1.
+r2_tnmp_gamma 0.76667
 r2_tnmp_onoff 0.
 r2_tnmp_w 1.12
 r2_tonemap on
 r2_tonemap_adaptation 3.
-r2_tonemap_amount 0.3
-r2_tonemap_lowlum 0.5
-r2_tonemap_middlegray 1.6
+r2_tonemap_amount 1.
+r2_tonemap_lowlum 0.55
+r2_tonemap_middlegray 1.4
 r2_volumetric_lights off
 r2_wait_sleep 0
 r2_water_reflections on
 r2_zfill off
 r2_zfill_depth 0.25
 r2em 0.
-r3_dynamic_wet_surfaces off
+r3_dynamic_wet_surfaces on
 r3_dynamic_wet_surfaces_far 30.
 r3_dynamic_wet_surfaces_near 70.
 r3_dynamic_wet_surfaces_sm_res 128
@@ -798,9 +798,9 @@ r4_hdr10_bloom_intensity 0.06
 r4_hdr10_bloom_on 0
 r4_hdr10_brightness 0.
 r4_hdr10_colorspace 0
-r4_hdr10_contrast 0.31
-r4_hdr10_contrast_middle_gray 0.67
-r4_hdr10_exposure 5.
+r4_hdr10_contrast 0.05
+r4_hdr10_contrast_middle_gray 0.65
+r4_hdr10_exposure 0.75
 r4_hdr10_flare_blur_passes 12
 r4_hdr10_flare_blur_scale 1.
 r4_hdr10_flare_center_falloff 1.1
@@ -815,7 +815,7 @@ r4_hdr10_flare_lens_color (1.000000, 0.700000, 1.000000)
 r4_hdr10_flare_on 0
 r4_hdr10_flare_power 0.04
 r4_hdr10_flare_threshold 0.
-r4_hdr10_gamma 1.5
+r4_hdr10_gamma 1.1
 r4_hdr10_on 0
 r4_hdr10_pda_intensity 1.
 r4_hdr10_saturation 0.1
@@ -827,21 +827,21 @@ r4_hdr10_sun_inner_radius 0.2
 r4_hdr10_sun_intensity 80.
 r4_hdr10_sun_on 0
 r4_hdr10_sun_outer_radius 0.4
-r4_hdr10_tonemap_mode 1
-r4_hdr10_tonemapper 6
+r4_hdr10_tonemap_mode 0
+r4_hdr10_tonemapper 5
 r4_hdr10_ui_nits 100.
-r4_hdr10_ui_saturation 0.5
+r4_hdr10_ui_saturation 0.
 r4_hdr10_whitepoint_nits 100.
 r4_wireframe off
 r__3Dfakescope 1
-r__actor_shadow off
+r__actor_shadow on
 r__bloom_thresh (0.700000, 0.800000, 0.900000, 0.000000)
 r__bloom_weight (0.330000, 0.330000, 0.330000, 0.000000)
 r__clear_models_on_unload off
 r__color_grading (0.000000, 0.000000, 0.000000)
-r__detail_density 0.36
-r__detail_height 0.8
-r__detail_radius 110
+r__detail_density 0.26
+r__detail_height 0.7
+r__detail_radius 150
 r__dtex_range 50.
 r__enable_grass_shadow off
 r__exposure 1.
@@ -857,15 +857,25 @@ r__no_scale_on_fade off
 r__optimize_dynamic_geom 2
 r__optimize_shadow_geom off
 r__optimize_static_geom 2
-r__saturation 1.1
-r__supersample 8
-r__tf_aniso 16
-r__tf_mipbias -0.5
+r__saturation 1.
+r__supersample 1
+r__tf_aniso 4
+r__tf_mipbias 0.5
 r__use_precompiled_shaders on
 r__wallmark_ttl 50.
 r_screenshot_mode png
 render_short_tracers 1
 renderer renderer_r4
+rs_c_brightness 1.
+rs_c_contrast 1.
+rs_c_gamma 1.
+rs_cam_pos off
+rs_refresh_60hz off
+rs_screenmode borderless
+rs_skeleton_update 32
+rs_stats off
+rs_v_sync off
+rs_vis_distance 0.9
 s3ds_param_1 (4.000000, 4.000000, 0.300000, 0.000000)
 s3ds_param_2 (0.550000, 0.000000, 0.000000, 1.600000)
 s3ds_param_3 (0.000000, 0.000000, 0.200000, 0.030000)
@@ -874,42 +884,33 @@ scope_2dtexactive 0
 scope_blur_inner 0.1
 scope_blur_outer 1.
 scope_brightness 1.
-scope_ca 0.01
+scope_ca 0.003
 scope_factor 1.
 scope_fog_interp 0.15
 scope_fog_radius 1.25
 scope_fog_sharp 4.
-scope_fog_swayAim 0.8
-scope_fog_swayMove 1.
-scope_fog_travel 0.4
-shader_param_1 (1.000000, 1.000000, 1.000000, -0.200000)
+scope_fog_swayAim 0.66
+scope_fog_swayMove 0.25
+scope_fog_travel 0.25
+scope_radius 0.
+sds_enable on
+sds_speed_enable on
+sds_zoom_enable on
+shader_param_1 (0.000000, 0.000000, 0.000000, 0.800000)
 shader_param_2 (0.000000, 0.000000, 0.000000, 0.030000)
 shader_param_3 (0.000000, 0.000000, 0.000000, 0.670000)
-shader_param_4 (1.120000, 1.120000, 1.130000, -0.400000)
+shader_param_4 (0.000000, 0.000000, 0.000000, 0.800000)
 shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
 shader_param_6 (0.000000, 1.000000, 0.000000, 0.000000)
 shader_param_7 (1.000000, 0.550000, 0.000000, 0.000000)
 shader_param_8 (0.000000, 10.300000, 100.000000, 10.000000)
 sil_glow_color (1.000000, 0.000000, 0.000000)
-sil_glow_cool_temp_rate 0.01
-sil_glow_max_temp 0.15
-sil_glow_shot_temp 0.004
-smooth_ads_transition 0
-snd_acceleration on
-snd_cache_size 256
-snd_device OpenAL Soft
-snd_doppler_power 1.8
-snd_doppler_smoothing 15
-snd_efx on
-snd_targets 256
-snd_volume_eff 1.
-snd_volume_music 0.
-ssfx_ao (1.000000, 5.000000, 1.000000, 2.000000)
-ssfx_ao_quality 4
-ssfx_ao_setup1 (150.000000, 1.000000, 1.000000, 0.115000)
+ssfx_ao (2.000000, 5.000000, 1.000000, 2.000000)
+ssfx_ao_quality 2
+ssfx_ao_setup1 (100.000000, 1.000000, 1.000000, 0.115000)
 ssfx_blood_decals (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_bloom_1 (9.000000, 2.000000, 0.000000, 0.800000)
-ssfx_bloom_2 (1.000000, 1.000000, 1.000000, 1.000000)
+ssfx_bloom_1 (9.000000, 1.500000, 0.000000, 0.300000)
+ssfx_bloom_2 (1.000000, 1.000000, 0.000000, 0.000000)
 ssfx_bloom_use_presets 0
 ssfx_florafixes_1 (0.150000, 0.180000, 0.140000, 0.150000)
 ssfx_florafixes_2 (4.600000, 0.380000, 0.000000, 0.000000)
@@ -928,10 +929,10 @@ ssfx_int_grass_params_1 (1.400000, 2.000000, 2.000000, 25.000000)
 ssfx_int_grass_params_2 (1.000000, 5.000000, 0.300000, 2.000000)
 ssfx_is_underground 0
 ssfx_lightsetup_1 (0.600000, 0.600000, 0.000000, 0.000000)
-ssfx_lut (1.000000, 2.000000, 0.000000, 0.000000)
+ssfx_lut (1.000000, 11.000000, 0.000000, 0.000000)
 ssfx_pom (16.000000, 8.000000, 0.035000, 0.500000)
 ssfx_pom_refine 0
-ssfx_rain_1 (1.300000, 0.100000, 1.000000, 1.000000)
+ssfx_rain_1 (1.300000, 0.060000, 1.200000, 1.000000)
 ssfx_rain_2 (1.000000, 0.000000, 1.200000, 0.600000)
 ssfx_rain_3 (0.200000, 3.000000, 0.000000, 0.000000)
 ssfx_rain_drops_setup (2500.000000, 15.000000, 0.000000, 0.000000)
@@ -957,7 +958,7 @@ ssfx_water_setup2 (0.860000, 6.000000, 0.300000, 0.500000)
 ssfx_wetness_multiplier (1.400000, 0.500000, 0.000000)
 ssfx_wetsurfaces_1 (0.500000, 1.400000, 0.700000, 1.250000)
 ssfx_wetsurfaces_2 (0.800000, 1.500000, 0.200000, 0.350000)
-ssfx_wind_grass (9.700000, 1.500000, 1.600000, 0.500000)
+ssfx_wind_grass (9.999999, 1.500000, 1.600000, 0.500000)
 ssfx_wind_trees (9.100000, 0.170000, 0.900000, 0.100000)
 ssfx_wpn_dof_1 (0.150000, 0.400000, 0.000000, 1.100000)
 ssfx_wpn_dof_2 0.15
@@ -982,8 +983,6 @@ Then, download and install these files **in the order shown** using the links be
 
 You can also get **STALKER XTREME**, which is a modpack full of mods to greatly enhance the realism and immersiveness of the zone. Certain mods that are disabled may be re-enabled, but they might cause issues. I'll offer as much support for them as I can.
 
-**STALKER XTREME (REQUIRES A NEW GAME): https://www.mediafire.com/file/gm862b2xneitbei/STALKER+XTREME.7z/file**
-
 Head to the **STALKER XTREME** page for instructions on how to install it - I highly recommend using it with **XTREME Graphics Pack**.
 
 From there, if you are not going to get **STALKER XTREME**, follow the instructions on the **Modlist Compatibility** and **MCM Settings For SSS** pages on this site to modify your settings and mod list files to work with this pack.
@@ -994,9 +993,13 @@ stalkerxtreme = {
     "part1": """
 STALKER XTREME is a modpack designed around making STALKER as realistic as possible, featuring a Cold System, constant psy drain, modified item effects, a realistic body health system, HUD changes, reanimations, and so much more.
 
-To get **STALKER XTREME**, first, make sure MO2 is CLOSED. Then, just download the file and open it in 7Zip. Next, drag and drop EVERYTHING inside the file into your `GAMMA` folder.
+To get **STALKER XTREME**, first, make sure MO2 is CLOSED. Then, download the following files and open them in 7Zip. Drag and drop EVERYTHING inside the `STALKER XTREME.7z` file into your `GAMMA` folder, and drag and drop the contents of the other two files into your `mods` folder.
 
-You can download it here if you haven't already: https://www.mediafire.com/file/gm862b2xneitbei/STALKER+XTREME.7z/file
+***STALKER XTREME***: https://www.mediafire.com/file/gm862b2xneitbei/STALKER+XTREME.7z/file
+
+***XTREME GAMMA Mods***: https://www.mediafire.com/file/12h31ywvngu4vjf/XTREME_GAMMA_Mods.7z/file
+
+***XTREME GAMMA Large Files***: https://www.mediafire.com/file/7q88fyjpk7cl7u1/G.A.M.M.A._Large_Files.7z/file
 
 After that, you will need **Arrival Anomalies**. The author of this mod says that this is still a WIP, so it cannot be included in the pack. However, it can still be used; you'll just need to download and install it yourself.
 
